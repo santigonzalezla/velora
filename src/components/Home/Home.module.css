@@ -1,0 +1,28 @@
+.Home {
+  margin-top: 4rem;
+  font-family: "Barlow";
+}
+
+.singUpBtn {
+  all: unset;
+  background-color: #A000FF;
+  color: #ECEDF2;
+  border-radius: 5px;
+  padding: 5px 1rem;
+  font-family: Inter;
+}
+
+.singUpBtn:hover {
+  background-color: #ECEDF2;
+  color: #A000FF;
+}
+
+.Caption {
+  text-align: left;
+  bottom: 30%;
+  font-family: Cantarell;
+}
+
+#ImgHero {
+  width: 100%;
+}
