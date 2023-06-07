@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import CarruselImg from '../../assets/img/Carrusel.png'
+import CarruselImg from '../../assets/img/Home/Carrusel.png'
 import style from './Home.module.css'
 
 const Carrusel = () => {

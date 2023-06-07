@@ -23,6 +23,21 @@
   font-family: Cantarell;
 }
 
+.Hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
 #ImgHero {
+  width: 100%;
+}
+
+#ImgBe {
+  width: 20rem;
+}
+
+#ImgUs {
   width: 100%;
 }

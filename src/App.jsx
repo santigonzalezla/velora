@@ -1,13 +1,13 @@
 {/* Main Entry Point of the app  */ }
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import Landing from './view/Landing';
+import RouterApp from './router/RouterApp';
 
 function App() {
 
   return (
     <>
-      <Landing />
+      <RouterApp />
     </>
   )
 }
