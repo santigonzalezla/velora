@@ -1,0 +1,69 @@
+#Client {
+  margin-top: 4rem;
+  font-family: "Barlow", sans-serif;
+  color: #4F5168;
+  background-color: #F9F9F9;
+}
+
+.singUpBtn {
+  all: unset;
+  background-color: #A000FF;
+  color: #ECEDF2;
+  border-radius: 5px;
+  padding: 5px 1rem;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.singUpBtn:hover {
+  background-color: #ECEDF2;
+  color: #A000FF;
+}
+
+.Caption {
+  text-align: left;
+  bottom: 30%;
+  font-family: Cantarell, sans-serif;
+}
+
+#Benefits {
+  padding: 1rem;
+}
+
+#BenefitsContainer {
+  width: 100%;
+}
+
+.CardsColums {
+  margin: 0.5rem;
+}
+
+.Cards {
+  background-color: #4F5168;
+  color: #ECEDF2;
+  font-family: Cantarell, sans-serif;
+  border-radius: 10px;
+  margin: 1rem;
+  width: 12rem;
+  border: none;
+}
+
+.Cards:hover {
+  background-color: #F9F9F9;
+  color: #4F5168;
+  border: 1px solid #A000FF;
+  box-shadow: 0px 0px 20px 0px rgba(160, 0, 255, 1);
+}
+
+.CardsTxt {
+  background-color: #F9F9F9;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #4F5168;
+}
+
+#Sesions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

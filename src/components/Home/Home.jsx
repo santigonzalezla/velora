@@ -4,7 +4,7 @@ import style from './Home.module.css'
 
 const Home = () => {
   return (
-    <div className={style.Home}>
+    <div id={style.Home}>
       <Carrusel />
       <Hero />
     </div>

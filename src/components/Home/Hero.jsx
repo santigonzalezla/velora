@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import style from './Home.module.css'
 import HeroImg from '../../assets/img/Home/Hero.png'
 import BeImg from '../../assets/img/Home/Be.png'
@@ -12,7 +13,9 @@ const Hero = () => {
           <Col sm="12" md="4" lg="4" xl="4">
             <h1>Find what you want</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
-            <button className={style.singUpBtn}>Sing up</button>
+            <Link to='/Client'>
+              <button className={style.singUpBtn} >Sing up</button>
+            </Link>
           </Col>
           <Col sm="12" md="8" lg="8" xl="8">
             <img src={HeroImg} alt="" id={style.ImgHero} />
