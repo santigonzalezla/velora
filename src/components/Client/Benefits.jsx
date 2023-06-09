@@ -5,9 +5,9 @@ const Benefits = () => {
   return (
     <div id={style.Benefits}>
       <Container id={style.Benefits}>
-        <Row>
+        <Row className={style.BenefitsRow}>
           <h1>Beneficios</h1>
-          <Col className={style.CardsColums} sm="12" md="2" lg="2" xl="2">
+          <Col >
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -17,7 +17,7 @@ const Benefits = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col className={style.CardsColums} sm="12" md="2" lg="2" xl="2">
+          <Col>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -27,7 +27,7 @@ const Benefits = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col className={style.CardsColums} sm="12" md="2" lg="2" xl="2">
+          <Col>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -37,23 +37,13 @@ const Benefits = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col className={style.CardsColums} sm="12" md="2" lg="2" xl="2">
+          <Col>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
                 <Card.Text className={style.CardsTxt}>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className={style.CardsColums} sm="12" md="2" lg="2" xl="2">
-            <Card className={style.Cards} >
-              <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
-                <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
