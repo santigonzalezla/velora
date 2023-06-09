@@ -1,14 +1,14 @@
 import Carousel from 'react-bootstrap/Carousel';
-import CarruselImg from '../../assets/img/Home/Carrusel.png'
-import style from './Home.module.css'
+import style from './Client.module.css'
+import CarruselClientImg from '../../assets/img/Client/CarruselClient.png';
 
-const Carrusel = () => {
+const CarruselClient = () => {
   return (
     <Carousel>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={CarruselImg}
+          src={CarruselClientImg}
           alt="First slide"
         />
         <Carousel.Caption className={style.Caption}>
@@ -20,7 +20,7 @@ const Carrusel = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={CarruselImg}
+          src={CarruselClientImg}
           alt="Second slide"
         />
         <Carousel.Caption className={style.Caption}>
@@ -32,7 +32,7 @@ const Carrusel = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={CarruselImg}
+          src={CarruselClientImg}
           alt="Third slide"
         />
         <Carousel.Caption className={style.Caption}>
@@ -45,4 +45,4 @@ const Carrusel = () => {
   );
 }
 
-export default Carrusel;
+export default CarruselClient;

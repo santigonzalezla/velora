@@ -1,6 +1,8 @@
-.Home {
+#Home {
   margin-top: 4rem;
-  font-family: "Barlow";
+  font-family: "Barlow", sans-serif;
+  color: #4F5168;
+  background-color: #F9F9F9;
 }
 
 .singUpBtn {
@@ -9,7 +11,8 @@
   color: #ECEDF2;
   border-radius: 5px;
   padding: 5px 1rem;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
+
 }
 
 .singUpBtn:hover {
@@ -20,9 +23,24 @@
 .Caption {
   text-align: left;
   bottom: 30%;
-  font-family: Cantarell;
+  font-family: Cantarell, sans-serif;
+}
+
+.Hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 #ImgHero {
+  width: 100%;
+}
+
+#ImgBe {
+  width: 20rem;
+}
+
+#ImgUs {
   width: 100%;
 }
