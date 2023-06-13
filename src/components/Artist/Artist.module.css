@@ -1,0 +1,27 @@
+#Artist {
+  margin-top: 4rem;
+  font-family: "Barlow", sans-serif;
+  color: #4F5168;
+  background-color: #F9F9F9;
+}
+
+.singUpBtn {
+  all: unset;
+  background-color: #A000FF;
+  color: #ECEDF2;
+  border-radius: 5px;
+  padding: 5px 1rem;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.singUpBtn:hover {
+  background-color: #ECEDF2;
+  color: #A000FF;
+}
+
+.Caption {
+  text-align: left;
+  bottom: 30%;
+  font-family: Cantarell, sans-serif;
+}
