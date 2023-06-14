@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import style from './Artist.module.css'
-import CarruselArtistImg from '../../assets/img/Artist/CarruselArtistImg'
+import CarruselArtistImg from '../../assets/img/Artist/CarruselArtistImg.png'
 
 const CarruselArtist = () => {
   return (

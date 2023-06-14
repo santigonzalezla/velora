@@ -42,7 +42,9 @@ const Hero = () => {
           <Col sm="12" md="6" lg="6" xl="6">
             <h1>¿Quieres Pautar con Nosotros?</h1>
             <p>Accede a nuestro catálogo de artistas y descubre lo que ofrecemos para tu negocio</p>
-            <button className={style.singUpBtn}>Ver Más</button>
+            <Link to='/Company'>
+              <button className={style.singUpBtn}>Ver Más</button>
+            </Link>
           </Col>
           <Col sm="12" md="6" lg="6" xl="6">
             <img src={UsImg} alt="" id={style.ImgUs} />

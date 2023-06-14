@@ -25,3 +25,63 @@
   bottom: 30%;
   font-family: Cantarell, sans-serif;
 }
+
+#Benefits {
+  padding: 1rem;
+}
+
+#BenefitsContainer {
+  width: 100%;
+}
+
+.BenefitsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Cards {
+  background-color: #4F5168;
+  color: #ECEDF2;
+  font-family: Cantarell, sans-serif;
+  border-radius: 10px;
+  width: 14.5rem;
+  border: none;
+}
+
+.Cards:hover {
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.CardsTxt {
+  background-color: #F9F9F9;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #4F5168;
+}
+
+#Sesions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ImgHero {
+  width: 100%;
+}
+
+.ServiceCards {
+  font-family: Inter, sans-serif;
+  background-color: #ECEDF2;
+  border: none;
+  height: 200px;
+}
+
+.ServCardTxt {
+  font-size: small;
+}
+
+.ServiceCardsText {
+  font-size: small;
+}

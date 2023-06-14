@@ -67,6 +67,10 @@
   align-items: center;
 }
 
+#ImgHero {
+  width: 100%;
+}
+
 .ServiceCards {
   font-family: Inter, sans-serif;
   background-color: #ECEDF2;

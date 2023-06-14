@@ -13,7 +13,7 @@ const Services = () => {
           <h1>Servicios</h1>
           <Col >
             <Card className={style.ServiceCards}>
-              <Card.Body>
+              <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>¿Te gustaría conocer a tu Artista?</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
                   A través de nuestro servicio Handshake, Concreta una cita, virtual o presencial  para conocerle
@@ -24,7 +24,7 @@ const Services = () => {
           </Col>
           <Col>
             <Card className={style.ServiceCards}>
-              <Card.Body>
+              <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
                   Accede al contenido comprado, de subscripción, y a sugerencias de contenido basado en tu consumo
@@ -35,10 +35,10 @@ const Services = () => {
           </Col>
           <Col>
             <Card className={style.ServiceCards}>
-              <Card.Body>
+              <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>Lives</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Gravida diam enim sed ut mi. Est in sit sed tincidunt.
+                  Gravida diam enim sed ut mi. Est in sit sed tincidunt.Gravida diam enim sed ut mi. Est in sit sed tincidunt.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg4} />
@@ -46,10 +46,10 @@ const Services = () => {
           </Col>
           <Col>
             <Card className={style.ServiceCards}>
-              <Card.Body>
+              <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Gravida diam enim sed ut mi. Est in sit sed tincidunt.
+                  Gravida diam enim sed ut mi. Est in sit sed tincidunt.Gravida diam enim sed ut mi. Est in sit sed tincidunt.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg2} />
