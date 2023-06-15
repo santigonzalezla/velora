@@ -1,20 +1,3 @@
-.Header {
-  background-color: #373B56;
-}
-
-.NavButtons {
-  background-color: #ECEDF2;
-  border-radius: 5px;
-  color: #373B56;
-  margin: 10px;
-}
-
-.NavButtons:hover {
-  cursor: pointer;
-  background-color: #A000FF;
-  color: #ECEDF2;
-}
-
 .ModalContainer {
   width: 10rem;
 }
