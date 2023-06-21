@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav, Button, Modal, Form } from 'react-bootstrap';
 import style from './Header.module.css'
 import Logo from '../../assets/img/Header/logo.png'
 import { useState } from 'react';
-import { Button, Modal, Form } from 'react-bootstrap';
 import Twitter from '../../assets/img/Login/Twitter.webp'
 import Facebook from '../../assets/img/Login/Facebook.png'
 import Google from '../../assets/img/Login/Google.png'
 
 const Header = () => {
+
   const [show, setShow] = useState(false);
   const [showSingUp, setShowSingUp] = useState(false);
+  const [shorRegister, setShowRegister] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
