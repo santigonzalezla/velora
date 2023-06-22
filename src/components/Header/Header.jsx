@@ -11,12 +11,20 @@ const Header = () => {
 
   const [show, setShow] = useState(false);
   const [showSingUp, setShowSingUp] = useState(false);
-  const [shorRegister, setShowRegister] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   const handleCloseSingUp = () => setShowSingUp(false);
   const handleShowSingUp = () => setShowSingUp(true);
+
+  const handleCloseRegister = () => setShowRegister(false);
+
+  const handleShowRegister = () => {
+    setShowRegister(true);
+    setShowSingUp(false);
+  }
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -88,7 +96,7 @@ const Header = () => {
                 <Form.Group className="mb-3" controlId="password">
                   <Form.Control type="password" name='password' placeholder="Confirme su contraseña" className={style.ModalInput} />
                 </Form.Group>
-                <Button type="submit" className={style.ModalButton}>
+                <Button type="submit" className={style.ModalButton} onClick={handleShowRegister}>
                   Registrarse
                 </Button>
                 <p>O Ingresa con:</p>
@@ -99,6 +107,46 @@ const Header = () => {
               <img src={Facebook} alt="" className={style.icons} />
               <img src={Google} alt="" className={style.icons} />
             </Modal.Footer>
+          </Modal>
+          <Modal
+            show={showRegister}
+            onHide={handleCloseRegister}
+            keyboard={false}
+
+          >
+            <Modal.Body className={style.ModalBody}>
+              <Modal.Title id={style.ModalTitle} >Sing Up</Modal.Title>
+              <Form onSubmit={submitHandler}>
+                <Form.Select aria-label="Default select example" className={style.ModalInput} >
+                  <option>Seleccione su tipo de usuario</option>
+                  <option value="1">Artista</option>
+                  <option value="2">Cliente</option>
+                  <option value="3">Empresa</option>
+                </Form.Select>
+                <Form.Group className={style.FormGroup} >
+                  <Form.Control type="text" name='contry' placeholder="Pais" className={style.FormGroupInput} />
+                  <Form.Control type="text" name='city' placeholder="Ciudad" className={style.FormGroupInput} />
+                </Form.Group>
+                <Form.Group className={style.FormGroup} controlId="number">
+                  <Form.Control type="text" name='city' placeholder="+57" className={style.FormGroupInput} />
+                  <Form.Control type="text" name='number' placeholder="Numero de celular" className={style.FormGroupInput} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="user">
+                  <Form.Control type="text" name='user' placeholder="Nombre de usuario" className={style.ModalInput} />
+                </Form.Group>
+                <Form.Group className={style.FormGroup} controlId="date">
+                  <label>Fecha de nacimiento</label>
+                  <Form.Control type="date" name='date' className={style.FormGroupInput} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="user">
+                  <p>Preferencias de contenido</p>
+                  <Form.Control type="text" name='user' placeholder="Añadir" className={style.FormGroupInput} />
+                </Form.Group>
+                <Button type="submit" className={style.ModalButton}>
+                  Finalizar
+                </Button>
+              </Form>
+            </Modal.Body>
           </Modal>
         </Navbar.Collapse>
       </Container>

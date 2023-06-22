@@ -50,6 +50,14 @@
   border: none;
 }
 
+.FormGroup {
+  display: flex;
+}
+
+.FormGroupInput {
+  background-color: #F9F9F9;
+}
+
 .ModalButton:hover {
   background-color: #ECEDF2;
   color: #A000FF;

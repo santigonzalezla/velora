@@ -4,6 +4,7 @@ import Client from '../components/Client/Client';
 import Artist from '../components/Artist/Artist'
 import Company from '../components/Company/Company'
 import Login from '../components/Login/Login';
+import HomeApp from '../components/HomeApp/HomeApp'
 
 const RouterApp = () => {
   return (
@@ -13,6 +14,7 @@ const RouterApp = () => {
       <Route path='/Artist' element={<Artist />} />
       <Route path='/Company' element={<Company />} />
       <Route path='/Login' element={<Login />} />
+      <Route path='/Home' element={<HomeApp />} />
     </Routes>
   );
 }

@@ -1,9 +1,10 @@
-import React from 'react';
+import style from './HomeApp.module.css'
+import SideBar from './SideBar';
 
 const HomeApp = () => {
   return (
-    <div>
-
+    <div id={style.HomeApp}>
+      <SideBar />
     </div>
   );
 }
