@@ -1,4 +1,5 @@
 import style from './HomeApp.module.css'
+import { Image } from 'react-bootstrap'
 import LogoSide from '../../assets/img/HomeApp/Feed/logoside.png'
 import userPhoto from '../../assets/img/HomeApp/Feed/userPhoto.png'
 import postImg from '../../assets/img/HomeApp/Feed/postImg.png'
@@ -10,24 +11,24 @@ const Feed = () => {
   return (
     <main id={style.Feed}>
       <div>
-        <img src={LogoSide} alt="" id={style.LogoSide} />
+        < Image src={LogoSide} alt="" id={style.LogoSide} fluid />
       </div>
       <div className={style.Post}>
         <div className={style.porfile}>
-          <img src={userPhoto} alt="" className={style.userPhoto} />
+          < Image src={userPhoto} alt="" className={style.userPhoto} fluid />
           <div className={style.userData}>
             <span className={style.userNick}>Beautyful Mouse</span>
             <span>@beautyfulmuse112</span>
           </div>
         </div>
         <div className={style.PostContent}>
-          <img src={postImg} alt="" className={style.PostImg} />
+          < Image src={postImg} alt="" className={style.PostImg} fluid />
           <div className={style.PostReaction}>
-            <img src={commentReaction} alt="" className={style.iconsReaction} />
-            <img src={heartReaction} alt="" className={style.iconsReaction} />
-            <img src={donationReaction} alt="" className={style.iconsReaction} />
+            < Image src={commentReaction} alt="" className={style.iconsReaction} fluid />
+            < Image src={heartReaction} alt="" className={style.iconsReaction} fluid />
+            < Image src={donationReaction} alt="" className={style.iconsReaction} fluid />
           </div>
-          <div>
+          <div className={style.postDescription}>
             <p className={style.postTxt}>Lorem ipsum dolor sit amet, Cum sociis natoque penatibus et magnis dis parturient. Purus faucibus ornare suspendisse sed nisi lacus sed. </p>
             <p className={style.postViewMore}>View more...</p>
           </div>
@@ -35,20 +36,20 @@ const Feed = () => {
       </div>
       <div className={style.Post}>
         <div className={style.porfile}>
-          <img src={userPhoto} alt="" className={style.userPhoto} />
+          < Image src={userPhoto} alt="" className={style.userPhoto} fluid />
           <div className={style.userData}>
             <span className={style.userNick}>Beautyful Mouse</span>
             <span>@beautyfulmuse112</span>
           </div>
         </div>
         <div className={style.PostContent}>
-          <img src={postImg} alt="" className={style.PostImg} />
+          < Image src={postImg} alt="" className={style.PostImg} fluid />
           <div className={style.PostReaction}>
-            <img src={commentReaction} alt="" className={style.iconsReaction} />
-            <img src={heartReaction} alt="" className={style.iconsReaction} />
-            <img src={donationReaction} alt="" className={style.iconsReaction} />
+            < Image src={commentReaction} alt="" className={style.iconsReaction} fluid />
+            < Image src={heartReaction} alt="" className={style.iconsReaction} fluid />
+            < Image src={donationReaction} alt="" className={style.iconsReaction} fluid />
           </div>
-          <div>
+          <div className={style.postDescription}>
             <p className={style.postTxt}>Lorem ipsum dolor sit amet, Cum sociis natoque penatibus et magnis dis parturient. Purus faucibus ornare suspendisse sed nisi lacus sed. </p>
             <p className={style.postViewMore}>View more...</p>
           </div>

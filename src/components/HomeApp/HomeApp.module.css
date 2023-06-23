@@ -27,13 +27,21 @@
   background: #ECEDF2;
 }
 
+#Feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #LogoSide {
   width: 30%;
 }
 
 .Post {
+  margin: 1rem;
+  width: 90%;
   background-color: #F9F9F9;
-  margin: 2rem;
   border-radius: 10px;
 }
 
@@ -46,7 +54,7 @@
 
 .userPhoto {
   width: 50px;
-  margin: 1rem;
+  margin: 1%;
 }
 
 
@@ -73,8 +81,7 @@
 }
 
 .PostReaction {
-  width: 200px;
-  margin-left: -460px;
+  width: 87%;
 }
 
 .iconsReaction {
@@ -82,9 +89,17 @@
   margin: 1rem;
 }
 
+.postDescription {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
 .postTxt {
   margin-top: 1rem;
-  width: 40rem;
 }
 
 .postViewMore {
@@ -93,4 +108,9 @@
 
 .postViewMore:hover {
   cursor: pointer;
+}
+
+#Suggetions {
+  border-left: 1px solid #373B5640;
+  padding-left: 2rem;
 }
