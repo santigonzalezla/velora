@@ -101,7 +101,7 @@
 }
 
 @font-face {
-  font-family: "Barlow";
+  font-family: "Barlow Black";
   src: local("Barlow"),
     url("./assets/fonts/Barlow/Barlow-Black.ttf") format("truetype");
   font-weight: 900;
@@ -131,7 +131,7 @@
 }
 
 @font-face {
-  font-family: "Barlow";
+  font-family: "Barlow Bold";
   src: local("Barlow"),
     url("./assets/fonts/Barlow/Barlow-Bold.ttf") format("truetype");
   font-weight: 700;
@@ -161,7 +161,7 @@
 }
 
 @font-face {
-  font-family: "Barlow";
+  font-family: "Barlow Medium";
   src: local("Barlow"),
     url("./assets/fonts/Barlow/Barlow-Medium.ttf") format("truetype");
   font-weight: 500;
