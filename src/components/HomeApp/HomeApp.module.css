@@ -5,7 +5,7 @@
 #SideBar {
   background-color: #F9F9F9;
   height: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +72,25 @@
   align-items: center;
 }
 
+.PostReaction {
+  width: 200px;
+  margin-left: -460px;
+}
+
+.iconsReaction {
+  width: 25px;
+  margin: 1rem;
+}
+
 .postTxt {
   margin-top: 1rem;
   width: 40rem;
+}
+
+.postViewMore {
+  color: #373B56B2;
+}
+
+.postViewMore:hover {
+  cursor: pointer;
 }
