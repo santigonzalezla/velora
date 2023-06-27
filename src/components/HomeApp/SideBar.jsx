@@ -10,19 +10,19 @@ const SideBar = () => {
   return (
     <main id={style.SideBar}>
       <div id={style.SideBarIcons}>
-        <Link>
+        <Link to={'/ViewArtist'}>
           <img src={Porfile} alt="" className={style.SideBarItem} />
         </Link>
-        <Link>
+        <Link to={'/Home'}>
           <img src={Home} alt="" className={style.SideBarItem} />
         </Link>
         <Link>
           <img src={Notification} alt="" className={style.SideBarItem} />
         </Link>
-        <Link>
+        <Link to={'/Chats'}>
           <img src={Chat} alt="" className={style.SideBarItem} />
         </Link>
-        <Link>
+        <Link to={'/Subscriptions'}>
           <img src={Subscription} alt="" className={style.SideBarItem} />
         </Link>
       </div>

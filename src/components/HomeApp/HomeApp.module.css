@@ -65,7 +65,7 @@
 }
 
 .userNick {
-  font-family: "Barlow Medium";
+  font-family: "Barlow Medium", sans-serif;
   color: #373B56;
 }
 
@@ -113,4 +113,350 @@
 #Suggetions {
   border-left: 1px solid #373B5640;
   padding-left: 2rem;
+  height: 100%;
+  background-color: #ECEDF2;
+  font-family: "Barlow", sans-serif;
+}
+
+
+.SuggetionsContent {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.SuggetionsCard {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0px;
+  margin-bottom: 1rem;
+}
+
+.SuggetionsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#ViewArtist {
+  display: flex;
+  padding: 0px;
+  background-color: #ECEDF2;
+}
+
+#ViewArtistCol {
+  display: flex;
+  flex-direction: column;
+}
+
+#ViewArtistContent {
+  color: #373B56;
+  margin-left: 6.4rem;
+  background-color: #ECEDF2;
+}
+
+.SuggetionsBar {
+  margin: 0px;
+  padding: 0px;
+}
+
+.ArtistBanner {
+  width: 100%;
+}
+
+.ArtistPhoto {
+  width: 20%;
+  margin-top: -10%;
+  margin-left: 8%;
+}
+
+.UserData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Block {
+  width: 3%;
+  height: 3%;
+}
+
+#msgBtn {
+  color: #373B56;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: #373B56 solid 1px;
+}
+
+#subBtn {
+  font-family: Barlow, sans-serif;
+  background-color: #A000FF;
+  padding: 5px 15px;
+  color: #ECEDF2;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 0px #A000FF4F;
+}
+
+#subBtn:hover {
+  cursor: pointer;
+}
+
+.porfilUser {
+  font-family: Barlow, sans-serif;
+  color: #373B56;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+#atSign {
+  color: #373B5640;
+}
+
+#Navies {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: #373B5640 1px solid;
+}
+
+#Navies a {
+  color: #373B56;
+  font-family: Barlow, sans-serif;
+}
+
+#RoomBtn {
+  color: #A000FF !important;
+}
+
+#Chats {
+  background-color: #F9F9F9;
+  height: 100vh;
+}
+
+.ChatsContainer {
+  padding-left: 6.4rem;
+  max-width: 100%;
+}
+
+.ChatsBar {
+  height: 100vh;
+  border-left: #373B5640 1px solid;
+  border-right: #373B5640 1px solid;
+}
+
+#LogoChats {
+  width: 100%;
+}
+
+#SerchUser {
+  box-shadow: 0px 0px 2px 0px #00000040 inset;
+  margin-top: 1rem;
+  border-radius: 15px;
+  background-color: #F9F9F9;
+}
+
+.UserPhoto {
+  width: 50px;
+}
+
+.UserChatData {
+  display: flex;
+  margin: 2.5rem 1.5rem;
+}
+
+.UserChatDataTxT {
+  color: #373B56;
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 0.5rem;
+  font-family: Barlow, sans-serif;
+}
+
+.UserChat {
+  background-color: #ECEDF2;
+}
+
+.OtherUser {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.chatBubble1 {
+  width: 365px;
+  background: #F9F9F9;
+  margin: 1rem 2rem;
+  border-radius: 20px 20px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #373B56;
+}
+
+.MyUser {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.chatBubble2 {
+  width: 365px;
+  background: #373B56;
+  margin: 1rem 2rem;
+  border-radius: 20px 20px 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #F9F9F9;
+}
+
+#Send {
+  width: 70%;
+  box-shadow: 0px 0px 2px 0px #00000040 inset;
+  margin-top: 1rem;
+  border-radius: 15px;
+  background-color: #F9F9F9;
+}
+
+.SendMsg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-top: #373B5640 1px solid;
+}
+
+.SendIcons {
+  width: 30px;
+  height: 30px;
+  margin: 1rem;
+}
+
+.SendIcons:hover {
+  cursor: pointer;
+}
+
+#Lives {
+  width: 100%;
+  height: 100vh;
+  background-color: #373B56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ECEDF2;
+  font-family: Inter, sans-serif;
+}
+
+#LiveVideo {
+  width: 100%;
+  background-color: #373B56;
+}
+
+.LiveChat {
+  background-color: #373B56;
+
+}
+
+.Streamer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.StreamerPhoto {
+  width: 70px;
+}
+
+.StreamerTxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0.5rem;
+}
+
+.SpectatorContainer {
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.SpectatorItem {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: #ECEDF20D 1px solid;
+  border-bottom: #ECEDF20D 1px solid;
+}
+
+.Spectator {
+  width: 25%;
+}
+
+.SpectatorTxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.LiveSend {
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  color: #373B56;
+  background:
+    linear-gradient(0deg, #ECEDF2, #ECEDF2);
+  border: 1px solid #373B56
+}
+
+#SubscriptionsContainer {
+  padding-left: 6.4rem;
+  font-family: Barlow, sans-serif;
+  color: #373B56;
+}
+
+.ArtisSub {
+  width: 10%;
+}
+
+#SubItemHead {
+  text-align: center;
+  color: #373B56;
+  background-color: #373B5640;
+}
+
+#SubItemHead th {
+  border: none;
+  font-family: Barlow-Light, sans-serif;
+}
+
+.SubItem {
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.SubItem td {
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.SubItem input {
+  background-color: #F9F9F9;
+}
+
+.SubItem input:focus {
+  background-color: #373B56;
+}
+
+.SubItem input:active {
+  background-color: #373B56 !important;
 }

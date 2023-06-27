@@ -4,6 +4,7 @@ import CarruselCompany from './CarruselCompany'
 import BenefitsCompany from './BenefitsCompany';
 import SesionsCompany from './SesionsCompany';
 import ServicesCompany from './ServicesCompany';
+import Footer from '../Footer/Footer';
 
 const Company = () => {
   return (
@@ -13,6 +14,7 @@ const Company = () => {
       <BenefitsCompany />
       <SesionsCompany />
       <ServicesCompany />
+      <Footer />
     </div>
   );
 }

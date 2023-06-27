@@ -82,3 +82,19 @@
 .ServiceCardsText {
   font-size: small;
 }
+
+.BuyService {
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.BuyButton {
+  all: unset;
+  background-color: #4F5168;
+  box-shadow: none;
+  color: #FFFFFF;
+  border-radius: 15px;
+  padding: 10px;
+  font-family: Barlow, sans-serif;
+}

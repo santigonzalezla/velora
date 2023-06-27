@@ -4,6 +4,7 @@ import CarruselArtist from './CarruselArtist'
 import BenefitsArtist from './BenefitsArtist';
 import ServicesArtist from './ServicesArtist';
 import SesionsArtist from './SesionsArtist';
+import Footer from '../Footer/Footer';
 
 const Artist = () => {
   return (
@@ -13,6 +14,7 @@ const Artist = () => {
       <BenefitsArtist />
       <SesionsArtist />
       <ServicesArtist />
+      <Footer />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import CarruselClient from "./CarruselClient";
 import Benefits from './Benefits.jsx';
 import Sesions from './Sesions';
 import Services from './Services'
+import Footer from '../Footer/Footer';
 
 const Client = () => {
   return (
@@ -13,6 +14,7 @@ const Client = () => {
       <Benefits />
       <Sesions />
       <Services />
+      <Footer />
     </div>
   );
 }
