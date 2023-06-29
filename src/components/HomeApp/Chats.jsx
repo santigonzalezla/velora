@@ -71,12 +71,12 @@ const Chats = () => {
             </section>
             <section className={style.OtherUser}>
               <div className={style.chatBubble1}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  </p>
               </div>
             </section>
             <section className={style.MyUser}>
               <div className={style.chatBubble2}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  </p>
               </div>
             </section>
             <Form className={style.SendMsg}>
@@ -84,9 +84,7 @@ const Chats = () => {
               <Image src={More} className={style.SendIcons} />
               <Form.Control
                 type="text"
-                placeholder="Send"
                 className="me-2"
-                aria-label="Send"
                 id={style.Send}
               />
               <Image src={Send} className={style.SendIcons} />

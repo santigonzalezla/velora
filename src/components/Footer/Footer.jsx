@@ -2,8 +2,8 @@ import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import style from './Footer.module.css'
 import VeloraLogo from '../../assets/img/Footer/VeloraLogo.png'
+import Translate from '../../assets/img/Footer/Translate.png'
 import Icons from '../../assets/img/Footer/Icon.png'
-
 
 const Footer = () => {
   return (
@@ -41,10 +41,13 @@ const Footer = () => {
           </Col>
 
           <Col xs='' sm='' md='' lg='' className={style.NavItem} >
-            <select className={style.Dropdown}>
-              <option value="1" className={style.Dropdown}>Spanish</option>
-              <option value="2" className={style.Dropdown}>English</option>
-            </select>
+            <div>
+              <img src={Translate} alt="" width={20} />
+              <select className={style.Dropdown}>
+                <option value="1" className={style.Dropdown}>Spanish</option>
+                <option value="2" className={style.Dropdown}>English</option>
+              </select>
+            </div>
             <Nav.Link ><img src={Icons} alt="" className={style.Icons} /></Nav.Link>
             <Nav.Link >@2023 Velora Room</Nav.Link>
           </Col>

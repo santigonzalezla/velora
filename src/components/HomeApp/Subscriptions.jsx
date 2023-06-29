@@ -29,6 +29,30 @@ const Subscriptions = () => {
               </td>
               <td>Activa</td>
             </tr>
+            <tr className={style.SubItem}>
+              <td><span><img src={Artist} alt="" className={style.ArtisSub} /> NOMBRE</span></td>
+              <td>DD/MM/AA</td>
+              <td>250USD/MES</td>
+              <td>
+                <Form.Check
+                  type="switch"
+                  id="custom-switch"
+                />
+              </td>
+              <td>Activa</td>
+            </tr>
+            <tr className={style.SubItem}>
+              <td><span><img src={Artist} alt="" className={style.ArtisSub} /> NOMBRE</span></td>
+              <td>DD/MM/AA</td>
+              <td>250USD/MES</td>
+              <td>
+                <Form.Check
+                  type="switch"
+                  id="custom-switch"
+                />
+              </td>
+              <td>Activa</td>
+            </tr>
           </tbody>
         </Table>
       </section>

@@ -11,6 +11,7 @@ import ViewArtist from '../components/HomeApp/ViewArtist';
 import Chats from '../components/HomeApp/Chats'
 import Lives from '../components/HomeApp/Lives';
 import Subscriptions from '../components/HomeApp/Subscriptions';
+import Billing from '../components/HomeApp/Billing';
 
 const RouterApp = () => {
   return (
@@ -27,6 +28,7 @@ const RouterApp = () => {
       <Route path='/Chats' element={<Chats />} />
       <Route path='/Lives' element={<Lives />} />
       <Route path='/Subscriptions' element={<Subscriptions />} />
+      <Route path='/Billing' element={<Billing />} />
     </Routes>
   );
 }

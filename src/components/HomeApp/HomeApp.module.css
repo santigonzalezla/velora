@@ -17,6 +17,10 @@
   margin: 1rem;
 }
 
+#SideBarMore {
+  text-align: center;
+}
+
 .SideBarItem {
   width: 50px;
   margin: 10px;
@@ -40,7 +44,7 @@
 
 .Post {
   margin: 1rem;
-  width: 90%;
+  width: 95%;
   background-color: #F9F9F9;
   border-radius: 10px;
 }
@@ -459,4 +463,75 @@
 
 .SubItem input:active {
   background-color: #373B56 !important;
+}
+
+#Billing {
+  background-color: #ECEDF2;
+}
+
+#BillingContainer {
+  padding-left: 6.4rem;
+  background-color: #ECEDF2;
+  height: 100vh;
+  font-family: Inter, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#BillingLogo {
+  width: 80%;
+  margin: 1rem;
+}
+
+#BillingRow {
+  display: flex;
+  justify-content: center;
+
+}
+
+.BillingItems {
+  text-align: center;
+}
+
+#UsdBilling {
+  background-color: #F9F9F9;
+  width: 30%;
+  padding: 1rem;
+  margin: 2rem;
+  height: 3.5rem;
+}
+
+#Credits {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  height: 20%;
+}
+
+#AvailableCredits {
+  width: 30%;
+  background-color: #F9F9F9;
+  padding: 1rem;
+  height: 3.5rem;
+}
+
+#CreditsBuy {
+  width: 70%;
+  padding: 1rem;
+  background-color: #A000FF;
+  color: #F9F9F9;
+  height: 3.5rem;
+}
+
+#TransactionsBilling {
+  background-color: #F9F9F9;
+  padding: 1rem;
+  font-family: Barlow, sans-serif;
+}
+
+.TransactionsRows {
+  margin: 1rem;
+  padding: 1rem;
+  border-bottom: #373B5640 1px solid;
 }

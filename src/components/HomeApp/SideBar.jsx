@@ -4,7 +4,9 @@ import Porfile from '../../assets/img/HomeApp/SideBar/Eclipse.png'
 import Home from '../../assets/img/HomeApp/SideBar/home.png'
 import Notification from '../../assets/img/HomeApp/SideBar/notification.png'
 import Chat from '../../assets/img/HomeApp/SideBar/chat.png'
+import Billing from '../../assets/img/HomeApp/SideBar/Billing.png'
 import Subscription from '../../assets/img/HomeApp/SideBar/Subscriptions.png'
+import More from '../../assets/img/HomeApp/SideBar/more.png'
 
 const SideBar = () => {
   return (
@@ -22,9 +24,15 @@ const SideBar = () => {
         <Link to={'/Chats'}>
           <img src={Chat} alt="" className={style.SideBarItem} />
         </Link>
+        <Link to={'/Billing'}>
+          <img src={Billing} alt="" className={style.SideBarItem} />
+        </Link>
         <Link to={'/Subscriptions'}>
           <img src={Subscription} alt="" className={style.SideBarItem} />
         </Link>
+      </div>
+      <div id={style.SideBarMore}>
+        <img src={More} alt="" className={style.SideBarItem} />
       </div>
     </main>
   );
