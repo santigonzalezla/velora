@@ -73,7 +73,7 @@ const Header = () => {
                 <img src={Google} alt="" className={style.icons} />
               </Modal.Footer>
             </Modal>
-            <Nav.Link className={style.NavButtons} onClick={handleShowSingUp}>Sing up</Nav.Link>
+            <Nav.Link className={style.NavButtons} onClick={handleShowSingUp}>Sign up</Nav.Link>
           </Nav>
           <Modal
             show={showSingUp}
@@ -82,7 +82,7 @@ const Header = () => {
 
           >
             <Modal.Body className={style.ModalBody}>
-              <Modal.Title id={style.ModalTitle} >Sing Up</Modal.Title>
+              <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
               <Form onSubmit={submitHandler}>
                 <Form.Group className="mb-3" controlId="name">
                   <Form.Control type="text" name='name' placeholder="Nombre" className={style.ModalInput} />
@@ -115,7 +115,7 @@ const Header = () => {
 
           >
             <Modal.Body className={style.ModalBody}>
-              <Modal.Title id={style.ModalTitle} >Sing Up</Modal.Title>
+              <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
               <Form onSubmit={submitHandler}>
                 <Form.Select aria-label="Default select example" className={style.ModalInput} >
                   <option>Seleccione su tipo de usuario</option>

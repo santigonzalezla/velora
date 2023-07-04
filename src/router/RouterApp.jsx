@@ -12,6 +12,7 @@ import Chats from '../components/HomeApp/Chats'
 import Lives from '../components/HomeApp/Lives';
 import Subscriptions from '../components/HomeApp/Subscriptions';
 import Billing from '../components/HomeApp/Billing';
+import VideoCall from '../components/HomeApp/VideoCall';
 
 const RouterApp = () => {
   return (
@@ -29,6 +30,7 @@ const RouterApp = () => {
       <Route path='/Lives' element={<Lives />} />
       <Route path='/Subscriptions' element={<Subscriptions />} />
       <Route path='/Billing' element={<Billing />} />
+      <Route path='/VideoCall' element={<VideoCall />} />
     </Routes>
   );
 }

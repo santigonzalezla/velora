@@ -12,6 +12,7 @@ const Feed = () => {
     <main id={style.Feed}>
       <div>
         < Image src={LogoSide} alt="" id={style.LogoSide} fluid />
+        <input type="text" id={style.FeedInput} />
       </div>
       <div className={style.Post}>
         <div className={style.porfile}>

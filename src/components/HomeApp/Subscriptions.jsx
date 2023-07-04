@@ -1,6 +1,6 @@
 import style from './HomeApp.module.css'
 import SideBar from './SideBar';
-import { Table, Form } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import Artist from '../../assets/img/HomeApp/Subscriptions/ArtistPhoto.png'
 
 const Subscriptions = () => {
@@ -22,11 +22,13 @@ const Subscriptions = () => {
               <td>DD/MM/AA</td>
               <td>250USD/MES</td>
               <td>
-                <Form.Check
-                  type="switch"
-                  id="custom-switch"
-                />
-              </td>
+                <label className={style.toggleSwitch}>
+                  <input type="checkbox" />
+                  <div className={style.toggleSwitchBackground}>
+                    <div className={style.toggleSwitchHandle}></div>
+                  </div>
+                </label>
+              </td >
               <td>Activa</td>
             </tr>
             <tr className={style.SubItem}>
@@ -34,11 +36,13 @@ const Subscriptions = () => {
               <td>DD/MM/AA</td>
               <td>250USD/MES</td>
               <td>
-                <Form.Check
-                  type="switch"
-                  id="custom-switch"
-                />
-              </td>
+                <label className={style.toggleSwitch}>
+                  <input type="checkbox" />
+                  <div className={style.toggleSwitchBackground}>
+                    <div className={style.toggleSwitchHandle}></div>
+                  </div>
+                </label>
+              </td >
               <td>Activa</td>
             </tr>
             <tr className={style.SubItem}>
@@ -46,17 +50,19 @@ const Subscriptions = () => {
               <td>DD/MM/AA</td>
               <td>250USD/MES</td>
               <td>
-                <Form.Check
-                  type="switch"
-                  id="custom-switch"
-                />
-              </td>
+                <label className={style.toggleSwitch}>
+                  <input type="checkbox" />
+                  <div className={style.toggleSwitchBackground}>
+                    <div className={style.toggleSwitchHandle}></div>
+                  </div>
+                </label>
+              </ td >
               <td>Activa</td>
             </tr>
           </tbody>
         </Table>
       </section>
-    </div>
+    </div >
   );
 }
 
