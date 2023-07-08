@@ -5,9 +5,9 @@ import style from './Home.module.css'
 const Carrusel = () => {
   return (
     <Carousel>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselImg}
           alt="First slide"
         />
@@ -17,9 +17,9 @@ const Carrusel = () => {
           <button className={style.singUpBtn}>Sing up</button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselImg}
           alt="Second slide"
         />
@@ -29,9 +29,9 @@ const Carrusel = () => {
           <button className={style.singUpBtn}>Sing up</button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselImg}
           alt="Third slide"
         />

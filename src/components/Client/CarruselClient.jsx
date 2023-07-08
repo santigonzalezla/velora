@@ -5,9 +5,9 @@ import CarruselClientImg from '../../assets/img/Client/CarruselClient.png';
 const CarruselClient = () => {
   return (
     <Carousel>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselClientImg}
           alt="First slide"
         />
@@ -17,9 +17,9 @@ const CarruselClient = () => {
           <button className={style.singUpBtn}>Sing up</button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselClientImg}
           alt="Second slide"
         />
@@ -29,9 +29,9 @@ const CarruselClient = () => {
           <button className={style.singUpBtn}>Sing up</button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselClientImg}
           alt="Third slide"
         />
