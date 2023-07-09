@@ -42,7 +42,7 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Inter-Light";
   src: local("Inter"),
     url("./assets/fonts/Inter/static/Inter-Light.ttf") format("truetype");
   font-weight: 300;
@@ -101,7 +101,7 @@
 }
 
 @font-face {
-  font-family: "Barlow";
+  font-family: "Barlow Black";
   src: local("Barlow"),
     url("./assets/fonts/Barlow/Barlow-Black.ttf") format("truetype");
   font-weight: 900;
@@ -131,7 +131,7 @@
 }
 
 @font-face {
-  font-family: "Barlow";
+  font-family: "Barlow Bold";
   src: local("Barlow"),
     url("./assets/fonts/Barlow/Barlow-Bold.ttf") format("truetype");
   font-weight: 700;
@@ -146,7 +146,7 @@
 }
 
 @font-face {
-  font-family: "Barlow";
+  font-family: "Barlow-SemiBold";
   src: local("Barlow"),
     url("./assets/fonts/Barlow/Barlow-SemiBold.ttf") format("truetype");
   font-weight: 600;
@@ -161,7 +161,7 @@
 }
 
 @font-face {
-  font-family: "Barlow";
+  font-family: "Barlow-Medium";
   src: local("Barlow"),
     url("./assets/fonts/Barlow/Barlow-Medium.ttf") format("truetype");
   font-weight: 500;
@@ -191,7 +191,7 @@
 }
 
 @font-face {
-  font-family: "Barlow";
+  font-family: "Barlow-Light";
   src: local("Barlow"),
     url("./assets/fonts/Barlow/Barlow-Light.ttf") format("truetype");
   font-weight: 300;

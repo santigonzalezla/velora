@@ -31,7 +31,9 @@ const Hero = () => {
           <Col sm="12" md="6" lg="6" xl="6">
             <h1>Be an Artist</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
-            <button className={style.singUpBtn}>Ver Más</button>
+            <Link to='/Artist' >
+              <button className={style.singUpBtn}>Ver Más</button>
+            </Link>
           </Col>
         </Row>
       </Container>
@@ -40,7 +42,9 @@ const Hero = () => {
           <Col sm="12" md="6" lg="6" xl="6">
             <h1>¿Quieres Pautar con Nosotros?</h1>
             <p>Accede a nuestro catálogo de artistas y descubre lo que ofrecemos para tu negocio</p>
-            <button className={style.singUpBtn}>Ver Más</button>
+            <Link to='/Company'>
+              <button className={style.singUpBtn}>Ver Más</button>
+            </Link>
           </Col>
           <Col sm="12" md="6" lg="6" xl="6">
             <img src={UsImg} alt="" id={style.ImgUs} />
