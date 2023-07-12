@@ -38,7 +38,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px;
+  margin-bottom: 4rem;
 }
+
+@media (min-width: 300px) and (max-width: 550px) {
+  .CardCol {
+    margin: 40px;
+  }
+}
+
 
 .Cards {
   background-color: #4F5168;
@@ -91,8 +100,8 @@
 }
 
 @media (min-width: 300px) and (max-width: 550px) {
-  #Home {
-    margin-top: 25%;
+  #Client {
+    margin-top: 4rem;
   }
 
   .Carousel {

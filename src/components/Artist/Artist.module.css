@@ -1,5 +1,5 @@
 #Artist {
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   font-family: "Barlow", sans-serif;
   color: #4F5168;
   background-color: #F9F9F9;
@@ -30,15 +30,22 @@
   padding: 1rem;
 }
 
+#Services {
+  margin-bottom: 4rem;
+}
+
 #BenefitsContainer {
   width: 100%;
 }
+
 
 .BenefitsRow {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px;
 }
+
 
 .Cards {
   background-color: #4F5168;
@@ -91,8 +98,12 @@
 }
 
 @media (min-width: 300px) and (max-width: 550px) {
-  #Home {
-    margin-top: 25%;
+  #Artist {
+    margin-top: 4.5rem;
+  }
+
+  .CardCol {
+    margin: 40px;
   }
 
   .Carousel {

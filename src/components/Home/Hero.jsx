@@ -7,14 +7,14 @@ import UsImg from '../../assets/img/Home/Us.png'
 
 const Hero = () => {
   return (
-    <div>
+    <div id={style.HeaderBackground}>
       <Container>
         <Row className={style.Hero}>
           <Col sm="12" md="4" lg="4" xl="4">
             <h1>Find what you want</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
             <Link to='/Client'>
-              <button className={style.singUpBtn} >Sing up</button>
+              <button className={style.singUpBtn} >Ver mas</button>
             </Link>
           </Col>
           <Col sm="12" md="8" lg="8" xl="8">

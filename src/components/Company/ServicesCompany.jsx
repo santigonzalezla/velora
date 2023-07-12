@@ -10,7 +10,7 @@ const ServicesCompany = () => {
       <Container id={style.Benefits}>
         <Row className={style.BenefitsRow}>
           <h1>Servicio: Artistas Velora</h1>
-          <Col>
+          <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
@@ -21,7 +21,7 @@ const ServicesCompany = () => {
               <Card.Img variant="bottom" src={ServicesImg3} />
             </Card>
           </Col>
-          <Col>
+          <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
@@ -32,7 +32,7 @@ const ServicesCompany = () => {
               <Card.Img variant="bottom" src={ServicesImg3} />
             </Card>
           </Col>
-          <Col>
+          <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
@@ -43,7 +43,7 @@ const ServicesCompany = () => {
               <Card.Img variant="bottom" src={ServicesImg4} />
             </Card>
           </Col>
-          <Col>
+          <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>
@@ -62,7 +62,7 @@ const ServicesCompany = () => {
       <Container id={style.Benefits}>
         <Row className={style.BenefitsRow}>
           <h1>Servicio: Promueve tu establecimiento</h1>
-          <Col>
+          <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
@@ -73,7 +73,7 @@ const ServicesCompany = () => {
               <Card.Img variant="bottom" src={ServicesImg3} />
             </Card>
           </Col>
-          <Col>
+          <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
@@ -84,7 +84,7 @@ const ServicesCompany = () => {
               <Card.Img variant="bottom" src={ServicesImg3} />
             </Card>
           </Col>
-          <Col>
+          <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>
@@ -95,7 +95,7 @@ const ServicesCompany = () => {
               <Card.Img variant="bottom" src={ServicesImg4} />
             </Card>
           </Col>
-          <Col>
+          <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
                 <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>

@@ -30,39 +30,75 @@ const Header = () => {
     e.preventDefault();
   }
   return (
-    <Navbar className={style.Header} fixed="top">
-      <Container>
-        <Navbar.Brand as={Link} to={'/'}>
-          <img
-            src={Logo}
-            width="370"
-            height="50"
-            className="d-inline-block align-top"
-            alt="React Bootstrap logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="justify-content-end">
-          <Nav className="justify-content-end">
-            <Nav.Link className={style.NavButtons} onClick={handleShow}>Log in
-            </Nav.Link>
+    <div>
+      <Navbar className={style.Header} fixed='top'>
+        <Container>
+          <Navbar.Brand as={Link} to={'/'}>
+            <img
+              src={Logo}
+              width="370"
+              height="50"
+              id={style.imgHeader}
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse className="justify-content-end">
+            <Nav className="justify-content-end">
+              <Nav.Link className={style.NavButtons} onClick={handleShow}>Log in
+              </Nav.Link>
+              <Modal
+                show={show}
+                onHide={handleClose}
+                keyboard={false}
+
+              >
+                <Modal.Body className={style.ModalBody}>
+                  <Modal.Title id={style.ModalTitle} >Login</Modal.Title>
+                  <Form onSubmit={submitHandler}>
+                    <Form.Group className="mb-3" controlId="username">
+                      <Form.Control type="user" name='username' placeholder="nombre de Usuario" className={style.ModalInput} />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="password">
+                      <Form.Control type="password" name='password' placeholder="Contraseña" className={style.ModalInput} />
+                    </Form.Group>
+                    <Button type="submit" className={style.ModalButton}>
+                      Iniciar Sesión
+                    </Button>
+                    <p>O Ingresa con:</p>
+                  </Form>
+                </Modal.Body>
+                <Modal.Footer className={style.Modal} id={style.ModalFooter}>
+                  <img src={Twitter} alt="" className={style.icons} />
+                  <img src={Facebook} alt="" className={style.icons} />
+                  <img src={Google} alt="" className={style.icons} />
+                </Modal.Footer>
+              </Modal>
+              <Nav.Link className={style.NavButtons} onClick={handleShowSingUp}>Sign up</Nav.Link>
+            </Nav>
             <Modal
-              show={show}
-              onHide={handleClose}
+              show={showSingUp}
+              onHide={handleCloseSingUp}
               keyboard={false}
 
             >
               <Modal.Body className={style.ModalBody}>
-                <Modal.Title id={style.ModalTitle} >Login</Modal.Title>
+                <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
                 <Form onSubmit={submitHandler}>
-                  <Form.Group className="mb-3" controlId="username">
-                    <Form.Control type="user" name='username' placeholder="nombre de Usuario" className={style.ModalInput} />
+                  <Form.Group className="mb-3" controlId="name">
+                    <Form.Control type="text" name='name' placeholder="Nombre" className={style.ModalInput} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="lastname">
+                    <Form.Control type="text" name='lastname' placeholder="Apellido" className={style.ModalInput} />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="password">
                     <Form.Control type="password" name='password' placeholder="Contraseña" className={style.ModalInput} />
                   </Form.Group>
-                  <Button type="submit" className={style.ModalButton}>
-                    Iniciar Sesión
+                  <Form.Group className="mb-3" controlId="password">
+                    <Form.Control type="password" name='password' placeholder="Confirme su contraseña" className={style.ModalInput} />
+                  </Form.Group>
+                  <Button type="submit" className={style.ModalButton} onClick={handleShowRegister}>
+                    Registrarse
                   </Button>
                   <p>O Ingresa con:</p>
                 </Form>
@@ -73,84 +109,50 @@ const Header = () => {
                 <img src={Google} alt="" className={style.icons} />
               </Modal.Footer>
             </Modal>
-            <Nav.Link className={style.NavButtons} onClick={handleShowSingUp}>Sign up</Nav.Link>
-          </Nav>
-          <Modal
-            show={showSingUp}
-            onHide={handleCloseSingUp}
-            keyboard={false}
+            <Modal
+              show={showRegister}
+              onHide={handleCloseRegister}
+              keyboard={false}
 
-          >
-            <Modal.Body className={style.ModalBody}>
-              <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
-              <Form onSubmit={submitHandler}>
-                <Form.Group className="mb-3" controlId="name">
-                  <Form.Control type="text" name='name' placeholder="Nombre" className={style.ModalInput} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="lastname">
-                  <Form.Control type="text" name='lastname' placeholder="Apellido" className={style.ModalInput} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="password">
-                  <Form.Control type="password" name='password' placeholder="Contraseña" className={style.ModalInput} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="password">
-                  <Form.Control type="password" name='password' placeholder="Confirme su contraseña" className={style.ModalInput} />
-                </Form.Group>
-                <Button type="submit" className={style.ModalButton} onClick={handleShowRegister}>
-                  Registrarse
-                </Button>
-                <p>O Ingresa con:</p>
-              </Form>
-            </Modal.Body>
-            <Modal.Footer className={style.Modal} id={style.ModalFooter}>
-              <img src={Twitter} alt="" className={style.icons} />
-              <img src={Facebook} alt="" className={style.icons} />
-              <img src={Google} alt="" className={style.icons} />
-            </Modal.Footer>
-          </Modal>
-          <Modal
-            show={showRegister}
-            onHide={handleCloseRegister}
-            keyboard={false}
-
-          >
-            <Modal.Body className={style.ModalBody}>
-              <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
-              <Form onSubmit={submitHandler}>
-                <Form.Select aria-label="Default select example" className={style.ModalInput} >
-                  <option>Seleccione su tipo de usuario</option>
-                  <option value="1">Artista</option>
-                  <option value="2">Cliente</option>
-                  <option value="3">Empresa</option>
-                </Form.Select>
-                <Form.Group className={style.FormGroup} >
-                  <Form.Control type="text" name='contry' placeholder="Pais" className={style.FormGroupInput} />
-                  <Form.Control type="text" name='city' placeholder="Ciudad" className={style.FormGroupInput} />
-                </Form.Group>
-                <Form.Group className={style.FormGroup} controlId="number">
-                  <Form.Control type="text" name='city' placeholder="+57" className={style.FormGroupInput} />
-                  <Form.Control type="text" name='number' placeholder="Numero de celular" className={style.FormGroupInput} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="user">
-                  <Form.Control type="text" name='user' placeholder="Nombre de usuario" className={style.ModalInput} />
-                </Form.Group>
-                <Form.Group className={style.FormGroup} controlId="date">
-                  <label>Fecha de nacimiento</label>
-                  <Form.Control type="date" name='date' className={style.FormGroupInput} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="user">
-                  <p>Preferencias de contenido</p>
-                  <Form.Control type="text" name='user' placeholder="Añadir" className={style.FormGroupInput} />
-                </Form.Group>
-                <Button type="submit" className={style.ModalButton}>
-                  Finalizar
-                </Button>
-              </Form>
-            </Modal.Body>
-          </Modal>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            >
+              <Modal.Body className={style.ModalBody}>
+                <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
+                <Form onSubmit={submitHandler}>
+                  <Form.Select aria-label="Default select example" className={style.ModalInput} >
+                    <option>Seleccione su tipo de usuario</option>
+                    <option value="1">Artista</option>
+                    <option value="2">Cliente</option>
+                    <option value="3">Empresa</option>
+                  </Form.Select>
+                  <Form.Group className={style.FormGroup} >
+                    <Form.Control type="text" name='contry' placeholder="Pais" className={style.FormGroupInput} />
+                    <Form.Control type="text" name='city' placeholder="Ciudad" className={style.FormGroupInput} />
+                  </Form.Group>
+                  <Form.Group className={style.FormGroup} controlId="number">
+                    <Form.Control type="text" name='city' placeholder="+57" className={style.FormGroupInput} />
+                    <Form.Control type="text" name='number' placeholder="Numero de celular" className={style.FormGroupInput} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="user">
+                    <Form.Control type="text" name='user' placeholder="Nombre de usuario" className={style.ModalInput} />
+                  </Form.Group>
+                  <Form.Group className={style.FormGroup} controlId="date">
+                    <label>Fecha de nacimiento</label>
+                    <Form.Control type="date" name='date' className={style.FormGroupInput} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="user">
+                    <p>Preferencias de contenido</p>
+                    <Form.Control type="text" name='user' placeholder="Añadir" className={style.FormGroupInput} />
+                  </Form.Group>
+                  <Button type="submit" className={style.ModalButton}>
+                    Finalizar
+                  </Button>
+                </Form>
+              </Modal.Body>
+            </Modal>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   );
 }
 
