@@ -14,7 +14,7 @@ const CarruselClient = () => {
         <Carousel.Caption className={style.Caption}>
           <h1>Lorem Ipsum</h1>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <button className={style.singUpBtn}>Sing up</button>
+          <button className={style.singUpBtn}>Sign up</button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={style.Carousel}>
@@ -26,7 +26,7 @@ const CarruselClient = () => {
         <Carousel.Caption className={style.Caption}>
           <h1>Lorem Ipsum</h1>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <button className={style.singUpBtn}>Sing up</button>
+          <button className={style.singUpBtn}>Sign up</button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={style.Carousel}>
@@ -38,7 +38,7 @@ const CarruselClient = () => {
         <Carousel.Caption className={style.Caption}>
           <h1>Lorem Ipsum</h1>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <button className={style.singUpBtn}>Sing up</button>
+          <button className={style.singUpBtn}>Sign up</button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
