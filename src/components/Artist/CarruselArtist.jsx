@@ -3,6 +3,7 @@ import style from './Artist.module.css'
 import CarruselArtistImg from '../../assets/img/Artist/CarruselArtistImg.png'
 
 const CarruselArtist = () => {
+
   return (
     <Carousel>
       <Carousel.Item className={style.Carousel}>
