@@ -7,7 +7,7 @@ const BenefitsArtist = () => {
       <Container id={style.Benefits}>
         <Row className={style.BenefitsRow}>
           <h1>Beneficios</h1>
-          <Col >
+          <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -17,7 +17,7 @@ const BenefitsArtist = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -27,7 +27,7 @@ const BenefitsArtist = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -37,7 +37,7 @@ const BenefitsArtist = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>

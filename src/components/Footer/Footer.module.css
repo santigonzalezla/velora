@@ -86,3 +86,15 @@
   margin: 1rem;
   font-family: Barlow, sans-serif;
 }
+
+@media (min-width:350px) and (max-width: 550px) {
+  #Brand {
+    width: 100px;
+  }
+
+  .NavItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

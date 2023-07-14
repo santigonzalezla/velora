@@ -10,9 +10,10 @@ const Footer = () => {
     <Navbar expand="lg" id={style.Footer}>
       <Container>
         <Row>
-          <Col xs='' sm='' md='2' lg=''>
-            <Navbar.Brand as={Link} to='/' id={style.Brand}>
+          <Col xs='' sm='' md='2' lg='' className={style.NavItem}>
+            <Navbar.Brand as={Link} to='/' >
               <img
+                id={style.Brand}
                 src={VeloraLogo}
                 alt="React Bootstrap logo"
               />

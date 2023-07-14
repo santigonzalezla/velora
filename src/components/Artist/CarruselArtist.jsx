@@ -5,9 +5,9 @@ import CarruselArtistImg from '../../assets/img/Artist/CarruselArtistImg.png'
 const CarruselArtist = () => {
   return (
     <Carousel>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselArtistImg}
           alt="First slide"
         />
@@ -17,9 +17,9 @@ const CarruselArtist = () => {
           <button className={style.singUpBtn}>Sing up</button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselArtistImg}
           alt="Second slide"
         />
@@ -29,9 +29,9 @@ const CarruselArtist = () => {
           <button className={style.singUpBtn}>Sing up</button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className={style.Carousel}>
         <img
-          className="d-block w-100"
+          className={style.ImgCarrusel}
           src={CarruselArtistImg}
           alt="Third slide"
         />

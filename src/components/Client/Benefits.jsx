@@ -5,9 +5,9 @@ const Benefits = () => {
   return (
     <div id={style.Benefits}>
       <Container id={style.Benefits}>
-        <Row className={style.BenefitsRow}>
+        <Row>
           <h1>Beneficios</h1>
-          <Col >
+          <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -17,7 +17,7 @@ const Benefits = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -27,7 +27,7 @@ const Benefits = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>
@@ -37,7 +37,7 @@ const Benefits = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
+          <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
                 <Card.Title>Lorem ipsum</Card.Title>

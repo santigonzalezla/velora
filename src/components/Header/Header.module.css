@@ -1,5 +1,11 @@
 .Header {
   background-color: #373B56;
+  height: 4.5rem;
+}
+
+#HeaderBackground {
+  height: 4.5rem;
+  background-color: #A000FF;
 }
 
 .NavButtons {
@@ -74,4 +80,11 @@
 
 .icons:hover {
   cursor: pointer;
+}
+
+@media (min-width:300px) and (max-width: 550px) {
+  #imgHeader {
+    width: 150px;
+    height: 20px;
+  }
 }
