@@ -128,7 +128,7 @@
 
   .ImgCarrusel {
     width: 100% !important;
-    height: 100vh !important;
+    object-fit: cover;
   }
 
   .Caption {

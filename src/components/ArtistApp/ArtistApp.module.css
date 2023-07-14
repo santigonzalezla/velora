@@ -1,0 +1,23 @@
+#SideBar {
+  background-color: #F9F9F9;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#SideBarIcons {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+#SideBarMore {
+  text-align: center;
+}
+
+.SideBarItem {
+  width: 50px;
+  margin: 10px;
+}
