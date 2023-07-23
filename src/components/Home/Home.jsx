@@ -2,10 +2,10 @@ import Carrusel from "./Carrusel";
 import Hero from "./Hero";
 import style from './Home.module.css'
 
-const Home = () => {
+const Home = ({handleSignIn}) => {
   return (
     <div id={style.Home}>
-      <Carrusel />
+      <Carrusel handleSignIn={handleSignIn}/>
       <Hero />
     </div>
   );
