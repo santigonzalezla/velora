@@ -14,7 +14,7 @@ import Subscriptions from '../components/HomeApp/Subscriptions';
 import Billing from '../components/HomeApp/Billing';
 import VideoCall from '../components/HomeApp/VideoCall';
 import ArtistApp from '../components/ArtistApp/ArtistApp';
-
+import ArtstChats from '../components/ArtistApp/ArtistChats'
 const RouterApp = () => {
   return (
     <Routes>
@@ -33,6 +33,7 @@ const RouterApp = () => {
       <Route path='/Billing' element={<Billing />} />
       <Route path='/VideoCall' element={<VideoCall />} />
       <Route path='/ArtistApp' element={<ArtistApp />} />
+      <Route path='/ArtstChats' element={<ArtstChats />} />
     </Routes>
   );
 }
