@@ -6,6 +6,7 @@ import User from '../../assets/img/HomeApp/Chats/User.png'
 import Send from '../../assets/img/HomeApp/Chats/Send.png'
 import More from '../../assets/img/HomeApp/Chats/More.png'
 import Video from '../../assets/img/HomeApp/Chats/Video.png'
+import { Link } from 'react-router-dom';
 
 const ArtistChats = () => {
   return (
@@ -22,13 +23,15 @@ const ArtistChats = () => {
               aria-label="Search"
               id={style.SerchUser}
             />
-            <section className={style.UserChatData} >
-              <Image src={User} fluid className={style.UserPhoto} />
-              <div className={style.UserChatDataTxT}>
-                <span>Beautiful Mouse</span>
-                <span>@beautifulmouse112</span>
-              </div>
-            </section>
+            <Link to={'/ClientPorfile'}>
+              <section className={style.UserChatData} >
+                <Image src={User} fluid className={style.UserPhoto} />
+                <div className={style.UserChatDataTxT}>
+                  <span>Beautiful Mouse</span>
+                  <span>@beautifulmouse112</span>
+                </div>
+              </section>
+            </Link>
             <section className={style.UserChatData} >
               <Image src={User} fluid className={style.UserPhoto} />
               <div className={style.UserChatDataTxT}>

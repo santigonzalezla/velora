@@ -6,6 +6,7 @@ import postImg from '../../assets/img/HomeApp/Feed/postImg.png'
 import commentReaction from '../../assets/img/HomeApp/Feed/commentReaction.png'
 import heartReaction from '../../assets/img/HomeApp/Feed/heartReaction.png'
 import donationReaction from '../../assets/img/HomeApp/Feed/donationReaction.png'
+import { Link } from 'react-router-dom'
 
 const Feed = () => {
   return (
@@ -16,7 +17,9 @@ const Feed = () => {
       </div>
       <div className={style.Post}>
         <div className={style.porfile}>
-          < Image src={userPhoto} alt="" className={style.userPhoto} fluid />
+          <Link to={'/ViewArtist'}>
+            < Image src={userPhoto} alt="" className={style.userPhoto} fluid />
+          </Link>
           <div className={style.userData}>
             <span className={style.userNick}>Beautyful Mouse</span>
             <span>@beautyfulmuse112</span>

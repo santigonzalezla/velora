@@ -12,9 +12,7 @@ const SideBar = () => {
   return (
     <main id={style.SideBar}>
       <div id={style.SideBarIcons}>
-        <Link to={'/ViewArtist'}>
-          <img src={Porfile} alt="" className={style.SideBarItem} />
-        </Link>
+        <img src={Porfile} alt="" className={style.SideBarItem} />
         <Link to={'/Home'}>
           <img src={Home} alt="" className={style.SideBarItem} />
         </Link>

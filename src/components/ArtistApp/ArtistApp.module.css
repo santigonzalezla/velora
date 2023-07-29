@@ -230,3 +230,155 @@
 .SendIcons:hover {
   cursor: pointer;
 }
+
+#ViewArtistCol {
+  display: flex;
+  flex-direction: column;
+}
+
+#ViewArtistContent {
+  color: #373B56;
+  margin-left: 6.4rem;
+  background-color: #ECEDF2;
+}
+
+.SuggetionsBar {
+  margin: 0px;
+  padding: 0px;
+}
+
+.ArtistBanner {
+  width: 100%;
+}
+
+.ArtistPhoto {
+  width: 20%;
+  margin-top: -10%;
+  margin-left: 8%;
+}
+
+.UserData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#LocationTxt {
+  font-family: Barlow, sans-serif;
+  color: #373B5640;
+}
+
+#Location {
+  width: 30px;
+}
+
+#BtnOptions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#Block {
+  width: 10%;
+  height: 10%;
+}
+
+#msgBtn {
+  color: #373B56;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: #373B56 solid 1px;
+}
+
+#subBtn {
+  font-family: Barlow, sans-serif;
+  background-color: #A000FF;
+  padding: 5px 15px;
+  color: #ECEDF2;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 0px #A000FF4F;
+}
+
+#subBtn:hover {
+  cursor: pointer;
+}
+
+.porfilUser {
+  font-family: Barlow, sans-serif;
+  color: #373B56;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+#Review {
+  color: #373B5640;
+}
+
+.Nums {
+  color: #373B56;
+}
+
+#Subs {
+  color: #373B5640;
+  padding-right: 0.5rem;
+  border-right: 1px solid #373B5640;
+  margin-right: 0.5rem;
+}
+
+#Rev {
+  color: #373B5640;
+  padding-right: 0.5rem;
+  border-right: 1px solid #373B5640;
+  margin-right: 0.5rem;
+}
+
+#atSign {
+  color: #373B5640;
+}
+
+#Navies {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: #373B5640 1px solid;
+}
+
+#Navies a {
+  color: #373B56;
+  font-family: Barlow, sans-serif;
+}
+
+#RoomBtn {
+  color: #A000FF !important;
+}
+
+.PostTittle {
+  font-size: small;
+  color: #373B56;
+}
+
+.PostInput {
+  width: 100%;
+  border: none;
+}
+
+#ArtistDashboard {
+  width: 90%;
+}
+
+.Head {
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+#LogoDashboard {
+  width: 350px;
+}
