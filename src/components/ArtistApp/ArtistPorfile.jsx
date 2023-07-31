@@ -1,5 +1,5 @@
 import style from './ArtistApp.module.css'
-import { Image, Row, Col, Nav, Container, Modal } from 'react-bootstrap';
+import { Image, Row, Col, Nav, Container, Modal, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import SideBarArtist from './SideBarArtist';
 import SuggetionsArtist from './SuggetionsArtist';
@@ -8,6 +8,7 @@ import Photo from '../../assets/img/HomeApp/ViewArtist/ArtistPhoto.png'
 import Location from '../../assets/img/HomeApp/ViewArtist/Location.png'
 import Block from '../../assets/img/HomeApp/ViewArtist/Block.png'
 import Star from '../../assets/img/HomeApp/ViewArtist/Star.png'
+import AddMedia from '../../assets/img/ArtistApp/ArtistPorfile/addmedia.png'
 import FeedArtist from './FeedArtist'
 
 const ArtistPorfile = () => {
@@ -41,9 +42,15 @@ const ArtistPorfile = () => {
                   </Modal.Header>
                   <Modal.Body>
                     <input className={style.PostInput} />
+                    <Form.Select id={style.SelectView}>
+                      <option>¿Quién puede ver?</option>
+                      <option value="1">Todos</option>
+                      <option value="2">Solo Clientes Premium</option>
+                    </Form.Select>
                   </Modal.Body>
-                  <Modal.Footer>
-                    publicar
+                  <Modal.Footer id={style.modalFooter}>
+                    <img src={AddMedia} width={20} />
+                    <p>Publicar</p>
                   </Modal.Footer>
                 </Modal>
               </section>

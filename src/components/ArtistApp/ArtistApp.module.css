@@ -364,6 +364,18 @@
   border: none;
 }
 
+#SelectView {
+  border: none;
+  padding: 1px;
+  width: 190px;
+}
+
+#modalFooter {
+  display: flex;
+  justify-content: space-between;
+  color: #A000FF;
+}
+
 #ArtistDashboard {
   width: 90%;
 }
