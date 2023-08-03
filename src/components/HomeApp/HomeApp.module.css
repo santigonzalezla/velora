@@ -26,6 +26,43 @@
   margin: 10px;
 }
 
+#ModalImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ModalForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ModalInput {
+  display: flex;
+  justify-content: space-around;
+}
+
+#CountryInput {
+  width: 100px;
+}
+
+#CityInput {
+  width: 100px;
+}
+
+#ModalBtnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#ModalBtn {
+  width: 200px;
+  background-color: #A000FF;
+  border: none;
+}
+
 #ContentHomeApp {
   margin-left: 6.4rem;
   background: #ECEDF2;

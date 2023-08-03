@@ -15,6 +15,10 @@ import Billing from '../components/HomeApp/Billing';
 import VideoCall from '../components/HomeApp/VideoCall';
 import ArtistApp from '../components/ArtistApp/ArtistApp';
 import ArtstChats from '../components/ArtistApp/ArtistChats'
+import ArtistPorfile from '../components/ArtistApp/ArtistPorfile'
+import ClientPorfile from '../components/ArtistApp/ClientPorfile';
+import ArtistDashboard from '../components/ArtistApp/ArtistDashboard'
+
 const RouterApp = () => {
   return (
     <Routes>
@@ -34,6 +38,9 @@ const RouterApp = () => {
       <Route path='/VideoCall' element={<VideoCall />} />
       <Route path='/ArtistApp' element={<ArtistApp />} />
       <Route path='/ArtstChats' element={<ArtstChats />} />
+      <Route path='/ArtistPorfile' element={<ArtistPorfile />} />
+      <Route path='/ClientPorfile' element={<ClientPorfile />} />
+      <Route path='/ArtistDashboard' element={<ArtistDashboard />} />
     </Routes>
   );
 }

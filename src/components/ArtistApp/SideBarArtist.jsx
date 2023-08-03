@@ -12,7 +12,7 @@ const SideBarArtist = () => {
   return (
     <main id={style.SideBar}>
       <div id={style.SideBarIcons}>
-        <Link to={'/ViewArtist'}>
+        <Link to={'/ArtistPorfile'}>
           <img src={Porfile} alt="" className={style.SideBarItem} />
         </Link>
         <Link to={'/ArtistApp'}>
