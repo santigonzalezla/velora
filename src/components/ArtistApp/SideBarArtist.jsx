@@ -31,7 +31,7 @@ const SideBarArtist = () => {
         <Link>
           <img src={Notification} alt="" className={style.SideBarItem} />
         </Link>
-        <Link to={'/Chats'}>
+        <Link to={'/ArtstChats'}>
           <img src={Chat} alt="" className={style.SideBarItem} />
         </Link>
         <Link to={'/Billing'}>
