@@ -1,7 +1,7 @@
 import style from './HomeApp.module.css'
 import { Link } from 'react-router-dom';
-import { Button, Modal, Nav, Form } from 'react-bootstrap';
-import { useState } from 'react';
+import { Button, Modal, Nav, Form, Overlay } from 'react-bootstrap';
+import { useState, useRef } from 'react';
 import Porfile from '../../assets/img/HomeApp/SideBar/Eclipse.png'
 import User from '../../assets/img/HomeApp/SideBar/User.png'
 import Home from '../../assets/img/HomeApp/SideBar/home.png'
@@ -10,11 +10,20 @@ import Chat from '../../assets/img/HomeApp/SideBar/chat.png'
 import Billing from '../../assets/img/HomeApp/SideBar/Billing.png'
 import Subscription from '../../assets/img/HomeApp/SideBar/Subscriptions.png'
 import More from '../../assets/img/HomeApp/SideBar/more.png'
+import Settings from '../../assets/img/HomeApp/SideBar/settings.png'
+import Transactions from '../../assets/img/HomeApp/SideBar/transactions.png'
+import Suports from '../../assets/img/HomeApp/SideBar/suports.png'
+import Logout from '../../assets/img/HomeApp/SideBar/logout.png'
 
 const SideBar = () => {
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [overlay, setOverlay] = useState(false);
+  const target = useRef(null);
+
   return (
     <main id={style.SideBar}>
       <div id={style.SideBarIcons}>
@@ -96,9 +105,49 @@ const SideBar = () => {
           <img src={Subscription} alt="" className={style.SideBarItem} />
         </Link>
       </div>
-      <div id={style.SideBarMore}>
+      <div id={style.SideBarMore} ref={target} onClick={() => setOverlay(!overlay)}>
         <img src={More} alt="" className={style.SideBarItem} />
-      </div>
+      </div >
+      <Overlay target={target.current} show={overlay} placement="right">
+        {({
+          placement: _placement,
+          arrowProps: _arrowProps,
+          show: _show,
+          popper: _popper,
+          hasDoneInitialMeasure: _hasDoneInitialMeasure,
+          ...props
+        }) => (
+          <div
+            id={style.Overlay}
+            {...props}
+            style={{
+              position: 'absolute',
+              backgroundColor: '#F9F9F9',
+              padding: '2px 10px',
+              color: '#373B56',
+              borderRadius: 5,
+              ...props.style,
+            }}
+          >
+            <div className={style.overlayItem}>
+              <img src={Settings} alt="" className={style.iconsOverlay} />
+              <p>Configuración</p>
+            </div>
+            <div className={style.overlayItem}>
+              <img src={Transactions} alt="" className={style.iconsOverlay} />
+              <p>Transacciones</p>
+            </div>
+            <div className={style.overlayItem}>
+              <img src={Suports} alt="" className={style.iconsOverlay} />
+              <p>Soporte</p>
+            </div>
+            <div className={style.overlayItem}>
+              <img src={Logout} alt="" className={style.iconsOverlay} />
+              <p>Cerrar Sesión</p>
+            </div>
+          </div>
+        )}
+      </Overlay>
     </main >
   );
 }
