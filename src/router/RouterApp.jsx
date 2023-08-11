@@ -18,6 +18,8 @@ import ArtstChats from '../components/ArtistApp/ArtistChats'
 import ArtistPorfile from '../components/ArtistApp/ArtistPorfile'
 import ClientPorfile from '../components/ArtistApp/ClientPorfile';
 import ArtistDashboard from '../components/ArtistApp/ArtistDashboard'
+import VideoCallArtist from '../components/ArtistApp/VideoCallArtist';
+import LivesArtist from '../components/ArtistApp/LivesArtist';
 
 const RouterApp = () => {
   return (
@@ -41,6 +43,8 @@ const RouterApp = () => {
       <Route path='/ArtistPorfile' element={<ArtistPorfile />} />
       <Route path='/ClientPorfile' element={<ClientPorfile />} />
       <Route path='/ArtistDashboard' element={<ArtistDashboard />} />
+      <Route path='/VideoCallArtist' element={<VideoCallArtist />} />
+      <Route path='/LivesArtist ' element={<LivesArtist />} />
     </Routes>
   );
 }

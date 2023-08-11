@@ -411,3 +411,100 @@
 #LogoDashboard {
   width: 350px;
 }
+
+#VideoCall {
+  width: 100%;
+  height: 100vh;
+  background-color: #373B56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ECEDF2;
+  font-family: Inter, sans-serif;
+}
+
+#Lives {
+  width: 100%;
+  height: 100vh;
+  background-color: #373B56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ECEDF2;
+  font-family: Inter, sans-serif;
+}
+
+#LiveVideo {
+  width: 100%;
+  background-color: #373B56;
+}
+
+.LiveChat {
+  background-color: #373B56;
+
+}
+
+.Streamer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.StreamerPhoto {
+  width: 70px;
+}
+
+.StreamerTxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0.5rem;
+}
+
+.SpectatorContainer {
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.SpectatorItem {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: #ECEDF20D 1px solid;
+  border-bottom: #ECEDF20D 1px solid;
+}
+
+.Spectator {
+  width: 25%;
+}
+
+.SpectatorTxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.LiveSend {
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  color: #373B56;
+  background:
+    linear-gradient(0deg, #ECEDF2, #ECEDF2);
+  border: 1px solid #373B56
+}
+
+#SubscriptionsContainer {
+  padding-left: 6.4rem;
+  font-family: Barlow, sans-serif;
+  color: #373B56;
+}
+
+.ArtisSub {
+  width: 10%;
+}
