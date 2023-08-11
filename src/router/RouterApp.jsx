@@ -44,7 +44,7 @@ const RouterApp = () => {
       <Route path='/ClientPorfile' element={<ClientPorfile />} />
       <Route path='/ArtistDashboard' element={<ArtistDashboard />} />
       <Route path='/VideoCallArtist' element={<VideoCallArtist />} />
-      <Route path='/LivesArtist ' element={<LivesArtist />} />
+      <Route path='/LivesArtist' element={<LivesArtist />} />
     </Routes>
   );
 }
