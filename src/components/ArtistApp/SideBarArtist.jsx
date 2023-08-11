@@ -1,6 +1,6 @@
 import style from './ArtistApp.module.css'
 import { Link } from 'react-router-dom';
-import { Button, Overlay } from 'react-bootstrap';
+import { Overlay } from 'react-bootstrap';
 import { useState, useRef } from 'react';
 import Porfile from '../../assets/img/ArtistApp/SideBarArt/Eclipse.png'
 import Home from '../../assets/img/ArtistApp/SideBarArt/home.png'
