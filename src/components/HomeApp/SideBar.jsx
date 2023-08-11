@@ -1,7 +1,7 @@
 import style from './HomeApp.module.css'
 import { Link } from 'react-router-dom';
 import { Button, Modal, Nav, Form } from 'react-bootstrap';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Porfile from '../../assets/img/HomeApp/SideBar/Eclipse.png'
 import User from '../../assets/img/HomeApp/SideBar/User.png'
 import Home from '../../assets/img/HomeApp/SideBar/home.png'
@@ -10,11 +10,39 @@ import Chat from '../../assets/img/HomeApp/SideBar/chat.png'
 import Billing from '../../assets/img/HomeApp/SideBar/Billing.png'
 import Subscription from '../../assets/img/HomeApp/SideBar/Subscriptions.png'
 import More from '../../assets/img/HomeApp/SideBar/more.png'
+import { Cookies } from 'react-cookie'
+import jwt from 'jwt-decode'
+
+const apiURL = import.meta.env.VITE_AUTH_API_URL;
+const cookies = new Cookies();
 
 const SideBar = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [userData, setUserData] = useState({});
+
+  const getUserInfo = async () => {
+      const token = cookies.get('auth-cookie');
+      const headers = { 'Authorization': 'Bearer ' + (token || '') };
+      const decoded = jwt(token);
+      const response = await fetch(`${apiURL}/profile/${decoded.username}`, { headers });
+
+      if (response.ok) {
+        const data = await response.json();
+        setUserData(data);
+        return true;
+      } else {
+        return false;
+      }
+  }
+
+  useEffect(() => {
+    getUserInfo();
+    console.log(userData);
+  }, []);
+
+
   return (
     <main id={style.SideBar}>
       <div id={style.SideBarIcons}>

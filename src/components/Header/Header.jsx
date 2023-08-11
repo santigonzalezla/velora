@@ -7,9 +7,13 @@ import Twitter from '../../assets/img/Login/Twitter.webp'
 import Facebook from '../../assets/img/Login/Facebook.png'
 import Google from '../../assets/img/Login/Google.png'
 import { useEffect } from 'react';
+import {Cookies} from 'react-cookie'
 
 
-const apiURL = "https://velora-room-auth-ezoaw2zi7a-uc.a.run.app/api"
+const apiURL = import.meta.env.VITE_AUTH_API_URL;
+
+const cookies = new Cookies();
+
 async function signUp( username, password, email, first_name, last_name, phone, country, city, preferences, type, birth_date, bio ) {
     const url = `${apiURL}/signup`;
     const options = {
@@ -20,22 +24,29 @@ async function signUp( username, password, email, first_name, last_name, phone, 
         body: JSON.stringify({ username, password, email, first_name, last_name, phone, country, city, preferences, type, birth_date, bio })
     }
     const response = await fetch(url, options);
+    console.log(response)
     const data = await response.json();
     return await data;
 }
 
-async function logIn( email, password ) {
+async function logIn( username, password ) {
   const url = `${apiURL}/login`;
   const options = {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ username, password })
   }
   const response = await fetch(url, options);
-  const data = await response.json();
-  return await data;
+  if (response.ok) {
+    const data = await response.json();
+    console.log(response.headers.getSetCookie())
+    cookies.set('auth-cookie', data.data.token)
+    return true;
+  } else {
+    return false;
+  }
 }
 
 const Header = (props) => {
@@ -80,12 +91,12 @@ const Header = (props) => {
 
   const handleLogIn = async (e) => {
     e.preventDefault();
-    await logIn(email, password).then(res => {
-      if (res.status == "success") {
+    await logIn(username, password).then(success => {
+      if (success) {
+        //console.log(success.headers)
         alert("Login successful");
         navigate('/home')
       }else{
-        console.log(res)
         alert("Login failed");
       }
     });
@@ -93,10 +104,10 @@ const Header = (props) => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-
+    //console.log(apiURL)
     await signUp(username, password, email, firstName, lastName, phone, country, city, preferences, type, birthDate, bio).then(res => {
       if (res.status == "success") {
-        alert("Login successful");
+        cookies.set('auth-cookie', res)
         navigate('/home')
       }else{
         alert("Login failed");
@@ -141,7 +152,7 @@ const Header = (props) => {
                   <Modal.Title id={style.ModalTitle} >Login</Modal.Title>
                   <Form onSubmit={handleLogIn}>
                     <Form.Group className="mb-3" controlId="username">
-                      <Form.Control type="user" name='username' placeholder="nombre de Usuario" className={style.ModalInput} onChange={e => setEmail(e.target.value)}/>
+                      <Form.Control type="user" name='username' placeholder="nombre de Usuario" className={style.ModalInput} onChange={e => setUserName(e.target.value)}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="password">
                       <Form.Control type="password" name='password' placeholder="Contraseña" className={style.ModalInput} onChange={e => setPassword(e.target.value)}/>
