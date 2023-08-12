@@ -262,6 +262,7 @@
 .SuggetionsBar {
   margin: 0px;
   padding: 0px;
+  background-color: #ECEDF2
 }
 
 .ArtistBanner {
@@ -507,4 +508,54 @@
 
 .ArtisSub {
   width: 10%;
+}
+
+#ReviewTitle {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: #373B5640 solid 1px;
+}
+
+#newReview {
+  margin: 10px;
+  background-color: #F9F9F9;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #373B5626;
+  border-radius: 0px, 0px, 1px, 0px;
+}
+
+.StarsReview {
+  display: flex;
+  align-items: center;
+}
+
+.StarsReview img {
+  width: 20px;
+  height: 20px;
+  margin: 1px;
+}
+
+#inputReview {
+  width: 80%;
+  background: #F9F9F9;
+  box-shadow: 0px 0px 4px 0px #00000040 inset;
+  border: none;
+  border-radius: 10px;
+}
+
+#historyReview {
+  background-color: #F9F9F9;
+  border-bottom: 1px solid #373B5626;
+  margin: 10px;
+  padding: 10px;
+}
+
+.itemReview {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #373B5640;
 }
