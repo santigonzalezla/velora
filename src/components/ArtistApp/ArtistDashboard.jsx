@@ -2,6 +2,8 @@ import style from './ArtistApp.module.css'
 import { Image, Row, Col, Container } from 'react-bootstrap';
 import Logo from '../../assets/img/HomeApp/Chats/Logo.png'
 import SideBarArtist from './SideBarArtist';
+import Grafic from '../../assets/img/ArtistApp/ArtistDashboard/grafic.png'
+
 const ArtistDashboard = () => {
   return (
     <div id={style.ViewArtist}>
