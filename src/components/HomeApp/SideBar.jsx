@@ -93,9 +93,15 @@ const SideBar = () => {
     navigate('/')
   }
 
-  const handleUpdateProfile = () => {
-    updateProfile(first_name, lastname, password, city, country, phone);
-    console.log(first_name, lastname, password, city, country, phone)
+  const handleUpdateProfile = async (e) => {
+    await updateProfile(first_name, lastname, password, city, country, phone).then(success => {
+      if (success) {
+        alert("Profile updated");
+      }else{
+        alert("Error updating profile");
+      }
+    });
+    
     handleClose();
   }
 
