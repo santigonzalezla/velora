@@ -95,6 +95,7 @@ const SideBar = () => {
 
   const handleUpdateProfile = () => {
     updateProfile(first_name, lastname, password, city, country, phone);
+    console.log(first_name, lastname, password, city, country, phone)
     handleClose();
   }
 
