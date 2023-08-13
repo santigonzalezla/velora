@@ -119,7 +119,7 @@ const SideBar = () => {
               <img src={User} width={100} />
               <p>Cliente</p>
             </section>
-            <Form id={style.ModalForm}>
+            <Form id={style.ModalForm} onClick={handleUpdateProfile}>
               <section className={style.ModalInput}>
                 <Form.Group className="mb-3" controlId="username">
                   <Form.Control type="text" name='username' placeholder="Nombre" value={first_name} className={style.ModalInput} onChange={(e) => setName(e.target.value)} />
@@ -160,7 +160,7 @@ const SideBar = () => {
                 </Form.Group>
               </section>
               <section id={style.ModalBtnContainer}>
-                <Button type="submit" id={style.ModalBtn} onClick={handleUpdateProfile}>
+                <Button type="submit" id={style.ModalBtn}>
                   Guardar Cambios
                 </Button>
               </section>
