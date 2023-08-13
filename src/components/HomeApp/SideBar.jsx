@@ -39,13 +39,33 @@ const logout = async () => {
   const response = await fetch(`${apiURL}/logout`, { credentials: 'include' });
 }
 
+const updateProfile = async (first_name, last_name, password, city, country, phone) => {
+  const token = cookies.get('auth-cookie');
+  const decoded = jwt(token); F
+  const response = await fetch(`${apiURL}/${decoded.username}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ password, phone, email, preferences, 
+      country, city, bio, birth_date, status, 
+      first_name, last_name, type }),
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    return data.data;
+  } else {
+    return null;
+  }
+}
 
 const SideBar = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [name, setName] = useState('');
+  const [first_name, setName] = useState('');
   const [birthDate, setBirthDate] = useState('');
   const [lastname, setLastname] = useState('');
   const [username, setUsername] = useState('');
@@ -73,6 +93,11 @@ const SideBar = () => {
     navigate('/')
   }
 
+  const handleUpdateProfile = () => {
+    updateProfile(first_name, lastname, password, city, country, phone);
+    handleClose();
+  }
+
   const [overlay, setOverlay] = useState(false);
   const target = useRef(null);
 
@@ -96,7 +121,7 @@ const SideBar = () => {
             <Form id={style.ModalForm}>
               <section className={style.ModalInput}>
                 <Form.Group className="mb-3" controlId="username">
-                  <Form.Control type="text" name='username' placeholder="Nombre" value={name} className={style.ModalInput} onChange={(e) => setName(e.target.value)} />
+                  <Form.Control type="text" name='username' placeholder="Nombre" value={first_name} className={style.ModalInput} onChange={(e) => setName(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="lastname">
                   <Form.Control type="text" name='lastname' placeholder="Apellido" value={lastname} className={style.ModalInput} onChange={(e) => setLastname(e.target.value)} />
@@ -105,7 +130,7 @@ const SideBar = () => {
               <section className={style.ModalInput}>
                 <p>Fecha de nacimiento</p>
                 <Form.Group className="mb-3" controlId="date">
-                  <Form.Control type="date" className={style.ModalInput} disabled value={birthDate} onChange={(e) => setBirthDate(e.target.value)} />
+                  <Form.Control type="date" className={style.ModalInput} value={birthDate} onChange={(e) => setBirthDate(e.target.value)} />
                 </Form.Group>
               </section>
               <section className={style.ModalInput}>
@@ -134,7 +159,7 @@ const SideBar = () => {
                 </Form.Group>
               </section>
               <section id={style.ModalBtnContainer}>
-                <Button type="submit" id={style.ModalBtn}>
+                <Button type="submit" id={style.ModalBtn} onClick={handleUpdateProfile}>
                   Guardar Cambios
                 </Button>
               </section>
