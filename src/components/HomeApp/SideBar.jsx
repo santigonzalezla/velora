@@ -41,7 +41,7 @@ const logout = async () => {
 
 const updateProfile = async (first_name, last_name, password, city, country, phone) => {
   const token = cookies.get('auth-cookie');
-  const decoded = jwt(token); F
+  const decoded = jwt(token);
   const response = await fetch(`${apiURL}/${decoded.username}`, {
     method: 'PATCH',
     headers: {
