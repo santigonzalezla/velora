@@ -94,13 +94,13 @@ const SideBar = () => {
   }
 
   const handleUpdateProfile = async (e) => {
-    await updateProfile(first_name, lastname, password, city, country, phone).then(success => {
+    /* await updateProfile(first_name, lastname, password, city, country, phone).then(success => {
       if (success) {
         alert("Profile updated");
       }else{
         alert("Error updating profile");
       }
-    });
+    }); */
     
     handleClose();
   }
