@@ -47,9 +47,7 @@ const updateProfile = async (first_name, last_name, password, city, country, pho
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ password, phone, email, preferences, 
-      country, city, bio, birth_date, status, 
-      first_name, last_name, type }),
+    body: JSON.stringify({ first_name, last_name, password, city, country, phone }),
   });
 
   if (response.ok) {
