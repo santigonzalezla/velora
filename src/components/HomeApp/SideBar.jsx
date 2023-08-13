@@ -101,8 +101,6 @@ const SideBar = () => {
         alert("Error updating profile");
       }
     });
-    
-    handleClose();
   }
 
   const [overlay, setOverlay] = useState(false);
