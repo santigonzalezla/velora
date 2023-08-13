@@ -94,6 +94,7 @@ const SideBar = () => {
   }
 
   const handleUpdateProfile = (e) => {
+    e.preventDefault();
     updateProfile(first_name, lastname, password, city, country, phone).then(success => {
       if (success) {
         alert("Profile updated");
