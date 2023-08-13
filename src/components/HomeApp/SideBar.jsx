@@ -39,7 +39,7 @@ const logout = async () => {
   const response = await fetch(`${apiURL}/logout`, { credentials: 'include' });
 }
 
-const updateProfile = async (first_name, last_name, password, city, country, phone) => {
+const updateProfile = async (first_name, last_name, password, city, country, phone, birth_date) => {
   const token = cookies.get('auth-cookie');
   const decoded = jwt(token);
   const response = await fetch(`${apiURL}/${decoded.username}`, {
@@ -48,7 +48,7 @@ const updateProfile = async (first_name, last_name, password, city, country, pho
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + (token || '')
     },
-    body: JSON.stringify({ first_name, last_name, password, city, country, phone }),
+    body: JSON.stringify({ first_name, last_name, password, city, country, phone, birth_date }),
   });
 
   if (response.ok) {
@@ -65,7 +65,7 @@ const SideBar = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [first_name, setName] = useState('');
-  const [birthDate, setBirthDate] = useState('');
+  const [birth_date, setBirthDate] = useState('');
   const [lastname, setLastname] = useState('');
   const [username, setUsername] = useState('');
   const [city, setCity] = useState('');
@@ -94,7 +94,7 @@ const SideBar = () => {
 
   const handleUpdateProfile = (e) => {
     e.preventDefault();
-    updateProfile(first_name, lastname, password, city, country, phone).then(success => {
+    updateProfile(first_name, lastname, password, city, country, phone, birth_date).then(success => {
       if (success) {
         alert("Profile updated");
       }else{
@@ -135,7 +135,7 @@ const SideBar = () => {
               <section className={style.ModalInput}>
                 <p>Fecha de nacimiento</p>
                 <Form.Group className="mb-3" controlId="date">
-                  <Form.Control type="date" className={style.ModalInput} value={birthDate} onChange={(e) => setBirthDate(e.target.value)} />
+                  <Form.Control type="date" className={style.ModalInput} value={birth_date} onChange={(e) => setBirthDate(e.target.value)} />
                 </Form.Group>
               </section>
               <section className={style.ModalInput}>
