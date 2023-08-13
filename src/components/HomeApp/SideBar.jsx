@@ -46,6 +46,7 @@ const updateProfile = async (first_name, last_name, password, city, country, pho
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + (token || '')
     },
     body: JSON.stringify({ first_name, last_name, password, city, country, phone }),
   });
