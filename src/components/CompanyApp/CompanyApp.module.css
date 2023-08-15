@@ -66,6 +66,14 @@
   border-radius: 7px;
 }
 
+#Billinghead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F9F9F9;
+
+}
+
 #SideBar {
   background-color: #F9F9F9;
   height: 100%;
