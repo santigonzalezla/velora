@@ -24,6 +24,7 @@ import LivesArtist from '../components/ArtistApp/LivesArtist';
 import CompanyApp from '../components/CompanyApp/CompanyApp';
 import CompanyChats from '../components/CompanyApp/CompanyChats';
 import ArtistCompany from '../components/CompanyApp/ArtistCompany'
+import BillingCompany from '../components/CompanyApp/BillingCompany';
 
 const RouterApp = () => {
   return (
@@ -53,6 +54,7 @@ const RouterApp = () => {
       <Route path='/CompanyApp' element={<CompanyApp />} />
       <Route path='/CompanyChats' element={<CompanyChats />} />
       <Route path='/ArtistCompany' element={<ArtistCompany />} />
+      <Route path='/BillingCompany' element={<BillingCompany />} />
     </Routes>
   );
 }

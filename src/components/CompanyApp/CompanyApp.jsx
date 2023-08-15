@@ -1,9 +1,9 @@
 import Style from './CompanyApp.module.css'
 import SideBarCompany from "./SideBarCompany";
 import { Row, Col, Container } from "react-bootstrap";
-import Logo from '../../assets/img/CompanyApp/logo.png'
-import Google from '../../assets/img/CompanyApp/Google.png'
-import grafic from '../../assets/img/CompanyApp/grafic.png'
+import Logo from '../../assets/img/CompanyApp/Dashboard/logo.png'
+import Google from '../../assets/img/CompanyApp/Dashboard/Google.png'
+import grafic from '../../assets/img/CompanyApp/Dashboard/grafic.png'
 
 const CompanyApp = () => {
   return (

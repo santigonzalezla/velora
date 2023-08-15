@@ -27,7 +27,7 @@ const SideBarCompany = () => {
         <Link to={'/CompanyChats'}>
           <img src={Chat} alt="" className={style.SideBarItem} />
         </Link>
-        <Link to={'/BillingArtist'}>
+        <Link to={'/BillingCompany'}>
           <img src={Billing} alt="" className={style.SideBarItem} />
         </Link>
       </div>
