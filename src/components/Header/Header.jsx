@@ -9,6 +9,12 @@ import Google from '../../assets/img/Login/Google.png'
 
 const Header = () => {
 
+  // let TelNum = document.getElementById('TelInput'),
+
+  // const = intlTelInput => ({
+  //   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+  // };
+
   const [show, setShow] = useState(false);
   const [showSingUp, setShowSingUp] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
@@ -47,6 +53,7 @@ const Header = () => {
             <Nav className="justify-content-end">
               <Nav.Link className={style.NavButtons} onClick={handleShow}>Log in
               </Nav.Link>
+              {/* Inicio Modal de login */}
               <Modal
                 show={show}
                 onHide={handleClose}
@@ -74,8 +81,10 @@ const Header = () => {
                   <img src={Google} alt="" className={style.icons} />
                 </Modal.Footer>
               </Modal>
+              {/* Fin Modal de login */}
               <Nav.Link className={style.NavButtons} onClick={handleShowSingUp}>Sign up</Nav.Link>
             </Nav>
+            {/* Inicio Modal de primer Sing Up */}
             <Modal
               show={showSingUp}
               onHide={handleCloseSingUp}
@@ -109,6 +118,7 @@ const Header = () => {
                 <img src={Google} alt="" className={style.icons} />
               </Modal.Footer>
             </Modal>
+            {/* Inicio Modal de segundo Sing Up */}
             <Modal
               show={showRegister}
               onHide={handleCloseRegister}
@@ -121,7 +131,7 @@ const Header = () => {
                   <Form.Select aria-label="Default select example" className={style.ModalInput} >
                     <option>Seleccione su tipo de usuario</option>
                     <option value="1">Artista</option>
-                    <option value="2">Cliente</option>
+                    <option value="2">Usuario</option>
                     <option value="3">Empresa</option>
                   </Form.Select>
                   <Form.Group className={style.FormGroup} >
@@ -130,7 +140,7 @@ const Header = () => {
                   </Form.Group>
                   <Form.Group className={style.FormGroup} controlId="number">
                     <Form.Control type="text" name='city' placeholder="+57" className={style.FormGroupInput} />
-                    <Form.Control type="text" name='number' placeholder="Numero de celular" className={style.FormGroupInput} />
+                    <Form.Control type="tel" name='number' placeholder="Numero de celular" className={style.FormGroupInput} id='TelInput' />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="user">
                     <Form.Control type="text" name='user' placeholder="Nombre de usuario" className={style.ModalInput} />
@@ -149,6 +159,7 @@ const Header = () => {
                 </Form>
               </Modal.Body>
             </Modal>
+            {/* Fin Modal de Sing Up */}
           </Navbar.Collapse>
         </Container>
       </Navbar>
