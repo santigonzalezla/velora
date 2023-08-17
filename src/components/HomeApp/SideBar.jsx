@@ -21,6 +21,10 @@ const SideBar = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [notification, setNotification] = useState(false);
+  const targetNotification = useRef(null);
+
+  // Controlls for more overlay
   const [overlay, setOverlay] = useState(false);
   const target = useRef(null);
 
@@ -30,6 +34,7 @@ const SideBar = () => {
         <Nav.Link onClick={handleShow}>
           <img src={Porfile} alt="" className={style.SideBarItem} />
         </Nav.Link>
+        {/* Start Modal Porfile */}
         <Modal
           show={show}
           onHide={handleClose}
@@ -89,12 +94,74 @@ const SideBar = () => {
             </Form>
           </Modal.Body>
         </Modal>
+        {/* End Modal porfile */}
         <Link to={'/Home'}>
           <img src={Home} alt="" className={style.SideBarItem} />
         </Link>
-        <Link>
+        <Link ref={targetNotification} onClick={() => setNotification(!notification)}>
           <img src={Notification} alt="" className={style.SideBarItem} />
         </Link>
+        {/* start notification overlay */}
+        <Overlay target={targetNotification.current} show={notification} placement="right">
+          {({
+            placement: _placement,
+            arrowProps: _arrowProps,
+            show: _show,
+            popper: _popper,
+            hasDoneInitialMeasure: _hasDoneInitialMeasure,
+            ...props
+          }) => (
+            <div
+              id={style.Notification}
+              {...props}
+              style={{
+                position: 'absolute',
+                backgroundColor: '#F9F9F9',
+                padding: '2px 10px',
+                color: '#373B56',
+                ...props.style,
+              }}
+            >
+              <div className={style.notificationHead}>
+                <h4>Notification</h4>
+                <img src={Settings} alt="" />
+              </div>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+            </div>
+          )}
+        </Overlay>
+        {/* End notification overlay */}
         <Link to={'/Chats'}>
           <img src={Chat} alt="" className={style.SideBarItem} />
         </Link>
@@ -104,10 +171,11 @@ const SideBar = () => {
         <Link to={'/Subscriptions'}>
           <img src={Subscription} alt="" className={style.SideBarItem} />
         </Link>
-      </div>
+      </div >
       <div id={style.SideBarMore} ref={target} onClick={() => setOverlay(!overlay)}>
         <img src={More} alt="" className={style.SideBarItem} />
       </div >
+      {/* start More overlay */}
       <Overlay target={target.current} show={overlay} placement="right">
         {({
           placement: _placement,
@@ -148,6 +216,7 @@ const SideBar = () => {
           </div>
         )}
       </Overlay>
+      {/* End More overlay */}
     </main >
   );
 }
