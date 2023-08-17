@@ -132,7 +132,7 @@ const Header = () => {
                     <option>Seleccione su tipo de usuario</option>
                     <option value="1">Artista</option>
                     <option value="2">Usuario</option>
-                    <option value="3">Empresa</option>
+                    <option value="3">Establecimiento</option>
                   </Form.Select>
                   <Form.Group className={style.FormGroup} >
                     <Form.Control type="text" name='contry' placeholder="Pais" className={style.FormGroupInput} />
