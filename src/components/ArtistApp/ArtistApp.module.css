@@ -31,6 +31,36 @@
   margin: 10px;
 }
 
+#Notification {
+  width: 18rem;
+  margin-left: 20px;
+  border-radius: 0px 7px 7px 0px;
+  box-shadow: 0px 8.445945739746094px 16.891891479492188px 0px #373B5626;
+}
+
+.notificationHead {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.notificationHead img {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.notificationItem {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notificationItem img {
+  width: 30px;
+  height: 30px;
+}
+
 #Overlay {
   box-shadow: 0px 4px 10px 0px #00000040;
   margin-left: -20px;
