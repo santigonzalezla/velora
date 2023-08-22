@@ -6,6 +6,16 @@ import BeImg from '../../assets/img/Home/Be.png'
 import UsImg from '../../assets/img/Home/Us.png'
 
 const Hero = () => {
+
+  let scrollToTop = () => {
+
+    //Funcion para llevar a la parte superior de la app al dar click
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Hace el desplazamiento suave
+    });
+
+  }
   return (
     <div id={style.HeaderBackground}>
       <Container>
@@ -14,7 +24,7 @@ const Hero = () => {
             <h1>Find what you want</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
             <Link to='/Client'>
-              <button className={style.singUpBtn} >Ver mas</button>
+              <button className={style.singUpBtn} onClick={scrollToTop} >Ver mas</button>
             </Link>
           </Col>
           <Col sm="12" md="8" lg="8" xl="8">
@@ -32,7 +42,7 @@ const Hero = () => {
             <h1>Be an Artist</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
             <Link to='/Artist' >
-              <button className={style.singUpBtn}>Ver Más</button>
+              <button className={style.singUpBtn} onClick={scrollToTop} >Ver Más</button>
             </Link>
           </Col>
         </Row>
@@ -43,7 +53,7 @@ const Hero = () => {
             <h1>¿Quieres Pautar con Nosotros?</h1>
             <p>Accede a nuestro catálogo de artistas y descubre lo que ofrecemos para tu negocio</p>
             <Link to='/Company'>
-              <button className={style.singUpBtn}>Ver Más</button>
+              <button className={style.singUpBtn} onClick={scrollToTop}>Ver Más</button>
             </Link>
           </Col>
           <Col sm="12" md="6" lg="6" xl="6">
