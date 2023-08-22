@@ -3,7 +3,6 @@ import Landing from '../view/Landing'
 import Client from '../components/Client/Client';
 import Artist from '../components/Artist/Artist'
 import Company from '../components/Company/Company'
-import Login from '../components/Login/Login';
 import HomeApp from '../components/HomeApp/HomeApp'
 import Terms from '../components/Footer/Terms'
 import Help from '../components/Footer/Help';
@@ -33,7 +32,6 @@ const RouterApp = () => {
       <Route path='/Client' element={<Client />} />
       <Route path='/Artist' element={<Artist />} />
       <Route path='/Company' element={<Company />} />
-      <Route path='/Login' element={<Login />} />
       <Route path='/Home' element={<HomeApp />} />
       <Route path='/Terms' element={<Terms />} />
       <Route path='/Help' element={<Help />} />
