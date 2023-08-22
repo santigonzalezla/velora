@@ -93,24 +93,11 @@ const Header = () => {
             >
               <Modal.Body className={style.ModalBody}>
                 <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
-                <Form onSubmit={submitHandler}>
-                  <Form.Group className="mb-3" controlId="name">
-                    <Form.Control type="text" name='name' placeholder="Nombre" className={style.ModalInput} />
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="lastname">
-                    <Form.Control type="text" name='lastname' placeholder="Apellido" className={style.ModalInput} />
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="password">
-                    <Form.Control type="password" name='password' placeholder="Contraseña" className={style.ModalInput} />
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="password">
-                    <Form.Control type="password" name='password' placeholder="Confirme su contraseña" className={style.ModalInput} />
-                  </Form.Group>
-                  <Button type="submit" className={style.ModalButton} onClick={handleShowRegister}>
-                    Registrarse
-                  </Button>
-                  <p>O Ingresa con:</p>
-                </Form>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, lacinia class placerat tristique ut varius rhoncus, leo mus eu aenean metus sagittis.</p>
+                <Button type="submit" className={style.ModalButton} onClick={handleShowRegister}>
+                  Registrarse
+                </Button>
+                <p>O Ingresa con:</p>
               </Modal.Body>
               <Modal.Footer className={style.Modal} id={style.ModalFooter}>
                 <img src={Twitter} alt="" className={style.icons} />
@@ -128,6 +115,18 @@ const Header = () => {
               <Modal.Body className={style.ModalBody}>
                 <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
                 <Form onSubmit={submitHandler}>
+                  <Form.Group className="mb-3" controlId="name">
+                    <Form.Control type="text" name='name' placeholder="Nombre" className={style.ModalInput} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="lastname">
+                    <Form.Control type="text" name='lastname' placeholder="Apellido" className={style.ModalInput} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="password">
+                    <Form.Control type="password" name='password' placeholder="Contraseña" className={style.ModalInput} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="password">
+                    <Form.Control type="password" name='password' placeholder="Confirme su contraseña" className={style.ModalInput} />
+                  </Form.Group>
                   <Form.Select aria-label="Default select example" className={style.ModalInput} >
                     <option>Seleccione su tipo de usuario</option>
                     <option value="1">Artista</option>
