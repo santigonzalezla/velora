@@ -58,6 +58,12 @@ async function logIn(username, password) {
 const Header = (props) => {
   const navigate = useNavigate();
 
+  // let TelNum = document.getElementById('TelInput'),
+
+  // const = intlTelInput => ({
+  //   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+  // };
+
   const [show, setShow] = useState(false);
   const [showSingUp, setShowSingUp] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
@@ -161,6 +167,7 @@ const Header = (props) => {
             <Nav className="justify-content-end">
               <Nav.Link className={style.NavButtons} onClick={handleShow}>Log in
               </Nav.Link>
+              {/* Inicio Modal de login */}
               <Modal
                 show={show}
                 onHide={handleClose}
@@ -188,8 +195,10 @@ const Header = (props) => {
                   <img src={Google} alt="" className={style.icons} />
                 </Modal.Footer>
               </Modal>
+              {/* Fin Modal de login */}
               <Nav.Link className={style.NavButtons} onClick={handleShowSingUp}>Sign up</Nav.Link>
             </Nav>
+            {/* Inicio Modal de primer Sing Up */}
             <Modal
               show={showSingUp}
               onHide={handleCloseSingUp}
@@ -198,7 +207,30 @@ const Header = (props) => {
             >
               <Modal.Body className={style.ModalBody}>
                 <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
-                <Form>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, lacinia class placerat tristique ut varius rhoncus, leo mus eu aenean metus sagittis.</p>
+                <Button type="submit" className={style.ModalButton} onClick={handleShowRegister}>
+                  Registrarse
+                </Button>
+                <p>O Ingresa con:</p>
+
+              </Modal.Body>
+              <Modal.Footer className={style.Modal} id={style.ModalFooter}>
+                <img src={Twitter} alt="" className={style.icons} />
+                <img src={Facebook} alt="" className={style.icons} />
+                <img src={Google} alt="" className={style.icons} />
+              </Modal.Footer>
+            </Modal>
+            {/* Inicio Modal de segundo Sing Up */}
+            <Modal
+              show={showRegister}
+              onHide={handleCloseRegister}
+              keyboard={false}
+
+            >
+              <Modal.Body className={style.ModalBody}>
+                <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
+
+                <Form onSubmit={handleSignUp}>
                   <Form.Group className="mb-3" controlId="name">
                     <Form.Control type="text" name='name' placeholder="Nombre" className={style.ModalInput} onChange={e => setFirstName(e.target.value)} />
                   </Form.Group>
@@ -211,32 +243,11 @@ const Header = (props) => {
                   <Form.Group className="mb-3" controlId="password">
                     <Form.Control type="password" name='confirmPassword' placeholder="Confirme su contraseña" className={style.ModalInput} onChange={e => setPassword(e.target.value)} />
                   </Form.Group>
-                  <Button className={style.ModalButton} onClick={handleShowRegister}>
-                    Registrarse
-                  </Button>
-                  <p>O Ingresa con:</p>
-                </Form>
-              </Modal.Body>
-              <Modal.Footer className={style.Modal} id={style.ModalFooter}>
-                <img src={Twitter} alt="" className={style.icons} />
-                <img src={Facebook} alt="" className={style.icons} />
-                <img src={Google} alt="" className={style.icons} />
-              </Modal.Footer>
-            </Modal>
-            <Modal
-              show={showRegister}
-              onHide={handleCloseRegister}
-              keyboard={false}
-
-            >
-              <Modal.Body className={style.ModalBody}>
-                <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
-                <Form onSubmit={handleSignUp}>
-                  <Form.Select aria-label="Default select example" className={style.ModalInput} onChange={e => setType(e.target.value)}>
+                  <Form.Select aria-label="Default select example" className={style.ModalInput} >
                     <option>Seleccione su tipo de usuario</option>
-                    <option value="Artista">Artista</option>
-                    <option value="Cliente">Cliente</option>
-                    <option value="Empresa">Empresa</option>
+                    <option value="1">Artista</option>
+                    <option value="2">Usuario</option>
+                    <option value="3">Establecimiento</option>
                   </Form.Select>
                   <Form.Group className={style.FormGroup} >
                     <Form.Control type="text" name='contry' placeholder="Pais" className={style.FormGroupInput} onChange={e => setCountry(e.target.value)} />
@@ -244,7 +255,7 @@ const Header = (props) => {
                   </Form.Group>
                   <Form.Group className={style.FormGroup} controlId="number">
                     <Form.Control type="text" name='city' placeholder="+57" className={style.FormGroupInput} onChange={e => setCountryCode(e.target.value)} />
-                    <Form.Control type="text" name='number' placeholder="Numero de celular" className={style.FormGroupInput} onChange={e => setPhone(e.target.value)} />
+                    <Form.Control type="text" name='number' placeholder="Numero de celular" className={style.FormGroupInput} id='TelInput' onChange={e => setPhone(e.target.value)} />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="user">
                     <Form.Control type="text" name='user' placeholder="Nombre de usuario" className={style.ModalInput} onChange={e => setUserName(e.target.value)} />
@@ -266,6 +277,7 @@ const Header = (props) => {
                 </Form>
               </Modal.Body>
             </Modal>
+            {/* Fin Modal de Sing Up */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -1,10 +1,11 @@
 import style from './ArtistApp.module.css'
 import { Link } from 'react-router-dom';
-import { Button, Overlay } from 'react-bootstrap';
+import { Overlay } from 'react-bootstrap';
 import { useState, useRef } from 'react';
 import Porfile from '../../assets/img/ArtistApp/SideBarArt/Eclipse.png'
 import Home from '../../assets/img/ArtistApp/SideBarArt/home.png'
 import Notification from '../../assets/img/ArtistApp/SideBarArt/notification.png'
+import User from '../../assets/img/ArtistApp/SideBarArt/User.png'
 import Chat from '../../assets/img/ArtistApp/SideBarArt/chat.png'
 import Billing from '../../assets/img/ArtistApp/SideBarArt/Billing.png'
 import Dashboard from '../../assets/img/ArtistApp/SideBarArt/Dashboard.png'
@@ -16,6 +17,8 @@ import Logout from '../../assets/img/HomeApp/SideBar/logout.png'
 
 const SideBarArtist = () => {
 
+  const [notification, setNotification] = useState(false);
+  const targetNotification = useRef(null);
   const [overlay, setOverlay] = useState(false);
   const target = useRef(null);
 
@@ -28,16 +31,77 @@ const SideBarArtist = () => {
         <Link to={'/ArtistApp'}>
           <img src={Home} alt="" className={style.SideBarItem} />
         </Link>
-        <Link>
+        <Link ref={targetNotification} onClick={() => setNotification(!notification)}>
           <img src={Notification} alt="" className={style.SideBarItem} />
         </Link>
+        {/* start notification overlay */}
+        <Overlay target={targetNotification.current} show={notification} placement="right">
+          {({
+            placement: _placement,
+            arrowProps: _arrowProps,
+            show: _show,
+            popper: _popper,
+            hasDoneInitialMeasure: _hasDoneInitialMeasure,
+            ...props
+          }) => (
+            <div
+              id={style.Notification}
+              {...props}
+              style={{
+                position: 'absolute',
+                backgroundColor: '#F9F9F9',
+                padding: '2px 10px',
+                color: '#373B56',
+                ...props.style,
+              }}
+            >
+              <div className={style.notificationHead}>
+                <h4>Notification</h4>
+                <img src={Settings} alt="" />
+              </div>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+            </div>
+          )}
+        </Overlay>
+        {/* End notification overlay */}
         <Link to={'/ArtstChats'}>
           <img src={Chat} alt="" className={style.SideBarItem} />
         </Link>
-        <Link to={'/Billing'}>
+        <Link to={'/BillingArtist'}>
           <img src={Billing} alt="" className={style.SideBarItem} />
         </Link>
-        <Link to={'/Subscriptions'}>
+        <Link to={'/ArtistDashboard'}>
           <img src={Dashboard} alt="" className={style.SideBarItem} />
         </Link>
       </div>

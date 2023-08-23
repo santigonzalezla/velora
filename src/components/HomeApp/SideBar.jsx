@@ -1,5 +1,7 @@
 import style from './HomeApp.module.css'
+
 import { Link, useNavigate } from 'react-router-dom';
+
 import { Button, Modal, Nav, Form, Overlay } from 'react-bootstrap';
 import { useState, useRef } from 'react';
 import Porfile from '../../assets/img/HomeApp/SideBar/Eclipse.png'
@@ -10,16 +12,19 @@ import Chat from '../../assets/img/HomeApp/SideBar/chat.png'
 import Billing from '../../assets/img/HomeApp/SideBar/Billing.png'
 import Subscription from '../../assets/img/HomeApp/SideBar/Subscriptions.png'
 import More from '../../assets/img/HomeApp/SideBar/more.png'
+
 import { Cookies } from 'react-cookie'
 import jwt from 'jwt-decode'
 
 const apiURL = import.meta.env.VITE_AUTH_API_URL;
 const cookies = new Cookies();
+
 import Settings from '../../assets/img/HomeApp/SideBar/settings.png'
 import Transactions from '../../assets/img/HomeApp/SideBar/transactions.png'
 import Suports from '../../assets/img/HomeApp/SideBar/suports.png'
 import Logout from '../../assets/img/HomeApp/SideBar/logout.png'
 
+  // Controlls for more overlay
 
 const getUserInfo = async () => {
   const token = cookies.get('auth-cookie');
@@ -72,6 +77,8 @@ const SideBar = () => {
   const [country, setCountry] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
+  const [notification, setNotification] = useState(false);
+  const targetNotification = useRef(null);
 
   const handleProfileClicked = async () => {
     const data = await getUserInfo();
@@ -112,6 +119,7 @@ const SideBar = () => {
         <Nav.Link onClick={handleProfileClicked}>
           <img src={Porfile} alt="" className={style.SideBarItem} />
         </Nav.Link>
+        {/* Start Modal Porfile */}
         <Modal
           show={show}
           onHide={handleClose}
@@ -171,12 +179,74 @@ const SideBar = () => {
             </Form>
           </Modal.Body>
         </Modal>
+        {/* End Modal porfile */}
         <Link to={'/Home'}>
           <img src={Home} alt="" className={style.SideBarItem} />
         </Link>
-        <Link>
+        <Link ref={targetNotification} onClick={() => setNotification(!notification)}>
           <img src={Notification} alt="" className={style.SideBarItem} />
         </Link>
+        {/* start notification overlay */}
+        <Overlay target={targetNotification.current} show={notification} placement="right">
+          {({
+            placement: _placement,
+            arrowProps: _arrowProps,
+            show: _show,
+            popper: _popper,
+            hasDoneInitialMeasure: _hasDoneInitialMeasure,
+            ...props
+          }) => (
+            <div
+              id={style.Notification}
+              {...props}
+              style={{
+                position: 'absolute',
+                backgroundColor: '#F9F9F9',
+                padding: '2px 10px',
+                color: '#373B56',
+                ...props.style,
+              }}
+            >
+              <div className={style.notificationHead}>
+                <h4>Notification</h4>
+                <img src={Settings} alt="" />
+              </div>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+              <section >
+                <div className={style.notificationItem}>
+                  <img src={User} alt="" />
+                  <p>@beautifulmouse112</p>
+                  <p>ahora</p>
+                </div>
+                <span>magnis dis parturient. Purus faucibus ornare ... </span>
+              </section>
+            </div>
+          )}
+        </Overlay>
+        {/* End notification overlay */}
         <Link to={'/Chats'}>
           <img src={Chat} alt="" className={style.SideBarItem} />
         </Link>
@@ -186,10 +256,12 @@ const SideBar = () => {
         <Link to={'/Subscriptions'}>
           <img src={Subscription} alt="" className={style.SideBarItem} />
         </Link>
-      </div>
+
+      </div >
       <div id={style.SideBarMore} ref={target} onClick={() => setOverlay(!overlay)}>
         <img src={More} alt="" className={style.SideBarItem} />
       </div >
+      {/* start More overlay */}
       <Overlay target={target.current} show={overlay} placement="right">
         {({
           placement: _placement,
@@ -230,6 +302,7 @@ const SideBar = () => {
           </div>
         )}
       </Overlay>
+      {/* End More overlay */}
     </main >
   );
 }
