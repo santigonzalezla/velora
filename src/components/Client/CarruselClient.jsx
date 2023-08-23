@@ -8,6 +8,7 @@ const CarruselClient = () => {
       <Carousel.Item className={style.Carousel}>
         <img
           className={style.ImgCarrusel}
+
           src={CarruselClientImg}
           alt="First slide"
         />

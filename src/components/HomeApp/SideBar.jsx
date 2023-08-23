@@ -1,5 +1,7 @@
 import style from './HomeApp.module.css'
-import { Link } from 'react-router-dom';
+
+import { Link, useNavigate } from 'react-router-dom';
+
 import { Button, Modal, Nav, Form, Overlay } from 'react-bootstrap';
 import { useState, useRef } from 'react';
 import Porfile from '../../assets/img/HomeApp/SideBar/Eclipse.png'
@@ -10,28 +12,111 @@ import Chat from '../../assets/img/HomeApp/SideBar/chat.png'
 import Billing from '../../assets/img/HomeApp/SideBar/Billing.png'
 import Subscription from '../../assets/img/HomeApp/SideBar/Subscriptions.png'
 import More from '../../assets/img/HomeApp/SideBar/more.png'
+
+import { Cookies } from 'react-cookie'
+import jwt from 'jwt-decode'
+
+const apiURL = import.meta.env.VITE_AUTH_API_URL;
+const cookies = new Cookies();
+
 import Settings from '../../assets/img/HomeApp/SideBar/settings.png'
 import Transactions from '../../assets/img/HomeApp/SideBar/transactions.png'
 import Suports from '../../assets/img/HomeApp/SideBar/suports.png'
 import Logout from '../../assets/img/HomeApp/SideBar/logout.png'
 
-const SideBar = () => {
+  // Controlls for more overlay
 
+const getUserInfo = async () => {
+  const token = cookies.get('auth-cookie');
+  const headers = { 'Authorization': 'Bearer ' + (token || '') };
+  const decoded = jwt(token);
+  const response = await fetch(`${apiURL}/profile/${decoded.username}`, { headers });
+
+  if (response.ok) {
+    const data = await response.json();
+    return data.data;
+  } else {
+    return null;
+  }
+}
+
+const logout = async () => {
+  const response = await fetch(`${apiURL}/logout`, { credentials: 'include' });
+}
+
+const updateProfile = async (first_name, last_name, password, city, country, phone, birth_date) => {
+  const token = cookies.get('auth-cookie');
+  const decoded = jwt(token);
+  const response = await fetch(`${apiURL}/${decoded.username}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + (token || '')
+    },
+    body: JSON.stringify({ first_name, last_name, password, city, country, phone, birth_date }),
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    return data.data;
+  } else {
+    return null;
+  }
+}
+
+const SideBar = () => {
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const [first_name, setName] = useState('');
+  const [birth_date, setBirthDate] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [username, setUsername] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+  const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
   const [notification, setNotification] = useState(false);
   const targetNotification = useRef(null);
 
-  // Controlls for more overlay
+  const handleProfileClicked = async () => {
+    const data = await getUserInfo();
+    setName(data.first_name);
+    setLastname(data.last_name);
+    setUsername(data.username);
+    setBirthDate(data.birth_date);
+    setCity(data.city);
+    setCountry(data.country);
+    setPhone(data.phone);
+    handleShow();
+  }
+
+  const handleLogout = () => {
+    cookies.remove('auth-cookie');
+    cookies.remove('x-refreshToken');
+    logout();
+    navigate('/')
+  }
+
+  const handleUpdateProfile = (e) => {
+    e.preventDefault();
+    updateProfile(first_name, lastname, password, city, country, phone, birth_date).then(success => {
+      if (success) {
+        alert("Profile updated");
+      }else{
+        alert("Error updating profile");
+      }
+    });
+  }
+
   const [overlay, setOverlay] = useState(false);
   const target = useRef(null);
 
   return (
     <main id={style.SideBar}>
       <div id={style.SideBarIcons}>
-        <Nav.Link onClick={handleShow}>
+        <Nav.Link onClick={handleProfileClicked}>
           <img src={Porfile} alt="" className={style.SideBarItem} />
         </Nav.Link>
         {/* Start Modal Porfile */}
@@ -46,44 +131,44 @@ const SideBar = () => {
               <img src={User} width={100} />
               <p>Cliente</p>
             </section>
-            <Form id={style.ModalForm}>
+            <Form id={style.ModalForm} onSubmit={handleUpdateProfile}>
               <section className={style.ModalInput}>
                 <Form.Group className="mb-3" controlId="username">
-                  <Form.Control type="text" name='username' placeholder="Nombre" className={style.ModalInput} />
+                  <Form.Control type="text" name='username' placeholder="Nombre" value={first_name} className={style.ModalInput} onChange={(e) => setName(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="lastname">
-                  <Form.Control type="text" name='lastname' placeholder="Apellido" className={style.ModalInput} />
+                  <Form.Control type="text" name='lastname' placeholder="Apellido" value={lastname} className={style.ModalInput} onChange={(e) => setLastname(e.target.value)} />
                 </Form.Group>
               </section>
               <section className={style.ModalInput}>
                 <p>Fecha de nacimiento</p>
                 <Form.Group className="mb-3" controlId="date">
-                  <Form.Control type="date" name='password' placeholder="Contraseña" className={style.ModalInput} />
+                  <Form.Control type="date" className={style.ModalInput} value={birth_date} onChange={(e) => setBirthDate(e.target.value)} />
                 </Form.Group>
               </section>
               <section className={style.ModalInput}>
                 <Form.Group className="mb-3">
-                  <Form.Control placeholder="Pais" id={style.CountryInput} />
+                  <Form.Control placeholder="Pais" value={country} id={style.CountryInput} onChange={(e) => setCountry(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Control placeholder="Ciudad" id={style.CityInput} />
+                  <Form.Control placeholder="Ciudad" value={city} id={style.CityInput} onChange={(e) => setCity(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Control placeholder="+57 | número de celular" />
+                  <Form.Control placeholder="+57 | número de celular" value={phone} onChange={(e) => setPhone(e.target.value)} />
                 </Form.Group>
               </section>
               <section className={style.ModalInput}>
                 <Form.Group className="mb-3">
-                  <Form.Control placeholder="nombre de usuario" />
+                  <p>Nombre de Usuario</p>
                 </Form.Group>
-                <p>@Nombredeusuario</p>
+                <p>@{username}</p>
               </section>
               <section className={style.ModalInput}>
                 <Form.Group className="mb-3">
                   <Form.Control placeholder="Modificar Contraseña" />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Control placeholder="Confirmar Contraseña" />
+                  <Form.Control placeholder="Confirmar Contraseña" onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
               </section>
               <section id={style.ModalBtnContainer}>
@@ -171,6 +256,7 @@ const SideBar = () => {
         <Link to={'/Subscriptions'}>
           <img src={Subscription} alt="" className={style.SideBarItem} />
         </Link>
+
       </div >
       <div id={style.SideBarMore} ref={target} onClick={() => setOverlay(!overlay)}>
         <img src={More} alt="" className={style.SideBarItem} />
@@ -209,7 +295,7 @@ const SideBar = () => {
               <img src={Suports} alt="" className={style.iconsOverlay} />
               <p>Soporte</p>
             </div>
-            <div className={style.overlayItem}>
+            <div className={style.overlayItem} onClick={handleLogout}>
               <img src={Logout} alt="" className={style.iconsOverlay} />
               <p>Cerrar Sesión</p>
             </div>

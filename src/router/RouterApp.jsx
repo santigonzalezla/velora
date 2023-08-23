@@ -18,12 +18,55 @@ import ArtistPorfile from '../components/ArtistApp/ArtistPorfile'
 import ClientPorfile from '../components/ArtistApp/ClientPorfile';
 import BillingArtist from '../components/ArtistApp/BillingArtist';
 import ArtistDashboard from '../components/ArtistApp/ArtistDashboard'
+
 import VideoCallArtist from '../components/ArtistApp/VideoCallArtist';
 import LivesArtist from '../components/ArtistApp/LivesArtist';
 import CompanyApp from '../components/CompanyApp/CompanyApp';
 import CompanyChats from '../components/CompanyApp/CompanyChats';
 import ArtistCompany from '../components/CompanyApp/ArtistCompany'
 import BillingCompany from '../components/CompanyApp/BillingCompany';
+import ClientProtectedRoute from '../utils/clientProtectedRoute';
+
+const home = () => {
+  return (
+    <ClientProtectedRoute>
+      <HomeApp />
+    </ClientProtectedRoute>
+  )
+}
+
+const chats = () => {
+  return (
+    <ClientProtectedRoute>
+      <Chats />
+    </ClientProtectedRoute>
+  )
+}
+
+const subscriptions = () => {
+  return (
+    <ClientProtectedRoute>
+      <Subscriptions />
+    </ClientProtectedRoute>
+  )
+}
+
+const billing = () => {
+  return (
+    <ClientProtectedRoute>
+      <Billing />
+    </ClientProtectedRoute>
+  )
+}
+
+const videoCall = () => {
+  return (
+    <ClientProtectedRoute>
+      <VideoCall />
+    </ClientProtectedRoute>
+  )
+}
+
 
 const RouterApp = () => {
   return (
@@ -32,15 +75,15 @@ const RouterApp = () => {
       <Route path='/Client' element={<Client />} />
       <Route path='/Artist' element={<Artist />} />
       <Route path='/Company' element={<Company />} />
-      <Route path='/Home' element={<HomeApp />} />
+      <Route path='/Home' element={home()} />
       <Route path='/Terms' element={<Terms />} />
       <Route path='/Help' element={<Help />} />
       <Route path='/ViewArtist' element={<ViewArtist />} />
-      <Route path='/Chats' element={<Chats />} />
+      <Route path='/Chats' element={chats()} />
       <Route path='/Lives' element={<Lives />} />
-      <Route path='/Subscriptions' element={<Subscriptions />} />
-      <Route path='/Billing' element={<Billing />} />
-      <Route path='/VideoCall' element={<VideoCall />} />
+      <Route path='/Subscriptions' element={subscriptions()} />
+      <Route path='/Billing' element={billing()} />
+      <Route path='/VideoCall' element={videoCall()} />
       <Route path='/ArtistApp' element={<ArtistApp />} />
       <Route path='/ArtstChats' element={<ArtstChats />} />
       <Route path='/ArtistPorfile' element={<ArtistPorfile />} />
@@ -53,6 +96,7 @@ const RouterApp = () => {
       <Route path='/CompanyChats' element={<CompanyChats />} />
       <Route path='/ArtistCompany' element={<ArtistCompany />} />
       <Route path='/BillingCompany' element={<BillingCompany />} />
+      <Route path="*" element={<Landing />}/>
     </Routes>
   );
 }

@@ -19,7 +19,6 @@ const SideBarArtist = () => {
 
   const [notification, setNotification] = useState(false);
   const targetNotification = useRef(null);
-
   const [overlay, setOverlay] = useState(false);
   const target = useRef(null);
 
