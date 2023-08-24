@@ -11,6 +11,10 @@ import jwt from 'jwt-decode'
 
 import { countries } from 'country-data';
 
+import { Country, State, City } from 'country-state-city';
+
+
+
 const apiURL = import.meta.env.VITE_AUTH_API_URL;
 
 const cookies = new Cookies();
@@ -86,6 +90,9 @@ const Header = (props) => {
   const [birthDate, setBirthDate] = useState("");
   const [bio, setBio] = useState("");
 
+  const [countryList, setCountryList] = useState(Country.getAllCountries());
+  const [cityList, setCityList] = useState([]);
+
   const handleCloseSingUp = () => {
     setShowSingUp(false)
     props.signUpClosed()
@@ -115,14 +122,14 @@ const Header = (props) => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    await signUp(username, password, email, firstName, lastName, '('+countryCode+') '+phone, country, city, type_preferences, type, birthDate, bio).then(success => {
+    /* await signUp(username, password, email, firstName, lastName, '(' + countryCode + ') ' + phone, country, city, type_preferences, type, birthDate, bio).then(success => {
       if (success) {
         alert("SignUp successful");
         navigate('/home')
       } else {
         alert("SignUp failed");
       }
-    })
+    }) */
   }
 
   const checkUserToken = async () => {
@@ -145,6 +152,11 @@ const Header = (props) => {
     } catch (error) { }
   }
 
+  const handleCountrySelect = (e) => {
+    let temp = countryList.find(country => country.isoCode === e.target.value)
+    setCountry(temp.name)
+    setCityList(City.getCitiesOfCountry(e.target.value))
+  }
   useEffect(() => {
     setShowSingUp(props.signUpClicked)
     checkUserToken();
@@ -251,19 +263,24 @@ const Header = (props) => {
                     <option value="3">Establecimiento</option>
                   </Form.Select>
                   <Form.Group className={style.FormGroup} >
-                    <Form.Select type="text" name='contry' className={style.FormGroupInput} onChange={e => { setCountry(e.target.value) }}>
+                    <Form.Select type="text" name='contry' className={style.FormGroupInput} onChange={handleCountrySelect}>
                       <option value="null" selected disabled hidden>Pais</option>
-                      {countries.all.map((country) => (
-                        country.status === "assigned" && <option value={country.name}>{country.name}</option>
+                      {countryList.map((country) => (
+                        <option value={country.isoCode}>{country.name}</option>
                       ))}
                     </Form.Select>
-                    <Form.Control type="text" name='city' placeholder="Ciudad" className={style.FormGroupInput} onChange={e => setCity(e.target.value)} />
+                    <Form.Select type="text" name='city' className={style.FormGroupInput} onChange={e => setCity(e.target.value)}>
+                    <option value="null" selected disabled hidden>Ciudad</option>
+                      {cityList.map((city) => (
+                        <option value={city.name}>{city.name}</option>
+                      ))}
+                    </Form.Select>
                   </Form.Group>
                   <Form.Group className={style.FormGroup} controlId="number">
                     <Form.Select type="text" name='city' placeholder="+57" className={style.FormGroupInput} onChange={e => setCountryCode(e.target.value)}>
                       <option value="null" selected disabled hidden>Codigo de pais</option>
                       {countries.all.map((country) => (
-                        country.countryCallingCodes[0] && <option value={country.countryCallingCodes[0]}>{country.name+' | ('+country.countryCallingCodes[0].replace(" ","-")+')'}</option>
+                        country.countryCallingCodes[0] && <option value={country.countryCallingCodes[0]}>{country.name + ' | (' + country.countryCallingCodes[0].replace(" ", "-") + ')'}</option>
                       ))}
                     </Form.Select>
                     <Form.Control type="text" name='number' placeholder="Numero de celular" className={style.FormGroupInput} id='TelInput' onChange={e => setPhone(e.target.value)} />
