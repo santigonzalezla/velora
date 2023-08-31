@@ -1,8 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
 import Landing from '../view/Landing'
-/* import Client from '../components/Client/Client';
+import Client from '../components/Client/Client';
 import Artist from '../components/Artist/Artist'
 import Company from '../components/Company/Company'
+/*
 import HomeApp from '../components/HomeApp/HomeApp'
 import Terms from '../components/Footer/Terms'
 import Help from '../components/Footer/Help';
