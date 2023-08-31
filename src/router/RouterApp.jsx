@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Landing from '../view/Landing'
-import Client from '../components/Client/Client';
+/* import Client from '../components/Client/Client';
 import Artist from '../components/Artist/Artist'
 import Company from '../components/Company/Company'
 import HomeApp from '../components/HomeApp/HomeApp'
@@ -24,10 +24,10 @@ import LivesArtist from '../components/ArtistApp/LivesArtist';
 import CompanyApp from '../components/CompanyApp/CompanyApp';
 import CompanyChats from '../components/CompanyApp/CompanyChats';
 import ArtistCompany from '../components/CompanyApp/ArtistCompany'
-import BillingCompany from '../components/CompanyApp/BillingCompany';
+import BillingCompany from '../components/CompanyApp/BillingCompany'; */
 import ClientProtectedRoute from '../utils/clientProtectedRoute';
 
-const home = () => {
+/* const home = () => {
   return (
     <ClientProtectedRoute>
       <HomeApp />
@@ -65,7 +65,7 @@ const videoCall = () => {
       <VideoCall />
     </ClientProtectedRoute>
   )
-}
+} */
 
 
 const RouterApp = () => {
@@ -75,7 +75,7 @@ const RouterApp = () => {
       <Route path='/Client' element={<Client />} />
       <Route path='/Artist' element={<Artist />} />
       <Route path='/Company' element={<Company />} />
-      <Route path='/Home' element={home()} />
+      {/* <Route path='/Home' element={home()} />
       <Route path='/Terms' element={<Terms />} />
       <Route path='/Help' element={<Help />} />
       <Route path='/ViewArtist' element={<ViewArtist />} />
@@ -96,7 +96,7 @@ const RouterApp = () => {
       <Route path='/CompanyChats' element={<CompanyChats />} />
       <Route path='/ArtistCompany' element={<ArtistCompany />} />
       <Route path='/BillingCompany' element={<BillingCompany />} />
-      <Route path="*" element={<Landing />}/>
+      <Route path="*" element={<Landing />}/> */}
     </Routes>
   );
 }
