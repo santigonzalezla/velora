@@ -122,14 +122,14 @@ const Header = (props) => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    /* await signUp(username, password, email, firstName, lastName, '(' + countryCode + ') ' + phone, country, city, type_preferences, type, birthDate, bio).then(success => {
+    await signUp(username, password, email, firstName, lastName, '(' + countryCode + ') ' + phone, country, city, type_preferences, type, birthDate, bio).then(success => {
       if (success) {
         alert("SignUp successful");
         navigate('/home')
       } else {
         alert("SignUp failed");
       }
-    }) */
+    })
   }
 
   const checkUserToken = async () => {
