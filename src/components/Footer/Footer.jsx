@@ -1,11 +1,12 @@
 import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import style from './Footer.module.css'
-import VeloraLogo from '../../assets/img/Footer/VeloraLogo.png'
-import Translate from '../../assets/img/Footer/Translate.png'
-import Twiter from '../../assets/img/Footer/twiter.png'
-import Tictoc from '../../assets/img/Footer/ticktok.png'
-import Facebook from '../../assets/img/Footer/facebook.png'
+const VeloraLogo = React.lazy(() => import('../../assets/img/Footer/VeloraLogo.png'))
+const Translate = React.lazy(() => import('../../assets/img/Footer/Translate.png'))
+const Twiter = React.lazy(() => import('../../assets/img/Footer/twiter.png'))
+const Tictoc = React.lazy(() => import('../../assets/img/Footer/ticktok.png'))
+const Facebook = React.lazy(() => import('../../assets/img/Footer/facebook.png'))
+import React from 'react'
 
 const Footer = () => {
   return (

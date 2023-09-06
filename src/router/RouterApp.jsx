@@ -1,32 +1,31 @@
 import { Routes, Route } from 'react-router-dom'
-import Landing from '../view/Landing'
-import Client from '../components/Client/Client';
-import Artist from '../components/Artist/Artist'
-import Company from '../components/Company/Company'
+const Landing = React.lazy(() => import('../view/Landing')) 
+const Artist = React.lazy(() => import('../components/Artist/Artist'))
+const Client = React.lazy(() => import('../components/Client/Client'))
+const Company = React.lazy(() => import('../components/Company/Company'))
+const HomeApp = React.lazy(() => import('../components/HomeApp/HomeApp'))
+const Terms = React.lazy(() => import('../components/Footer/Terms'))
+const Help = React.lazy(() => import('../components/Footer/Help'))
+const ViewArtist = React.lazy(() => import('../components/HomeApp/ViewArtist'))
+const Chats = React.lazy(() => import('../components/HomeApp/Chats'))
+const Lives = React.lazy(() => import('../components/HomeApp/Lives'))
+const Subscriptions = React.lazy(() => import('../components/HomeApp/Subscriptions'))
+const Billing = React.lazy(() => import('../components/HomeApp/Billing'))
+const VideoCall = React.lazy(() => import('../components/HomeApp/VideoCall'))
+const ArtistApp = React.lazy(() => import('../components/ArtistApp/ArtistApp'))
+const ArtstChats = React.lazy(() => import('../components/ArtistApp/ArtistChats'))
+const ArtistPorfile = React.lazy(() => import('../components/ArtistApp/ArtistPorfile'))
+const ClientPorfile = React.lazy(() => import('../components/ArtistApp/ClientPorfile'))
+const BillingArtist = React.lazy(() => import('../components/ArtistApp/BillingArtist'))
+const ArtistDashboard = React.lazy(() => import('../components/ArtistApp/ArtistDashboard'))
+const VideoCallArtist = React.lazy(() => import('../components/ArtistApp/VideoCallArtist'))
+const LivesArtist = React.lazy(() => import('../components/ArtistApp/LivesArtist'))
+const CompanyApp = React.lazy(() => import('../components/CompanyApp/CompanyApp'))
+const CompanyChats = React.lazy(() => import('../components/CompanyApp/CompanyChats'))
+const ArtistCompany = React.lazy(() => import('../components/CompanyApp/ArtistCompany'))
+const BillingCompany = React.lazy(() => import('../components/CompanyApp/BillingCompany'))
+const ClientProtectedRoute = React.lazy(() => import('../utils/clientProtectedRoute'))
 
-import HomeApp from '../components/HomeApp/HomeApp'
-import Terms from '../components/Footer/Terms'
-import Help from '../components/Footer/Help';
-import ViewArtist from '../components/HomeApp/ViewArtist';
-import Chats from '../components/HomeApp/Chats'
-import Lives from '../components/HomeApp/Lives';
-import Subscriptions from '../components/HomeApp/Subscriptions';
-import Billing from '../components/HomeApp/Billing';
-import VideoCall from '../components/HomeApp/VideoCall';
-import ArtistApp from '../components/ArtistApp/ArtistApp';
-import ArtstChats from '../components/ArtistApp/ArtistChats'
-import ArtistPorfile from '../components/ArtistApp/ArtistPorfile'
-import ClientPorfile from '../components/ArtistApp/ClientPorfile';
-import BillingArtist from '../components/ArtistApp/BillingArtist';
-import ArtistDashboard from '../components/ArtistApp/ArtistDashboard'
-
-import VideoCallArtist from '../components/ArtistApp/VideoCallArtist';
-import LivesArtist from '../components/ArtistApp/LivesArtist';
-import CompanyApp from '../components/CompanyApp/CompanyApp';
-import CompanyChats from '../components/CompanyApp/CompanyChats';
-import ArtistCompany from '../components/CompanyApp/ArtistCompany'
-import BillingCompany from '../components/CompanyApp/BillingCompany';
-import ClientProtectedRoute from '../utils/clientProtectedRoute';
 
 const home = () => {
   return (
