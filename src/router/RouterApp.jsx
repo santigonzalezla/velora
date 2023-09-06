@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import React from 'react'
 const Landing = React.lazy(() => import('../view/Landing')) 
 const Artist = React.lazy(() => import('../components/Artist/Artist'))
 const Client = React.lazy(() => import('../components/Client/Client'))
