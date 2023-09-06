@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import React from 'react'
-const Landing = React.lazy(() => import('../view/Landing')) 
+import React, { Suspense } from 'react'
+const Landing = React.lazy(() => import('../view/Landing'))
 const Artist = React.lazy(() => import('../components/Artist/Artist'))
 const Client = React.lazy(() => import('../components/Client/Client'))
 const Company = React.lazy(() => import('../components/Company/Company'))
@@ -71,34 +71,36 @@ const videoCall = () => {
 
 const RouterApp = () => {
   return (
-    <Routes>
-      <Route path='/' element={<Landing />} />
-      <Route path='/Client' element={<Client />} />
-      <Route path='/Artist' element={<Artist />} />
-      <Route path='/Company' element={<Company />} />
-      <Route path='/Home' element={home()} />
-      <Route path='/Terms' element={<Terms />} />
-      <Route path='/Help' element={<Help />} />
-      <Route path='/ViewArtist' element={<ViewArtist />} />
-      <Route path='/Chats' element={chats()} />
-      <Route path='/Lives' element={<Lives />} />
-      <Route path='/Subscriptions' element={subscriptions()} />
-      <Route path='/Billing' element={billing()} />
-      <Route path='/VideoCall' element={videoCall()} />
-      <Route path='/ArtistApp' element={<ArtistApp />} />
-      <Route path='/ArtstChats' element={<ArtstChats />} />
-      <Route path='/ArtistPorfile' element={<ArtistPorfile />} />
-      <Route path='/ClientPorfile' element={<ClientPorfile />} />
-      <Route path='/ArtistDashboard' element={<ArtistDashboard />} />
-      <Route path='/VideoCallArtist' element={<VideoCallArtist />} />
-      <Route path='/LivesArtist' element={<LivesArtist />} />
-      <Route path='/BillingArtist' element={<BillingArtist />} />
-      <Route path='/CompanyApp' element={<CompanyApp />} />
-      <Route path='/CompanyChats' element={<CompanyChats />} />
-      <Route path='/ArtistCompany' element={<ArtistCompany />} />
-      <Route path='/BillingCompany' element={<BillingCompany />} />
-      <Route path="*" element={<Landing />}/>
-    </Routes>
+    <Suspense fallback={<div>Loading...</div>} >
+      <Routes>
+        <Route path='/' element={<Landing />} />
+        <Route path='/Client' element={<Client />} />
+        <Route path='/Artist' element={<Artist />} />
+        <Route path='/Company' element={<Company />} />
+        <Route path='/Home' element={home()} />
+        <Route path='/Terms' element={<Terms />} />
+        <Route path='/Help' element={<Help />} />
+        <Route path='/ViewArtist' element={<ViewArtist />} />
+        <Route path='/Chats' element={chats()} />
+        <Route path='/Lives' element={<Lives />} />
+        <Route path='/Subscriptions' element={subscriptions()} />
+        <Route path='/Billing' element={billing()} />
+        <Route path='/VideoCall' element={videoCall()} />
+        <Route path='/ArtistApp' element={<ArtistApp />} />
+        <Route path='/ArtstChats' element={<ArtstChats />} />
+        <Route path='/ArtistPorfile' element={<ArtistPorfile />} />
+        <Route path='/ClientPorfile' element={<ClientPorfile />} />
+        <Route path='/ArtistDashboard' element={<ArtistDashboard />} />
+        <Route path='/VideoCallArtist' element={<VideoCallArtist />} />
+        <Route path='/LivesArtist' element={<LivesArtist />} />
+        <Route path='/BillingArtist' element={<BillingArtist />} />
+        <Route path='/CompanyApp' element={<CompanyApp />} />
+        <Route path='/CompanyChats' element={<CompanyChats />} />
+        <Route path='/ArtistCompany' element={<ArtistCompany />} />
+        <Route path='/BillingCompany' element={<BillingCompany />} />
+        <Route path="*" element={<Landing />} />
+      </Routes>
+    </Suspense>
   );
 }
 
