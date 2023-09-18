@@ -21,8 +21,8 @@ const Hero = () => {
       <Container>
         <Row className={style.Hero}>
           <Col sm="12" md="4" lg="4" xl="4">
-            <h1>Find what you want</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
+            <h1>Descubre un Mundo de Exclusividad </h1>
+            <p>Únete a nuestra comunidad exclusiva para acceso inmediato a contenido cautivador, desde fotos sensuales hasta videos emocionantes. Regístrate y disfruta de experiencias únicas. ¿Qué esperas?</p>
             <Link to='/Client'>
               <button className={style.singUpBtn} onClick={scrollToTop} >Ver mas</button>
             </Link>
@@ -39,8 +39,8 @@ const Hero = () => {
             <img src={BeImg} alt="" id={style.ImgBe} />
           </Col>
           <Col sm="12" md="6" lg="6" xl="6">
-            <h1>Be an Artist</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
+            <h1>¡Eleva Tu Arte y Tu Carrera!</h1>
+            <p>¿Eres un creador apasionado? Únete a nuestra comunidad y gana por tu talento. Libera tu creatividad, construye seguidores y establece conexiones significativas. Tu estilo importa. ¡Súmate hoy!</p>
             <Link to='/Artist' >
               <button className={style.singUpBtn} onClick={scrollToTop} >Ver Más</button>
             </Link>
@@ -51,7 +51,7 @@ const Hero = () => {
         <Row className={style.Hero}>
           <Col sm="12" md="6" lg="6" xl="6">
             <h1>¿Quieres Pautar con Nosotros?</h1>
-            <p>Accede a nuestro catálogo de artistas y descubre lo que ofrecemos para tu negocio</p>
+            <p>No te pierdas esta oportunidad única. Únete como amante del contenido o artista. Regístrate para explorar y ganar lo que mereces. </p>
             <Link to='/Company'>
               <button className={style.singUpBtn} onClick={scrollToTop}>Ver Más</button>
             </Link>
