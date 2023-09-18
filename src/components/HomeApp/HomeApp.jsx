@@ -1,9 +1,9 @@
 import style from './HomeApp.module.css'
 import { Col, Row, Container } from 'react-bootstrap';
-import SideBar from './SideBar';
-import Stories from './Stories';
-import Feed from './Feed'
-import Suggetions from './Suggetions';
+import SideBar from '../SideBar/SideBar';
+import Stories from '../Stories/Stories';
+import Feed from '../Feed/Feed'
+import Suggetions from '../Suggetions/Suggetions';
 
 const HomeApp = () => {
   return (

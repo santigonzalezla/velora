@@ -1,0 +1,113 @@
+.userPhoto {
+  width: 50px;
+  margin: 1%;
+}
+
+
+.userData {
+  display: flex;
+  flex-direction: column;
+  color: #373B56;
+}
+
+.userNick {
+  font-family: "Barlow Medium", sans-serif;
+  color: #373B56;
+}
+
+.PostImg {
+  width: 40rem;
+}
+
+.PostContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.PostReaction {
+  width: 87%;
+}
+
+.iconsReaction {
+  width: 25px;
+  margin: 1rem;
+}
+
+.postDescription {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.postTxt {
+  margin-top: 1rem;
+}
+
+.postViewMore {
+  color: #373B56B2;
+}
+
+.postViewMore:hover {
+  cursor: pointer;
+}
+
+#Suggetions {
+  background-color: #ECEDF2;
+}
+
+#SuggetionsContainer {
+  border-left: 1px solid #373B5640;
+  padding-left: 2rem;
+  height: 100%;
+  background-color: #ECEDF2;
+  font-family: "Barlow", sans-serif;
+}
+
+.SuggetionsContent {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.SuggetionsCard {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0px;
+  margin-bottom: 1rem;
+}
+
+.SuggetionsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#ViewArtist {
+  display: flex;
+  padding: 0px;
+  background-color: #ECEDF2;
+}
+
+#ViewArtistCol {
+  display: flex;
+  flex-direction: column;
+}
+
+#ViewArtistContent {
+  color: #373B56;
+  margin-left: 6.4rem;
+  background-color: #ECEDF2;
+}
+
+.SuggetionsBar {
+  margin: 0px;
+  padding: 0px;
+}
