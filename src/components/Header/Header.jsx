@@ -73,7 +73,7 @@ const Header = (props) => {
   const [showSingUp, setShowSingUp] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
-  const handleClose = () => setShow(false)
+  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const [email, setEmail] = useState("");
@@ -225,7 +225,6 @@ const Header = (props) => {
                   Registrarse
                 </Button>
                 <p>O Ingresa con:</p>
-
               </Modal.Body>
               <Modal.Footer className={style.Modal} id={style.ModalFooter}>
                 <img src={Twitter} alt="" className={style.icons} />
