@@ -1,8 +1,8 @@
 import style from './ArtistApp.module.css'
 import { Col, Row, Container } from 'react-bootstrap';
-import SideBarArtist from './SideBarArtist';
-import FeedArtist from './FeedArtist'
-import SuggetionsArtist from './SuggetionsArtist';
+import SideBarArtist from '../SideBarArtist/SideBarArtist';
+import FeedArtist from '../FeedArtist/FeedArtist'
+import SuggetionsArtist from '../SuggetionsArtist/SuggetionsArtist';
 
 const ArtistApp = () => {
   return (
