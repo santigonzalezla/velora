@@ -14,9 +14,9 @@ const ServicesArtist = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>¿Te gustaría conocer a tu Artista?</Card.Title>
+                <Card.Title className={style.ServCardTxt}>Ingresos Justos</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  A través de nuestro servicio Handshake, Concreta una cita, virtual o presencial  para conocerle
+                  Maximiza tus ganancias con una estructura de ingresos transparente y sin intermediarios.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg1} />
@@ -25,9 +25,9 @@ const ServicesArtist = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
+                <Card.Title className={style.ServCardTxt}>Libertad Creativa </Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Accede al contenido comprado, de subscripción, y a sugerencias de contenido basado en tu consumo
+                  Expresa tu arte sin restricciones, definiendo tu estilo y contenido a tu manera.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg3} />
@@ -36,9 +36,9 @@ const ServicesArtist = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>Lives</Card.Title>
+                <Card.Title className={style.ServCardTxt}> Comunidad Leal</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Gravida diam enim sed ut mi. Est in sit sed tincidunt.Gravida diam enim sed ut mi. Est in sit sed tincidunt.
+                  Construye una base de seguidores dedicados que te apoyan y siguen tu evolución artística.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg4} />
@@ -47,9 +47,9 @@ const ServicesArtist = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>
+                <Card.Title className={style.ServCardTxt}>Seguridad Garantizada</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Gravida diam enim sed ut mi. Est in sit sed tincidunt.Gravida diam enim sed ut mi. Est in sit sed tincidunt.
+                  Crea en un entorno protegido y confiable, donde tu privacidad y seguridad son primordiales.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg2} />

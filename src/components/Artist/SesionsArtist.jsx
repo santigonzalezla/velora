@@ -8,8 +8,8 @@ const SesionsArtist = () => {
       <Container>
         <Row id={style.Sesions}>
           <Col sm="12" md="6" lg="6" xl="6">
-            <h1>Find what you want</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
+            <h1>Eleva Tu Carrera Artística con Nosotros</h1>
+            <p>¿Eres un creador apasionado en busca de oportunidades para destacar y prosperar? Únete a nuestra comunidad de artistas y descubre un mundo de ingresos justos, libertad creativa sin límites, una base de seguidores leales y una plataforma segura para expresar tu arte. No dejes que tu talento pase desapercibido. Únete ahora y comienza a dar vida a tus sueños artísticos. Tu éxito te espera.</p>
             <button className={style.singUpBtn} >Sing up</button>
           </Col>
           <Col sm="12" md="6" lg="6" xl="6">
