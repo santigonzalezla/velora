@@ -14,9 +14,9 @@ const Services = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>¿Te gustaría conocer a tu Artista?</Card.Title>
+                <Card.Title className={style.ServCardTxt}>Comunicación Privada</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  A través de nuestro servicio Handshake, Concreta una cita, virtual o presencial  para conocerle
+                  Establece conexiones auténticas con tus artistas favoritos a través de mensajes privados, videollamadas y chats en vivo.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg1} />
@@ -25,9 +25,9 @@ const Services = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
+                <Card.Title className={style.ServCardTxt}>Privacidad y Seguridad </Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Accede al contenido comprado, de subscripción, y a sugerencias de contenido basado en tu consumo
+                  Tu confidencialidad es nuestra prioridad. Garantizamos un entorno seguro y protegido para disfrutar sin preocupaciones.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg3} />
@@ -36,9 +36,9 @@ const Services = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>Lives</Card.Title>
+                <Card.Title className={style.ServCardTxt}> Eventos Exclusivos</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Gravida diam enim sed ut mi. Est in sit sed tincidunt.Gravida diam enim sed ut mi. Est in sit sed tincidunt.
+                  Accede a eventos en vivo y experiencias únicas que te permiten interactuar en tiempo real con los artistas.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg4} />
@@ -47,9 +47,9 @@ const Services = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>
+                <Card.Title className={style.ServCardTxt}> Contenido Premium</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Gravida diam enim sed ut mi. Est in sit sed tincidunt.Gravida diam enim sed ut mi. Est in sit sed tincidunt.
+                  Sumérgete en un mundo de entretenimiento exclusivo con fotos y videos de alta calidad que despiertan tus deseos.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg2} />

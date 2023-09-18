@@ -7,8 +7,8 @@ const Sesions = () => {
       <Container>
         <Row id={style.Sesions}>
           <Col sm="12" md="6" lg="6" xl="6">
-            <h1>Find what you want</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus neque. In mollis pretium sapien, eu feugiat ligula bibendum nec. Phasellus laoreet laoreet velit, bibendum pretium nibh convallis at. Donec iaculis enim et sagittis tristique.</p>
+            <h1>Tu momento especial</h1>
+            <p>Descubre un mundo de placer y autenticidad. Únete a nuestra comunidad para acceder a contenido exclusivo, conectar con artistas, vivir experiencias únicas y disfrutar de una privacidad garantizada. No dejes pasar esta oportunidad. Únete ahora y empieza a crear momentos inolvidables. Tu experiencia te espera.</p>
             <button className={style.singUpBtn} >Sing up</button>
           </Col>
           <Col sm="12" md="6" lg="6" xl="6">

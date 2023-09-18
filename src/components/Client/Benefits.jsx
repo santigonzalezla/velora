@@ -10,9 +10,9 @@ const Benefits = () => {
           <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
+                <Card.Title>Contenido Exclusivo</Card.Title>
                 <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <p>Descubre un mundo de contenido que no encontrarás en ningún otro lugar. Desde fotos y videos privados hasta experiencias únicas, te ofrecemos exclusividad.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -20,9 +20,9 @@ const Benefits = () => {
           <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
+                <Card.Title>Conexiones Auténticas</Card.Title>
                 <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <p>Conéctate con tus artistas favoritos de manera cercana. Comentarios, mensajes privados y eventos en vivo te acercan más que nunca.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -30,9 +30,9 @@ const Benefits = () => {
           <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
+                <Card.Title>Experiencias Inolvidables</Card.Title>
                 <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <p>Vive momentos íntimos y emocionantes que te dejarán sin aliento. Nuestra comunidad te ofrece experiencias que perdurarán en tu memoria.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -40,10 +40,9 @@ const Benefits = () => {
           <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
+                <Card.Title>Privacidad Garantizada</Card.Title>
                 <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-
+                  <p>Tu privacidad es nuestra prioridad. Tu actividad en nuestra plataforma es confidencial,discreta y segura, para que disfrutes sin preocupaciones.</p>
                 </Card.Text>
               </Card.Body>
             </Card>

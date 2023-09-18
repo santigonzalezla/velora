@@ -6,7 +6,6 @@ import Sesions from './Sesions';
 import Services from './Services'
 import Footer from '../Footer/Footer';
 
-
 const Client = () => {
   return (
     <div id={style.Client}>
