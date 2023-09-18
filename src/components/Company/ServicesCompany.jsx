@@ -9,13 +9,13 @@ const ServicesCompany = () => {
     <div>
       <Container id={style.Benefits}>
         <Row className={style.BenefitsRow}>
-          <h1>Servicio: Artistas Velora</h1>
+          <h1>Innovadores para Artistas</h1>
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
+                <Card.Title className={style.ServCardTxt}>Monetización Inteligente</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Escoge el artista que más te guste
+                  Optimiza tus ingresos con herramientas avanzadas de monetización y análisis de audiencia.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg3} />
@@ -24,9 +24,9 @@ const ServicesCompany = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
+                <Card.Title className={style.ServCardTxt}> Exposición Global </Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Escoge el artista que más te guste
+                  Aumenta tu visibilidad y llega a audiencias internacionales a través de nuestras estrategias de promoción global.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg3} />
@@ -35,9 +35,9 @@ const ServicesCompany = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
+                <Card.Title className={style.ServCardTxt}> Asesoramiento Profesional </Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Organiza eventos con tu Artista
+                  Recibe orientación de expertos en la industria para perfeccionar tu arte y aumentar el tamaño de tu comunidad.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg4} />
@@ -46,9 +46,9 @@ const ServicesCompany = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>
+                <Card.Title className={style.ServCardTxt}>Herramientas Creativas</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Escoge el artista que más te guste
+                  Explora nuestras herramientas innovadoras para la creación y edición de contenido, impulsando tu creatividad.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg2} />
@@ -61,13 +61,13 @@ const ServicesCompany = () => {
       </Container>
       <Container id={style.Benefits}>
         <Row className={style.BenefitsRow}>
-          <h1>Servicio: Promueve tu establecimiento</h1>
+          <h1>Empresariales de Vanguardia</h1>
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
+                <Card.Title className={style.ServCardTxt}> Estrategia de Contenido Impactante </Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Escoge el artista que más te guste
+                  Desarrollamos estrategias de contenido personalizadas que conectan con tu audiencia de manera significativa.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg3} />
@@ -76,9 +76,9 @@ const ServicesCompany = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO </Card.Title>
+                <Card.Title className={style.ServCardTxt}>Campañas Virales </Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Escoge el artista que más te guste
+                  Creamos campañas virales guiadas a un publico objetivo garantizando que amplifican tu mensaje y aumentan la participación del público.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg3} />
@@ -87,9 +87,9 @@ const ServicesCompany = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>
+                <Card.Title className={style.ServCardTxt}>Análisis de Datos Avanzados</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Escoge el artista que más te guste
+                  Utilizamos análisis de datos avanzados para optimizar tus esfuerzos de marketing y medir resultados en tiempo real.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg4} />
@@ -98,9 +98,9 @@ const ServicesCompany = () => {
           <Col xs='12' md='3' className={style.CardCol}>
             <Card className={style.ServiceCards}>
               <Card.Body className={style.ServiceCardBody}>
-                <Card.Title className={style.ServCardTxt}>NOMBRE DEL SERVICIO</Card.Title>
+                <Card.Title className={style.ServCardTxt}>Colaboraciones Estratégicas</Card.Title>
                 <Card.Text className={style.ServiceCardsText}>
-                  Escoge el artista que más te guste
+                  Facilitamos colaboraciones estratégicas con artistas influyentes para aumentar el impacto de tu marca.
                 </Card.Text>
               </Card.Body>
               <Card.Img variant="bottom" src={ServicesImg2} />

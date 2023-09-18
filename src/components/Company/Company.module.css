@@ -86,6 +86,7 @@
 
 .BuyService {
   margin: 1rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: flex-end;
 }

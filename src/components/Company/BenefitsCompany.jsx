@@ -10,9 +10,9 @@ const BenefitsCompany = () => {
           <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
+                <Card.Title> Promoción Efectiva</Card.Title>
                 <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <p>Amplía tu alcance, potencial y visibilidad con nuestras herramientas de promoción y estadistica altamente efectivas, llegando a una amplia audiencia comprometida.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -20,9 +20,9 @@ const BenefitsCompany = () => {
           <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
+                <Card.Title> Colaboraciones Estratégicas</Card.Title>
                 <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <p>Establece relaciones con artistas y creadores para campañas exclusivas que generen impacto y conecten con tu audiencia de manera auténtica.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -30,9 +30,9 @@ const BenefitsCompany = () => {
           <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
+                <Card.Title>Experiencias de Marca</Card.Title>
                 <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <p>Ofrece a tus clientes experiencias únicas y memorables a través de eventos en vivo y contenido personalizado, impulsando la lealtad y la interacción.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -40,9 +40,9 @@ const BenefitsCompany = () => {
           <Col className={style.BenefitsRow}>
             <Card className={style.Cards} >
               <Card.Body>
-                <Card.Title>Lorem ipsum</Card.Title>
+                <Card.Title>Analítica y Seguimiento</Card.Title>
                 <Card.Text className={style.CardsTxt}>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <p>Accede a datos exactos y análisis en tiempo real para tomar decisiones informadas, asertivas y aumentar el impacto de tu presencia en nuestra plataforma</p>
                 </Card.Text>
               </Card.Body>
             </Card>
