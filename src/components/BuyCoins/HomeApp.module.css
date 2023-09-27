@@ -1,0 +1,75 @@
+#BuyCoins {
+  background-color: #ECEDF2;
+}
+
+#BuyCoinsContainer {
+  padding-left: 6.4rem;
+  background-color: #ECEDF2;
+  height: 100vh;
+  font-family: Inter, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#CreditsBuy {
+  width: 70%;
+  padding: 1rem;
+  background-color: #A000FF;
+  color: #F9F9F9;
+  height: 3.5rem;
+}
+
+#TransactionsBuyCoins {
+  background-color: #F9F9F9;
+  padding: 1rem;
+  margin: 1rem;
+  font-family: Barlow, sans-serif;
+}
+
+.TransactionsRows {
+  margin: 1rem;
+  padding: 1rem;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #ECEDF2;
+  box-shadow: 0px 5px 10px 0px #373B5626;
+}
+
+.TransactionsName {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.TransactionsOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.BuyCoinsLateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BuyCoinsButtons {
+  background: #A000FF;
+  color: #ECEDF2;
+  padding: 0.5rem;
+  margin: 2rem;
+  border-radius: 5px;
+}
+
+#CreditsData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#CreditsData span {
+  padding: 1rem 4rem;
+  border: 1px solid #373B5640;
+}
