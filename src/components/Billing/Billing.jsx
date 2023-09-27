@@ -2,7 +2,8 @@ import style from './HomeApp.module.css'
 import SideBar from '../SideBar/SideBar';
 import { Container, Row, Col } from 'react-bootstrap';
 import Logo from '../../assets/img/HomeApp/Billing/Logo.png'
-import PayMethod from '../../assets/img/HomeApp/Billing/PayMethod.png'
+import { Link } from 'react-router-dom';
+import HistoralBilling from './HistoralBilling';
 
 const Billing = () => {
   return (
@@ -22,7 +23,9 @@ const Billing = () => {
                   <p>1 Crédito</p>
                 </div>
                 <div id={style.CreditsBuy}>
-                  Comprar Créditos
+                  <Link to='/BuyCoins'>
+                    Comprar Créditos
+                  </Link>
                 </div>
               </section>
             </Col>
@@ -31,69 +34,12 @@ const Billing = () => {
             </Col>
           </Row>
         </Container>
-        <Container>
-          <Row id={style.TransactionsBilling}>
-            <section>
-              <h5>Historial de  transacciones</h5>
-            </section>
-            <Row className={style.TransactionsRows}>
-              <Col>
-                <p>Nombre transacción</p>
-              </Col>
-              <Col>
-                <img src={PayMethod} alt="" width={50} />
-              </Col>
-              <Col>
-                <p>250 USD</p>
-              </Col>
-              <Col>
-                <p>DD/MM/AAA</p>
-              </Col>
-            </Row>
-            <Row className={style.TransactionsRows}>
-              <Col>
-                <p>Nombre transacción</p>
-              </Col>
-              <Col>
-                <img src={PayMethod} alt="" width={50} />
-              </Col>
-              <Col>
-                <p>250 USD</p>
-              </Col>
-              <Col>
-                <p>DD/MM/AAA</p>
-              </Col>
-            </Row>
-            <Row className={style.TransactionsRows}>
-              <Col>
-                <p>Nombre transacción</p>
-              </Col>
-              <Col>
-                <img src={PayMethod} alt="" width={50} />
-              </Col>
-              <Col>
-                <p>250 USD</p>
-              </Col>
-              <Col>
-                <p>DD/MM/AAA</p>
-              </Col>
-            </Row>
-            <Row className={style.TransactionsRows}>
-              <Col>
-                <p>Nombre transacción</p>
-              </Col>
-              <Col>
-                <img src={PayMethod} alt="" width={50} />
-              </Col>
-              <Col>
-                <p>250 USD</p>
-              </Col>
-              <Col>
-                <p>DD/MM/AAA</p>
-              </Col>
-            </Row>
-          </Row>
-        </Container>
+        <section id={style.HistoralBilling}>
+          <section>
+            <h5>Historial de  transacciones</h5>
+          </section>
+          <HistoralBilling />
+        </section>
       </section>
     </div>
   );
