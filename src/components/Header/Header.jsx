@@ -140,10 +140,10 @@ const Header = (props) => {
         const token = cookies.get('auth-cookie');
         const decoded = jwt(token);
         const t = decoded.userType;
-        if (t === '1') {
+        if (t === 'artista') {
           alert("SignUp successful Artista");
           navigate('/artistapp')
-        } else if (t === '2') {
+        } else if (t === 'cliente') {
           alert("SignUp successful Client");
           navigate('/home')
         }

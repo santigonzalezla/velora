@@ -2,63 +2,86 @@ import style from './HomeApp.module.css'
 import { Image } from 'react-bootstrap'
 import LogoSide from '../../assets/img/HomeApp/Feed/logoside.png'
 import userPhoto from '../../assets/img/HomeApp/Feed/userPhoto.png'
-import postImg from '../../assets/img/HomeApp/Feed/postImg.png'
 import commentReaction from '../../assets/img/HomeApp/Feed/commentReaction.png'
 import heartReaction from '../../assets/img/HomeApp/Feed/heartReaction.png'
 import donationReaction from '../../assets/img/HomeApp/Feed/donationReaction.png'
-import { Link } from 'react-router-dom'
+import Post from './Post'
+import { Cookies } from 'react-cookie'
+import { useState } from 'react';
+
+const cookies = new Cookies();
+
+async function getUserPosts(username) {
+  const token = cookies.get('auth-cookie');
+  const url = `http://localhost:9000/api/posts/${username}`;
+  const options = {
+    headers: {
+      credetials: 'include',
+      'Authorization': 'Bearer ' + (token || '')
+    }
+  };
+  const response = await fetch(url, options);
+
+  if (response.ok) {
+    const data = await response.json();
+    return data;
+  } else {
+    return null;
+  }
+}
+
+async function getUserInfo(username) {
+  const token = cookies.get('auth-cookie');
+  const headers = {
+    'Authorization': 'Bearer ' + (token || '')
+  };
+  const response = await fetch(`${import.meta.env.VITE_AUTH_API_URL}/profile/${username}`, {
+    headers
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    return data.data;
+  } else {
+    return null;
+  }
+}
 
 const Feed = () => {
+  const [loadingSearch, setLoadingSearch] = useState(false);
+  const [posts, setPosts] = useState([]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const searchValue = e.target[0].value;
+    console.log(searchValue.startsWith('@'));
+    if (searchValue.startsWith('@')) {
+      setLoadingSearch(true);
+      getUserPosts(searchValue.slice(1)).then((data) => {
+        getUserInfo(searchValue.slice(1)).then((user) => {
+          const tempData = data.data.map((post) => [user.first_name + " " + user.last_name, post])
+          console.log(tempData);
+          setPosts(tempData);
+          setLoadingSearch(false);
+        });      
+      });
+    }
+  }
+
   return (
     <main id={style.Feed}>
       <div>
         < Image src={LogoSide} alt="" id={style.LogoSide} fluid />
-        <input type="text" id={style.FeedInput} />
+        <form onSubmit={handleSearch}>
+          <input type="text" id={style.FeedInput} disabled={loadingSearch} placeholder='@username' />
+        </form>
       </div>
-      <div className={style.Post}>
-        <div className={style.porfile}>
-          <Link to={'/ViewArtist'}>
-            < Image src={userPhoto} alt="" className={style.userPhoto} fluid />
-          </Link>
-          <div className={style.userData}>
-            <span className={style.userNick}>Beautyful Mouse</span>
-            <span>@beautyfulmuse112</span>
-          </div>
-        </div>
-        <div className={style.PostContent}>
-          < Image src={postImg} alt="" className={style.PostImg} fluid />
-          <div className={style.PostReaction}>
-            < Image src={commentReaction} alt="" className={style.iconsReaction} fluid />
-            < Image src={heartReaction} alt="" className={style.iconsReaction} fluid />
-            < Image src={donationReaction} alt="" className={style.iconsReaction} fluid />
-          </div>
-          <div className={style.postDescription}>
-            <p className={style.postTxt}>Lorem ipsum dolor sit amet, Cum sociis natoque penatibus et magnis dis parturient. Purus faucibus ornare suspendisse sed nisi lacus sed. </p>
-            <p className={style.postViewMore}>View more...</p>
-          </div>
-        </div>
-      </div>
-      <div className={style.Post}>
-        <div className={style.porfile}>
-          < Image src={userPhoto} alt="" className={style.userPhoto} fluid />
-          <div className={style.userData}>
-            <span className={style.userNick}>Beautyful Mouse</span>
-            <span>@beautyfulmuse112</span>
-          </div>
-        </div>
-        <div className={style.PostContent}>
-          < Image src={postImg} alt="" className={style.PostImg} fluid />
-          <div className={style.PostReaction}>
-            < Image src={commentReaction} alt="" className={style.iconsReaction} fluid />
-            < Image src={heartReaction} alt="" className={style.iconsReaction} fluid />
-            < Image src={donationReaction} alt="" className={style.iconsReaction} fluid />
-          </div>
-          <div className={style.postDescription}>
-            <p className={style.postTxt}>Lorem ipsum dolor sit amet, Cum sociis natoque penatibus et magnis dis parturient. Purus faucibus ornare suspendisse sed nisi lacus sed. </p>
-            <p className={style.postViewMore}>View more...</p>
-          </div>
-        </div>
-      </div>
+      
+      {
+        posts.map((post, index) => (
+          <Post key={index} artistUsername={post[1].creator_id} artistName={post[0]} postImages={post[1].media} postText={post[1].text}/>
+        ))
+      }
     </main>
   );
 }

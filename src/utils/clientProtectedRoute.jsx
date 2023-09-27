@@ -12,7 +12,6 @@ const ProtectedRoute = (props) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const checkUserToken = async () => {
         const token = cookies.get('auth-cookie');
-        let decoded = null;
 
         const response = await fetch(`${apiURL}/verifyToken`, {
             credentials: 'include',
@@ -20,12 +19,13 @@ const ProtectedRoute = (props) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ "tokenJWT": cookies.get('auth-cookie') || '' }),
+            body: JSON.stringify({ "tokenJWT": token  || '' }),
         });
 
         if (response.ok) {
             setIsLoggedIn(true)
             const data = await response.json();
+            console.log(data)
             if (data.data.token) {
                 cookies.set('auth-cookie', data.data.token)
             }

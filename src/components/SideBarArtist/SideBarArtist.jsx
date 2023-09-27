@@ -60,7 +60,7 @@ const SideBarArtist = () => {
   return (
     <main id={style.SideBar}>
       <div id={style.SideBarIcons}>
-        <Link to={'/ArtistPorfile'}>
+        <Link to={'/ArtistProfile'}>
           <img src={Porfile} alt="" className={style.SideBarItem} />
         </Link>
         <Link to={'/ArtistApp'}>

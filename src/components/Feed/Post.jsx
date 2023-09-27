@@ -1,11 +1,11 @@
-import style from './ArtistApp.module.css'
+import style from './HomeApp.module.css'
 import { Image } from 'react-bootstrap'
 import userPhoto from '../../assets/img/HomeApp/Feed/userPhoto.png'
-import postImg from '../../assets/img/HomeApp/Feed/postImg.png'
 import commentReaction from '../../assets/img/HomeApp/Feed/commentReaction.png'
 import heartReaction from '../../assets/img/HomeApp/Feed/heartReaction.png'
 import donationReaction from '../../assets/img/HomeApp/Feed/donationReaction.png'
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom'
 
 
 const Post = (props) => {
@@ -13,9 +13,11 @@ const Post = (props) => {
 
   return (
     <div className={style.Post}>
-      <div className={style.porfile}>
-        < Image src={userPhoto} alt="" className={style.userPhoto} fluid />
-        <div className={style.userData}>
+        <div className={style.porfile}>
+          <Link to={`/ViewArtist/${artistUsername}`}>
+            < Image src={userPhoto} alt="" className={style.userPhoto} fluid />
+          </Link>
+          <div className={style.userData}>
           <span className={style.userNick}>{artistName}</span>
           <span>@{artistUsername}</span>
         </div>

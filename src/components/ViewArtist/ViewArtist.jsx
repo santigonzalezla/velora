@@ -1,5 +1,6 @@
 import style from './HomeApp.module.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { Image, Row, Col, Nav, Container, Modal } from 'react-bootstrap';
 import SideBar from '../SideBar/SideBar';
 import Suggetions from '../Suggetions/Suggetions';
@@ -11,8 +12,35 @@ import Star from '../../assets/img/HomeApp/ViewArtist/Star.png'
 import Date from '../../assets/img/HomeApp/ViewArtist/Date.png'
 import WebCam from '../../assets/img/HomeApp/ViewArtist/WebCam.png'
 // import Feed from '../Feed/Feed'
+import { Cookies } from 'react-cookie'
+
+const cookies = new Cookies();
+
+async function getUserInfo(username) {
+  const token = cookies.get('auth-cookie');
+  const headers = {
+    'Authorization': 'Bearer ' + (token || '')
+  };
+  const response = await fetch(`${import.meta.env.VITE_AUTH_API_URL}/profile/${username}`, {
+    headers
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    return data.data;
+  } else {
+    return null;
+  }
+}
 
 const ViewArtist = () => {
+  const { username } = useParams();
+
+  const [first_name, setName] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [country, setCountry] = useState('');
+  const [bio, setBio] = useState('');
+
   //Modal para subscribirse al artista
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -29,6 +57,20 @@ const ViewArtist = () => {
   // const [reqSubs, setReqSubs] = useState(false);
   // const reqSubsClose = setReqSubs(false)
   // const reqSubsShow = setReqSubs(true);
+
+  const loadProfile = async () => {
+    getUserInfo(username).then((data) => {
+      setName(data.first_name);
+      setCountry(data.country);
+      setLastname(data.last_name);
+      setBio(data.bio || "Biografia");
+    });
+  }
+
+  useEffect(() => {
+    loadProfile()
+  }, []);
+
   return (
     <div id={style.ViewArtist}>
       <SideBar />
@@ -85,11 +127,11 @@ const ViewArtist = () => {
               </section>
             </div>
             <div className={style.porfilUser}>
-              <h5>Beautiful Mouse</h5>
-              <span id={style.atSign}>@beautifulmouse112</span>
-              <span>Colombia</span>
-              <span>TextoBiografía lorem ipsum</span>
-              <section id={style.Review}>--
+              <h5>{first_name + " " + lastname}</h5>
+              <span id={style.atSign}>@{username}</span>
+              <span>{country}</span>
+              <span>{bio}</span>
+              <section id={style.Review}>
                 <span id={style.Subs}><span className={style.Nums} >53K</span> SUBSCRIPCIONES</span>
                 <span className={style.Nums}>4.3 <img src={Star} width={15} alt="" /><span id={style.Rev}><span> 52K</span> RESEÑAS</span></span>
               </section>

@@ -28,9 +28,10 @@ import Logout from '../../assets/img/HomeApp/SideBar/logout.png'
 
 const getUserInfo = async () => {
   const token = cookies.get('auth-cookie');
-  const headers = { 'Authorization': 'Bearer ' + (token || '') };
-  const decoded = jwt(token);
-  const response = await fetch(`${apiURL}/profile/${decoded.username}`, { headers });
+  const headers = { 
+    'Authorization': 'Bearer ' + (token || '') 
+  };
+  const response = await fetch(`${apiURL}/profile/`, { headers });
 
   if (response.ok) {
     const data = await response.json();
@@ -80,13 +81,14 @@ const SideBar = () => {
   const [username, setUsername] = useState('');
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState(null);
   const [phone, setPhone] = useState('');
   const [notification, setNotification] = useState(false);
   const targetNotification = useRef(null);
 
   const handleProfileClicked = async () => {
     const data = await getUserInfo();
+    console.log(data);
     setName(data.first_name);
     setLastname(data.last_name);
     setUsername(data.username);
@@ -147,7 +149,7 @@ const SideBar = () => {
               <section className={style.ModalInput}>
                 <p>Fecha de nacimiento</p>
                 <Form.Group className="mb-3" controlId="date">
-                  <Form.Control type="date" className={style.ModalInput} value={birth_date} onChange={(e) => setBirthDate(e.target.value)} />
+                  <Form.Control type="date" className={style.ModalInput} value={birth_date} disabled/>
                 </Form.Group>
               </section>
               <section className={style.ModalInput}>
@@ -169,10 +171,10 @@ const SideBar = () => {
               </section>
               <section className={style.ModalInput}>
                 <Form.Group className="mb-3">
-                  <Form.Control placeholder="Modificar Contraseña" />
+                  <Form.Control type="password" placeholder="Modificar Contraseña" />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Control placeholder="Confirmar Contraseña" onChange={(e) => setPassword(e.target.value)} />
+                  <Form.Control type="password" placeholder="Confirmar Contraseña" onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
               </section>
               <section id={style.ModalBtnContainer}>
@@ -184,7 +186,7 @@ const SideBar = () => {
           </Modal.Body>
         </Modal>
         {/* End Modal porfile */}
-        <Link to={'/'}>
+        <Link to={'/home'}>
           <img src={Home} alt="" className={style.SideBarItem} />
         </Link>
         <Link ref={targetNotification} onClick={() => setNotification(!notification)}>
