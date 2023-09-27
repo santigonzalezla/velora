@@ -20,6 +20,7 @@ import Lives from '../components/Lives/Lives';
 import Subscriptions from '../components/Subscriptions/Subscriptions';
 import Billing from '../components/Billing/Billing';
 import VideoCall from '../components/VideoCall/VideoCall';
+import BuyCoins from '../components/BuyCoins/BuyCoins';
 // import ClientProtectedRoute from '../utils/clientProtectedRoute';
 
 // const home = () => {
@@ -87,6 +88,7 @@ const RouterApp = () => {
       <Route path='/Subscriptions' element={<Subscriptions />}/*element={subscriptions()} */ />
       <Route path='/Billing' element={<Billing />}/*element={billing()}*/ />
       <Route path='/VideoCall' element={<VideoCall />}/* element={videoCall()}*/ />
+      <Route path='/BuyCoins' element={<BuyCoins />} />
     </Routes>
   );
 }
