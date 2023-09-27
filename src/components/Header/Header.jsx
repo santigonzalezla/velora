@@ -9,9 +9,7 @@ import Google from '../../assets/img/Login/Google.png'
 import { Cookies } from 'react-cookie'
 import jwt from 'jwt-decode'
 
-import { countries } from 'country-data';
 
-import { Country, State, City } from 'country-state-city';
 
 
 
@@ -19,6 +17,27 @@ const apiURL = import.meta.env.VITE_AUTH_API_URL;
 
 const cookies = new Cookies();
 
+async function getContriesData() {
+  const url = 'https://countriesnow.space/api/v0.1/countries/info?returns=flag,dialCode'
+  const response = await fetch(url);
+  const data = await response.json();
+  return data.data;
+}
+
+async function getCitiesofCountry(country) {
+  const url = 'https://countriesnow.space/api/v0.1/countries/cities'
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ country })
+  }
+  const request = new Request(url, options);
+  const response = await fetch(request);
+  const data = await response.json();
+  return data.data;
+}
 
 async function signUp(username, password, email, first_name, last_name, phone, country, city, preferences, type, birth_date, bio) {
   const url = `${apiURL}/signup`;
@@ -54,7 +73,7 @@ async function logIn(username, password) {
   if (response.ok) {
     const data = await response.json();
     cookies.set('auth-cookie', data.data.token)
-    return true;
+    return data.data.token;
   } else {
     return false;
   }
@@ -90,7 +109,7 @@ const Header = (props) => {
   const [birthDate, setBirthDate] = useState("");
   const [bio, setBio] = useState("");
 
-  const [countryList, setCountryList] = useState(Country.getAllCountries());
+  const [countryList, setCountryList] = useState([]);
   const [cityList, setCityList] = useState([]);
 
   const handleCloseSingUp = () => {
@@ -100,12 +119,16 @@ const Header = (props) => {
   const handleShowSingUp = () => {
     setShowSingUp(true);
     props.signUpClosed()
+    getContriesData().then(data => {
+      setCountryList(data)
+    })
   }
   const handleCloseRegister = () => setShowRegister(false);
 
   const handleShowRegister = () => {
     setShowRegister(true);
     setShowSingUp(false);
+    console.log(countryList)
   }
 
 
@@ -113,7 +136,17 @@ const Header = (props) => {
     e.preventDefault();
     await logIn(username, password).then(success => {
       if (success) {
-        navigate('/home')
+        alert("Login successful");
+        const token = cookies.get('auth-cookie');
+        const decoded = jwt(token);
+        const t = decoded.userType;
+        if (t === '1') {
+          alert("SignUp successful Artista");
+          navigate('/artistapp')
+        } else if (t === '2') {
+          alert("SignUp successful Client");
+          navigate('/home')
+        }
       } else {
         alert("Login failed");
       }
@@ -124,8 +157,13 @@ const Header = (props) => {
     e.preventDefault();
     await signUp(username, password, email, firstName, lastName, '(' + countryCode + ') ' + phone, country, city, type_preferences, type, birthDate, bio).then(success => {
       if (success) {
-        alert("SignUp successful");
-        navigate('/home')
+        if (type === '1') {
+          alert("SignUp successful Artista");
+          navigate('/artistapp')
+        } else if (type === '2') {
+          alert("SignUp successful Client");
+          navigate('/home')
+        }
       } else {
         alert("SignUp failed");
       }
@@ -153,10 +191,17 @@ const Header = (props) => {
   }
 
   const handleCountrySelect = (e) => {
-    let temp = countryList.find(country => country.isoCode === e.target.value)
-    setCountry(temp.name)
-    setCityList(City.getCitiesOfCountry(e.target.value))
+    setCountry(e.target.value)
+    getCitiesofCountry(e.target.value).then(data => {
+      setCityList(data)
+    })
+
   }
+
+  const handleSelectUserT = (e) => {
+    setType(e.target.value)
+  }
+
   useEffect(() => {
     setShowSingUp(props.signUpClicked)
     checkUserToken();
@@ -255,7 +300,7 @@ const Header = (props) => {
                   <Form.Group className="mb-3" controlId="password">
                     <Form.Control type="password" name='confirmPassword' placeholder="Confirme su contraseña" className={style.ModalInput} onChange={e => setPassword(e.target.value)} />
                   </Form.Group>
-                  <Form.Select aria-label="Default select example" className={style.ModalInput} >
+                  <Form.Select aria-label="Default select example" className={style.ModalInput} onChange={handleSelectUserT}>
                     <option>Seleccione su tipo de usuario</option>
                     <option value="1">Artista</option>
                     <option value="2">Usuario</option>
@@ -264,23 +309,27 @@ const Header = (props) => {
                   <Form.Group className={style.FormGroup} >
                     <Form.Select type="text" name='contry' className={style.FormGroupInput} onChange={handleCountrySelect}>
                       <option value="null" selected disabled hidden>Pais</option>
-                      {countryList.map((country) => (
-                        <option value={country.isoCode}>{country.name}</option>
-                      ))}
+                      {
+                        countryList.map((country) => (
+                          <option value={country.name}>{country.name}</option>
+                        ))
+                      }
                     </Form.Select>
                     <Form.Select type="text" name='city' className={style.FormGroupInput} onChange={e => setCity(e.target.value)}>
-                    <option value="null" selected disabled hidden>Ciudad</option>
+                      <option value="null" selected disabled hidden>Ciudad</option>
                       {cityList.map((city) => (
-                        <option value={city.name}>{city.name}</option>
+                        <option value={city}>{city}</option>
                       ))}
                     </Form.Select>
                   </Form.Group>
                   <Form.Group className={style.FormGroup} controlId="number">
                     <Form.Select type="text" name='city' placeholder="+57" className={style.FormGroupInput} onChange={e => setCountryCode(e.target.value)}>
                       <option value="null" selected disabled hidden>Codigo de pais</option>
-                      {countries.all.map((country) => (
-                        country.countryCallingCodes[0] && <option value={country.countryCallingCodes[0]}>{country.name + ' | (' + country.countryCallingCodes[0].replace(" ", "-") + ')'}</option>
-                      ))}
+                      {
+                        countryList.map((country) => (
+                          country.dialCode && <option value={country.dialCode}>{country.name + ' | (' + (country.dialCode.startsWith("+") ? country.dialCode : "+"+country.dialCode) + ')'}</option>
+                        ))
+                      }
                     </Form.Select>
                     <Form.Control type="text" name='number' placeholder="Numero de celular" className={style.FormGroupInput} id='TelInput' onChange={e => setPhone(e.target.value)} />
                   </Form.Group>

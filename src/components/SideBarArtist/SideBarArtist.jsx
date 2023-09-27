@@ -1,5 +1,5 @@
 import style from './ArtistApp.module.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Overlay } from 'react-bootstrap';
 import { useState, useRef } from 'react';
 import Porfile from '../../assets/img/ArtistApp/SideBarArt/Eclipse.png'
@@ -10,12 +10,52 @@ import Billing from '../../assets/img/ArtistApp/SideBarArt/Billing.png'
 import Dashboard from '../../assets/img/ArtistApp/SideBarArt/Dashboard.png'
 import More from '../../assets/img/ArtistApp/SideBarArt/more.png'
 
+import User from '../../assets/img/HomeApp/SideBar/User.png'
+import Settings from '../../assets/img/HomeApp/SideBar/settings.png'
+import Transactions from '../../assets/img/HomeApp/SideBar/transactions.png'
+import Suports from '../../assets/img/HomeApp/SideBar/suports.png'
+import Logout from '../../assets/img/HomeApp/SideBar/logout.png'
+
+import { Cookies } from 'react-cookie'
+
+const apiURL = import.meta.env.VITE_AUTH_API_URL;
+const cookies = new Cookies();
+
+const logout = async () => {
+  const response = await fetch(`${apiURL}/logout`, { credentials: 'include' });
+  if (response.ok) {
+    return true;
+  } else {
+    return null;
+  }
+}
+
+
 const SideBarArtist = () => {
-  
+  const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const [first_name, setName] = useState('');
+  const [birth_date, setBirthDate] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [username, setUsername] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+  const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
+
+
   const [notification, setNotification] = useState(false);
   const targetNotification = useRef(null);
   const [overlay, setOverlay] = useState(false);
   const target = useRef(null);
+
+  const handleLogout = () => {
+    cookies.remove('auth-cookie');
+    logout();
+    navigate('/')
+  }
   
   return (
     <main id={style.SideBar}>
@@ -136,7 +176,7 @@ const SideBarArtist = () => {
               <img src={Suports} alt="" className={style.iconsOverlay} />
               <p>Soporte</p>
             </div>
-            <div className={style.overlayItem}>
+            <div className={style.overlayItem} onClick={handleLogout}>
               <img src={Logout} alt="" className={style.iconsOverlay} />
               <p>Cerrar Sesión</p>
             </div>

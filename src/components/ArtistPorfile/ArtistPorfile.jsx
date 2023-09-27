@@ -1,6 +1,6 @@
 import style from './ArtistApp.module.css'
 import { Image, Row, Col, Nav, Container, Modal, Form } from 'react-bootstrap';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SideBarArtist from '../SideBarArtist/SideBarArtist';
 import SuggetionsArtist from '../SuggetionsArtist/SuggetionsArtist';
 import Banner from '../../assets/img/HomeApp/ViewArtist/ArtistBanner.png'
@@ -11,11 +11,48 @@ import Star from '../../assets/img/HomeApp/ViewArtist/Star.png'
 import AddMedia from '../../assets/img/ArtistApp/ArtistPorfile/addmedia.png'
 import FeedArtist from '../FeedArtist/FeedArtist'
 
+import { Cookies } from 'react-cookie'
+import jwt from 'jwt-decode'
+
+const apiURL = import.meta.env.VITE_AUTH_API_URL;
+const cookies = new Cookies();
+
+const getUserInfo = async () => {
+  const token = cookies.get('auth-cookie');
+  const headers = { 'Authorization': 'Bearer ' + (token || '') };
+  const decoded = jwt(token);
+  const response = await fetch(`${apiURL}/profile/${decoded.username}`, { headers });
+
+  if (response.ok) {
+    const data = await response.json();
+    return data.data;
+  } else {
+    return null;
+  }
+}
+
 const ArtistPorfile = () => {
   const [show, setShow] = useState(false);
+  const [first_name, setName] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [username, setUsername] = useState('');
+  const [country, setCountry] = useState('');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleProfileClicked = async () => {
+    const data = await getUserInfo();
+    setName(data.first_name);
+    setCountry(data.country);
+    setLastname(data.last_name);
+    setUsername(data.username);
+  }
+
+  useEffect(() => {
+    handleProfileClicked()
+  }, []);
+
   return (
     <div id={style.ViewArtist}>
       <SideBarArtist />
@@ -56,9 +93,9 @@ const ArtistPorfile = () => {
               </section>
             </div>
             <div className={style.porfilUser}>
-              <h5>Beautiful Mouse</h5>
-              <span id={style.atSign}>@beautifulmouse112</span>
-              <span>Colombia</span>
+              <h5>{first_name+" "+lastname}</h5>
+              <span id={style.atSign}>@{username}</span>
+              <span>{country}</span>
               <span>TextoBiografía lorem ipsum</span>
               <section id={style.Review}>
                 <span id={style.Subs}><span className={style.Nums} >53K</span> SUBSCRIPCIONES</span>

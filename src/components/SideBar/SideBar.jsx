@@ -42,6 +42,11 @@ const getUserInfo = async () => {
 
 const logout = async () => {
   const response = await fetch(`${apiURL}/logout`, { credentials: 'include' });
+  if (response.ok) {
+    return true;
+  } else {
+    return null;
+  }
 }
 
 const updateProfile = async (first_name, last_name, password, city, country, phone, birth_date) => {
@@ -94,7 +99,6 @@ const SideBar = () => {
 
   const handleLogout = () => {
     cookies.remove('auth-cookie');
-    cookies.remove('x-refreshToken');
     logout();
     navigate('/')
   }
