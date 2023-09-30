@@ -37,7 +37,7 @@ async function getUserInfo() {
 
 async function createPost(data) {
   const token = cookies.get('auth-cookie');
-  const url = `http://localhost:9000/api/posts`;
+  const url = `https://www.veloraroom.com/post/api/posts`;
   const options = {
     credetials: 'include',
     headers: {

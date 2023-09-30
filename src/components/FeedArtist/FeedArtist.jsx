@@ -26,7 +26,7 @@ async function getUserInfo() {
 
 async function getPosts() {
   const token = cookies.get('auth-cookie');
-  const url = `http://localhost:9000/api/posts/${jwt(token).username}`;
+  const url = `https://www.veloraroom.com/post/api/posts/${jwt(token).username}`;
   const options = {
     headers: {
       credetials: 'include',

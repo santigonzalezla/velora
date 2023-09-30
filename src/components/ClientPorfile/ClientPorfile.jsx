@@ -1,5 +1,6 @@
 import style from './ArtistApp.module.css'
 import { Image, Row, Col, Container } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
 import Banner from '../../assets/img/ArtistApp/ClientPorfile/banner.png'
 import Photo from '../../assets/img/HomeApp/ViewArtist/ArtistPhoto.png'
 import Location from '../../assets/img/HomeApp/ViewArtist/Location.png'
@@ -9,7 +10,52 @@ import Star2 from '../../assets/img/ArtistApp/ClientPorfile/star2.png'
 import SideBarArtist from '../SideBarArtist/SideBarArtist';
 import SuggetionsArtist from '../SuggetionsArtist/SuggetionsArtist';
 
+import { Cookies } from 'react-cookie'
+import jwt from 'jwt-decode'
+
+const apiURL = import.meta.env.VITE_AUTH_API_URL;
+const cookies = new Cookies();
+
+async function getUserInfo() {
+  const token = cookies.get('auth-cookie');
+  const headers = {
+    'Authorization': 'Bearer ' + (token || '')
+  };
+  const decoded = jwt(token);
+  const response = await fetch(`${apiURL}/profile/${decoded.username}`, {
+    headers
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    return data.data;
+  } else {
+    return null;
+  }
+}
+
 const ClientPorfile = () => {
+
+  const [first_name, setName] = useState('');
+  const [username, setUsername] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [country, setCountry] = useState('');
+  const [bio, setBio] = useState('');
+
+  const loadProfile = async () => {
+    getUserInfo().then((data) => {
+      setName(data.first_name);
+      setCountry(data.country);
+      setLastname(data.last_name);
+      setUsername(data.username);
+      setBio(data.bio || "Biografia");
+    });
+  }
+
+  useEffect(() => {
+    loadProfile()
+  }, []);
+
   return (
     <div id={style.ViewArtist}>
       <SideBarArtist />
@@ -20,7 +66,7 @@ const ClientPorfile = () => {
             <div className={style.UserData}>
               <section>
                 <Image src={Photo} className={style.ArtistPhoto} fluid />
-                <span id={style.LocationTxt} ><img src={Location} id={style.Location} /> COLOMBIA</span>
+                <span id={style.LocationTxt} ><img src={Location} id={style.Location} />{country}</span>
               </section>
               <section id={style.BtnOptions}>
                 <Image src={Block} id={style.Block} fluid />
@@ -30,8 +76,8 @@ const ClientPorfile = () => {
               </section>
             </div>
             <div className={style.porfilUser}>
-              <h5>Usuario Cliente</h5>
-              <span id={style.atSign}>@beautifulmouse112</span>
+              <h5>{first_name + " " + lastname}</h5>
+              <span id={style.atSign}>@{username}</span>
               <section id={style.Review}>
                 <span className={style.Nums}>4.3 <img src={Star} width={15} alt="" /><span id={style.Rev}><span> 52K</span> RESEÑAS</span></span>
               </section>

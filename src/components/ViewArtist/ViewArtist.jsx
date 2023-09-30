@@ -11,7 +11,7 @@ import Block from '../../assets/img/HomeApp/ViewArtist/Block.png'
 import Star from '../../assets/img/HomeApp/ViewArtist/Star.png'
 import Date from '../../assets/img/HomeApp/ViewArtist/Date.png'
 import WebCam from '../../assets/img/HomeApp/ViewArtist/WebCam.png'
-// import Feed from '../Feed/Feed'
+import Feed from '../Feed/Feed'
 import { Cookies } from 'react-cookie'
 
 const cookies = new Cookies();
@@ -140,20 +140,20 @@ const ViewArtist = () => {
               <Nav.Link>FEED</Nav.Link>
               <Nav.Link>PREMIUM</Nav.Link>
               <p id={style.RoomBtn} >ROOM ME</p>
-              {/*
-                Modal para usuarios que no tiene servicios ROOOM ME <Modal show={reqSubs} onHide={reqSubsClose} id={style.buySubsModal}>
+
+                Modal para usuarios que no tiene servicios ROOOM ME <Modal /* show={reqSubs} onHide={reqSubsClose} */show={true} id={style.buySubsModal}>
                 <Modal.Body className={style.buySubsModalBody}>
                   <center>
                     <h3>Para acceder a  Estos servicios debes de pagar la subcripción </h3>
                     <div id={style.subBtnData} onClick={buySubsShow}>COMPRAR SUSCRIPCIÓN</div>
                   </center>
                 </Modal.Body>
-              </Modal> */}
+              </Modal>
             </Nav>
             <section>
               Servicios premiun
             </section>
-            {/* Seccion de servicio Room Me
+            Seccion de servicio Room Me
             <section>
               <Container>
                 <Row>
@@ -169,8 +169,8 @@ const ViewArtist = () => {
                   </Col>
                 </Row>
               </Container>
-            </section> */}
-            {/* <Feed /> */}
+            </section>
+            <Feed />
           </Col>
           <Col xs="12" sm="3" md="3" lg="3" className={style.SuggetionsBar}>
             <Suggetions />
