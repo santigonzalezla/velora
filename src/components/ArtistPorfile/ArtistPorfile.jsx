@@ -142,7 +142,7 @@ const ArtistPorfile = () => {
                     <Modal.Title className={style.PostTittle}>Nueva publicación</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
-                    <input className={style.PostInput} onChange={(e) => { setPostText(e.target.value) }} />
+                    <textarea className={style.PostInput} onChange={(e) => { setPostText(e.target.value) }} name="" id="" cols="30" rows="10"></textarea>
                     <Form.Select id={style.SelectView} defaultValue="" onChange={(e) => { setPostVisibility(e.target.value) }}>
                       <option value="" disabled hidden>¿Quién puede ver?</option>
                       <option value="public">Todos</option>
