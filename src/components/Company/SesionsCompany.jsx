@@ -9,9 +9,8 @@ const SesionsCompany = () => {
         <Row id={style.Sesions}>
           <Col sm="12" md="6" lg="6" xl="6">
             <h1>Sección explicativa </h1>
-            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al</p>
-            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al</p>
-            <button className={style.singUpBtn} >Sing up</button>
+            <p>En nuestra red social de artistas, las empresas encuentran un tesoro de talento creativo. Apoyamos a los artistas conectándolos con marcas apasionadas que valoran y respaldan su arte, creando colaboraciones significativas que inspiran y transforman.</p>
+            <button className={style.singUpBtn} >¡Unete!</button>
           </Col>
           <Col sm="12" md="6" lg="6" xl="6">
             <img src={SecionsImg} alt="" id={style.ImgHero} />

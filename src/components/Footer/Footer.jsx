@@ -22,25 +22,21 @@ const Footer = () => {
             </Navbar.Brand>
           </Col>
           <Col xs='3' sm='2' md='' lg='' className={style.NavItem} >
-            <Nav.Link as={Link} to='/Terms'>Terms of service</Nav.Link>
-            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Privacy Policy</Nav.Link>
-            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Terms of Use</Nav.Link>
-            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Acceptable use Policy</Nav.Link>
-            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Complaints Policy</Nav.Link>
+            <Nav.Link as={Link} to='/Terms'>Términos de Servicio</Nav.Link>
+            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Política de Privacidad</Nav.Link>
+            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Uso Aceptable</Nav.Link>
+            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Política de Quejas</Nav.Link>
           </Col>
           <Col xs='2' sm='2' md='' lg='' className={style.NavItem} >
-            <Nav.Link as={Link} to='/Terms' >Terms of service</Nav.Link>
-            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Disclosure Statement</Nav.Link>
-            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Anti-slavery & Anti-Trafficking</Nav.Link>
-            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Safety & Transparency Center</Nav.Link>
-            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Standard Contract between Fan and Creator</Nav.Link>
+            <Nav.Link as={Link} to='/Terms' >Términos de Servicio</Nav.Link>
+            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Declaración de Divulgación</Nav.Link>
+            <Nav.Link as={Link} to='/Terms' className={style.NavLink}>Contra la Esclavitud y Tráfico</Nav.Link>
           </Col>
           <Col xs='2' sm='2' md='' lg='' className={style.NavItem} >
-            <Nav.Link as={Link} to='/Help' >Help</Nav.Link>
-            <Nav.Link as={Link} to='/Help' className={style.NavLink}>About</Nav.Link>
-            <Nav.Link as={Link} to='/Help' className={style.NavLink}>Support</Nav.Link>
-            <Nav.Link as={Link} to='/Help' className={style.NavLink}>Cookies</Nav.Link>
-            <Nav.Link as={Link} to='/Help' className={style.NavLink}>DMCA Takedown Policy</Nav.Link>
+            <Nav.Link as={Link} to='/Help' >Ayuda</Nav.Link>
+            <Nav.Link as={Link} to='/Help' className={style.NavLink}>Acerca de</Nav.Link>
+            <Nav.Link as={Link} to='/Help' className={style.NavLink}>Soporte</Nav.Link>
+            <Nav.Link as={Link} to='/Help' className={style.NavLink}>Política DMCA</Nav.Link>
           </Col>
 
           <Col xs='2' sm='2' md='' lg='' className={style.NavItem} >

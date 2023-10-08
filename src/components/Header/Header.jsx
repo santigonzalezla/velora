@@ -128,7 +128,6 @@ const Header = (props) => {
   const handleShowRegister = () => {
     setShowRegister(true);
     setShowSingUp(false);
-    console.log(countryList)
   }
 
 
@@ -223,7 +222,7 @@ const Header = (props) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="justify-content-end">
             <Nav className="justify-content-end">
-              <Nav.Link className={style.NavButtons} onClick={handleShow}>Log in
+              <Nav.Link className={style.NavButtons} onClick={handleShow}>Ingresar
               </Nav.Link>
               {/* Inicio Modal de login */}
               <Modal
@@ -233,7 +232,7 @@ const Header = (props) => {
 
               >
                 <Modal.Body className={style.ModalBody}>
-                  <Modal.Title id={style.ModalTitle} >Login</Modal.Title>
+                  <Modal.Title id={style.ModalTitle} >Iniciar sesión</Modal.Title>
                   <Form onSubmit={handleLogIn}>
                     <Form.Group className="mb-3" controlId="username">
                       <Form.Control type="user" name='username' placeholder="nombre de Usuario" className={style.ModalInput} onChange={e => setUserName(e.target.value)} />
@@ -254,7 +253,7 @@ const Header = (props) => {
                 </Modal.Footer>
               </Modal>
               {/* Fin Modal de login */}
-              <Nav.Link className={style.NavButtons} onClick={handleShowSingUp}>Sign up</Nav.Link>
+              <Nav.Link className={style.NavButtons} onClick={handleShowSingUp}>Registrarse</Nav.Link>
             </Nav>
             {/* Inicio Modal de primer Sing Up */}
             <Modal
@@ -264,8 +263,8 @@ const Header = (props) => {
 
             >
               <Modal.Body className={style.ModalBody}>
-                <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, lacinia class placerat tristique ut varius rhoncus, leo mus eu aenean metus sagittis.</p>
+                <Modal.Title id={style.ModalTitle} >Iniciar sesión</Modal.Title>
+                <p>¡Inspira, Conecta, Crea! Únete a nuestra comunidad artística hoy mismo y deja que tu creatividad vuele libremente.</p>
                 <Button type="submit" className={style.ModalButton} onClick={handleShowRegister}>
                   Registrarse
                 </Button>
@@ -285,8 +284,7 @@ const Header = (props) => {
 
             >
               <Modal.Body className={style.ModalBody}>
-                <Modal.Title id={style.ModalTitle} >Sign Up</Modal.Title>
-
+                <Modal.Title id={style.ModalTitle} >Registrarse</Modal.Title>
                 <Form onSubmit={handleSignUp}>
                   <Form.Group className="mb-3" controlId="name">
                     <Form.Control type="text" name='name' placeholder="Nombre" className={style.ModalInput} onChange={e => setFirstName(e.target.value)} />
