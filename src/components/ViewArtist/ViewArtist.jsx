@@ -9,8 +9,8 @@ import Photo from '../../assets/img/HomeApp/ViewArtist/ArtistPhoto.png'
 import Location from '../../assets/img/HomeApp/ViewArtist/Location.png'
 import Block from '../../assets/img/HomeApp/ViewArtist/Block.png'
 import Star from '../../assets/img/HomeApp/ViewArtist/Star.png'
-import Date from '../../assets/img/HomeApp/ViewArtist/Date.png'
-import WebCam from '../../assets/img/HomeApp/ViewArtist/WebCam.png'
+import NotSubscribed from './NotSubscribed/NotSubscribed';
+import Subscribed from './Subscribed/Subscried';
 import Feed from '../Feed/Feed'
 import { Cookies } from 'react-cookie'
 
@@ -110,7 +110,7 @@ const ViewArtist = () => {
                   </div>
                 </Modal>
                 <Modal show={buySubs} onHide={buySubsClose} id={style.buySubsModal}>
-                  <Modal.Header closeButton className={style.buySubsModalHeader}>
+                  <Modal.Header className={style.buySubsModalHeader}>
                     <p>Suscríbete por solo</p>
                   </Modal.Header>
                   <Modal.Body className={style.buySubsModalBody}>
@@ -126,6 +126,7 @@ const ViewArtist = () => {
                 </Modal>
               </section>
             </div>
+            {/* Dision de secciones */}
             <div className={style.porfilUser}>
               <h5>{first_name + " " + lastname}</h5>
               <span id={style.atSign}>@{username}</span>
@@ -136,41 +137,15 @@ const ViewArtist = () => {
                 <span className={style.Nums}>4.3 <img src={Star} width={15} alt="" /><span id={style.Rev}><span> 52K</span> RESEÑAS</span></span>
               </section>
             </div>
-            <Nav id={style.Navies}>
-              <Nav.Link>FEED</Nav.Link>
-              <Nav.Link>PREMIUM</Nav.Link>
-              <p id={style.RoomBtn} >ROOM ME</p>
+            <div>
+              {/* 
 
-                Modal para usuarios que no tiene servicios ROOOM ME <Modal /* show={reqSubs} onHide={reqSubsClose} */show={true} id={style.buySubsModal}>
-                <Modal.Body className={style.buySubsModalBody}>
-                  <center>
-                    <h3>Para acceder a  Estos servicios debes de pagar la subcripción </h3>
-                    <div id={style.subBtnData} onClick={buySubsShow}>COMPRAR SUSCRIPCIÓN</div>
-                  </center>
-                </Modal.Body>
-              </Modal>
-            </Nav>
-            <section>
-              Servicios premiun
-            </section>
-            Seccion de servicio Room Me
-            <section>
-              <Container>
-                <Row>
-                  <Col>
-                    <div className={style.RoomMeServices}>
-                      <Image src={Date} width={200} />
-                    </div>
-                  </Col>
-                  <Col >
-                    <div className={style.RoomMeServices}>
-                      <Image src={WebCam} width={200} />
-                    </div>
-                  </Col>
-                </Row>
-              </Container>
-            </section>
-            <Feed />
+              Componente para personas que no estan subscritas
+              <NotSubscribed />
+
+   */}
+              <Subscribed />
+            </div>
           </Col>
           <Col xs="12" sm="3" md="3" lg="3" className={style.SuggetionsBar}>
             <Suggetions />

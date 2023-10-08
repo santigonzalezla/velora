@@ -25,6 +25,7 @@
     "react-select": "^5.7.4",
     "react-select-country-list": "^2.2.3",
     "recharts": "^2.7.2",
+    "socket.io-client": "^4.7.2",
     "terser": "^5.19.4"
   },
   "devDependencies": {
