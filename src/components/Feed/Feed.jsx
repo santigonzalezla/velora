@@ -13,7 +13,7 @@ const cookies = new Cookies();
 
 async function getUserPosts(username) {
   const token = cookies.get('auth-cookie');
-  const url = `https://www.veloraroom.com/post/api/posts/${username}`;
+  const url = `http://localhost:9000/api/posts/${username}`;
   const options = {
     headers: {
       credetials: 'include',

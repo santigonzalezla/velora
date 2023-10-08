@@ -302,9 +302,9 @@ const Header = (props) => {
                   </Form.Group>
                   <Form.Select aria-label="Default select example" className={style.ModalInput} onChange={handleSelectUserT}>
                     <option>Seleccione su tipo de usuario</option>
-                    <option value="1">Artista</option>
-                    <option value="2">Usuario</option>
-                    <option value="3">Establecimiento</option>
+                    <option value="artista">Artista</option>
+                    <option value="cliente">Usuario</option>
+                    <option value="establecimiento">Establecimiento</option>
                   </Form.Select>
                   <Form.Group className={style.FormGroup} >
                     <Form.Select type="text" name='contry' className={style.FormGroupInput} onChange={handleCountrySelect}>
