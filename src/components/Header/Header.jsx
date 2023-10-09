@@ -156,10 +156,10 @@ const Header = (props) => {
     e.preventDefault();
     await signUp(username, password, email, firstName, lastName, '(' + countryCode + ') ' + phone, country, city, type_preferences, type, birthDate, bio).then(success => {
       if (success) {
-        if (type === '1') {
+        if (type === 'artist') {
           alert("SignUp successful Artista");
           navigate('/artistapp')
-        } else if (type === '2') {
+        } else if (type === 'cliente') {
           alert("SignUp successful Client");
           navigate('/home')
         }

@@ -3,7 +3,7 @@ import style from './HomeApp.module.css'
 import { Link, useNavigate } from 'react-router-dom';
 
 import { Button, Modal, Nav, Form, Overlay } from 'react-bootstrap';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Porfile from '../../assets/img/HomeApp/SideBar/Eclipse.png'
 import User from '../../assets/img/HomeApp/SideBar/User.png'
 import Home from '../../assets/img/HomeApp/SideBar/home.png'
@@ -23,13 +23,15 @@ import Settings from '../../assets/img/HomeApp/SideBar/settings.png'
 import Transactions from '../../assets/img/HomeApp/SideBar/transactions.png'
 import Suports from '../../assets/img/HomeApp/SideBar/suports.png'
 import Logout from '../../assets/img/HomeApp/SideBar/logout.png'
+import socket from '../../utils/notificationSocket';
+
 
 // Controlls for more overlay
 
 const getUserInfo = async () => {
   const token = cookies.get('auth-cookie');
-  const headers = { 
-    'Authorization': 'Bearer ' + (token || '') 
+  const headers = {
+    'Authorization': 'Bearer ' + (token || '')
   };
   const response = await fetch(`${apiURL}/profile/`, { headers });
 
@@ -149,7 +151,7 @@ const SideBar = () => {
               <section className={style.ModalInput}>
                 <p>Fecha de nacimiento</p>
                 <Form.Group className="mb-3" controlId="date">
-                  <Form.Control type="date" className={style.ModalInput} value={birth_date} disabled/>
+                  <Form.Control type="date" className={style.ModalInput} value={birth_date} disabled />
                 </Form.Group>
               </section>
               <section className={style.ModalInput}>

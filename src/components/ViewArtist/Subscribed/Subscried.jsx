@@ -7,7 +7,8 @@ import WebCam from '../../../assets/img/HomeApp/ViewArtist/WebCam.png'
 import Premium from '../../../assets/img/HomeApp/ViewArtist/Premium.png'
 import PrimiumPackage from '../../../assets/img/HomeApp/ViewArtist/PrimiumPackage.png'
 
-const Subscribed = () => {
+const Subscribed = (props) => {
+  const { artist } = props;
   const [pack, setPack] = useState(false);
   const packShow = () => setPack(true);
   const packClose = () => setPack(false)
@@ -23,7 +24,7 @@ const Subscribed = () => {
   return (
     <Tabs id={style.Navies} defaultActiveKey="profile" className="mb-3">
       <Tab eventKey="Feed" title="Feed">
-        <Feed />
+        <Feed artistView={true} artist={artist}/>
       </Tab >
       <Tab eventKey="PREMIUM" title="PREMIUM">
         <Row className={style.Premium} >

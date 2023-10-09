@@ -164,13 +164,13 @@ const RouterApp = () => {
       <Route path='/ArtistApp' element={artistApp()} />
       <Route path='/ArtstChats' element={artistChats()} />
       <Route path='/ArtistProfile' element={artistProfile()} />
-      <Route path='/ClientProfile' element={clientProfile()} />
+      <Route path='/UserReviews/:user' element={clientProfile()} />
       <Route path='/ArtistDashboard' element={artistDashboard()} />
       <Route path='/VideoCallArtist' element={videoCallArtist()} />
       <Route path='/LivesArtist' element={livesArtist()} />
       <Route path='/BillingArtist' element={billingArtist()} />
       <Route path='/home' element={home()} />
-      <Route path='/ViewArtist/:username' element={viewArtist()} />
+      <Route path='/ViewArtist/:artist' element={viewArtist()} />
       <Route path='/Chats' element={chats()} />
       <Route path='/Lives' element={lives()} />
       <Route path='/Subscriptions' element={subscriptions()} />

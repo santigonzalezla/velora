@@ -1,5 +1,5 @@
 import style from './ArtistApp.module.css'
-import Post from './Post';
+import Post from '../Feed/Post';
 import { Cookies } from 'react-cookie'
 import jwt from 'jwt-decode'
 import { useEffect, useState } from 'react';

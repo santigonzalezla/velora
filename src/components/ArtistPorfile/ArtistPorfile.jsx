@@ -15,7 +15,6 @@ import Caledar from './Calendar';
 import { Cookies } from 'react-cookie'
 import jwt from 'jwt-decode'
 
-const apiURL = import.meta.env.VITE_AUTH_API_URL;
 const cookies = new Cookies();
 
 async function getUserInfo() {
@@ -24,7 +23,7 @@ async function getUserInfo() {
     'Authorization': 'Bearer ' + (token || '')
   };
   const decoded = jwt(token);
-  const response = await fetch(`${apiURL}/profile/${decoded.username}`, {
+  const response = await fetch(`${import.meta.env.VITE_AUTH_API_URL}/profile/${decoded.username}`, {
     headers
   });
 
@@ -38,7 +37,7 @@ async function getUserInfo() {
 
 async function createPost(data) {
   const token = cookies.get('auth-cookie');
-  const url = `https://www.veloraroom.com/post/api/posts`;
+  const url = `${import.meta.env.VITE_POST_API_URL}/posts`;
   const options = {
     credetials: 'include',
     headers: {
