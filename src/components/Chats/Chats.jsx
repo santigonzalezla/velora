@@ -13,7 +13,7 @@ import jwt from 'jwt-decode'
 
 const cookies = new Cookies();
 const token = cookies.get('auth-cookie');
-const decode = jwt(token);
+const decode = token ? jwt(token) : null;
 
 async function getChatSessions() {
 
