@@ -106,12 +106,31 @@ async function likePost(postId) {
   }
 }
 
+async function getAllPublicPosts() {
+  const token = cookies.get('auth-cookie');
+  const url = `http://localhost:9000/api/getAllPosts`;
+  const options = {
+    headers: {
+      'Authorization': 'Bearer ' + (token || '')
+    }
+  };
+  const response = await fetch(url, options);
+
+  if (response.ok) {
+    const data = await response.json();
+    return data;
+  } else {
+    return null;
+  }
+}
+
 const Feed = (props) => {
   const { artistView, artist } = props;
   const username = jwt(cookies.get('auth-cookie')).username;
   const [loadingSearch, setLoadingSearch] = useState(false);
   const [posts, setPosts] = useState([]);
   const [subArtists, setSubArtists] = useState(null);
+  const [publicPost, setPublicPost] = useState(null);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -124,7 +143,16 @@ const Feed = (props) => {
         if (data.isFollower) {
           getPosts([searchValue.slice(1)]).then((data) => {
             setPosts(data);
+            console.log(data);
           });
+        } else {
+          getUserInfo(searchValue.slice(1)).then((user) => {
+            const temp1 = publicPost.filter((post) => post.creator_id === searchValue.slice(1));
+            const temp2 = temp1.map((post) => [user.first_name + " " + user.last_name, post])
+            console.log(temp2);
+            setPosts(temp2);
+          });
+
         }
         setLoadingSearch(false);
       });
@@ -157,6 +185,13 @@ const Feed = (props) => {
 
 
   useEffect(() => {
+    async function getPublicPosts() {
+      const posts = await getAllPublicPosts();
+      setPublicPost(posts.data);
+      console.log(posts.data, 'public posts');
+    }
+    getPublicPosts();
+
     if (artistView) {
       getPosts([artist]).then((data) => {
         setPosts(data);
@@ -173,13 +208,13 @@ const Feed = (props) => {
 
   return (
     <main id={style.Feed}>
-      { !artistView &&
+      {!artistView &&
         <div>
-        < Image src={LogoSide} alt="" id={style.LogoSide} fluid />
-        <form onSubmit={handleSearch}>
-          <input type="text" id={style.FeedInput} disabled={loadingSearch} placeholder='@username' />
-        </form>
-      </div>
+          < Image src={LogoSide} alt="" id={style.LogoSide} fluid />
+          <form onSubmit={handleSearch}>
+            <input type="text" id={style.FeedInput} disabled={loadingSearch} placeholder='@username' />
+          </form>
+        </div>
       }
 
       {
