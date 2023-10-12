@@ -56,7 +56,7 @@ const SideBarArtist = () => {
     logout();
     navigate('/')
   }
-  
+
   return (
     <main id={style.SideBar}>
       <div id={style.SideBarIcons}>
@@ -167,10 +167,6 @@ const SideBarArtist = () => {
             <div className={style.overlayItem}>
               <img src={Settings} alt="" className={style.iconsOverlay} />
               <p>Configuración</p>
-            </div>
-            <div className={style.overlayItem}>
-              <img src={Transactions} alt="" className={style.iconsOverlay} />
-              <p>Transacciones</p>
             </div>
             <div className={style.overlayItem}>
               <img src={Suports} alt="" className={style.iconsOverlay} />

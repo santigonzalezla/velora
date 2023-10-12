@@ -102,9 +102,9 @@ const ArtistPorfile = () => {
       console.log(value);
     }
     handleClose();
-    const response = await createPost(data); 
+    const response = await createPost(data);
     window.location.reload();
-    
+
   }
 
   const handleAddImage = () => {
@@ -151,6 +151,7 @@ const ArtistPorfile = () => {
                   <Modal.Footer id={style.modalFooter}>
                     <input type="file" ref={addImageButton} hidden multiple onChange={(e) => { setPostImages(e.target.files) }} />
                     <img src={AddMedia} width={20} onClick={handleAddImage} />
+                    <span>image.png</span>
                     <p onClick={handleCreatePost}>Publicar</p>
                   </Modal.Footer>
                 </Modal>
