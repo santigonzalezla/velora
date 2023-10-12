@@ -45,11 +45,15 @@ const SideBarArtist = () => {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
 
-
+  // Notification Overlay
   const [notification, setNotification] = useState(false);
   const targetNotification = useRef(null);
+  // More Overlay
   const [overlay, setOverlay] = useState(false);
   const target = useRef(null);
+  // Config Overlay
+  const [config, setConfig] = useState(false);
+  const targetConfig = useRef(null);
 
   const handleLogout = () => {
     cookies.remove('auth-cookie');
@@ -164,10 +168,12 @@ const SideBarArtist = () => {
               ...props.style,
             }}
           >
-            <div className={style.overlayItem}>
+            <div className={style.overlayItem} onClick={() => setConfig(!config)}>
               <img src={Settings} alt="" className={style.iconsOverlay} />
               <p>Configuración</p>
+
             </div>
+
             <div className={style.overlayItem}>
               <img src={Suports} alt="" className={style.iconsOverlay} />
               <p>Soporte</p>
@@ -179,7 +185,34 @@ const SideBarArtist = () => {
           </div>
         )}
       </Overlay>
-    </main>
+      <Overlay target={targetConfig.current} show={config} placement="right">
+        {({
+          placement: _placement,
+          arrowProps: _arrowProps,
+          show: _show,
+          popper: _popper,
+          hasDoneInitialMeasure: _hasDoneInitialMeasure,
+          ...props
+        }) => (
+          <div
+            id={style.Config}
+            {...props}
+            style={{
+              position: 'absolute',
+              backgroundColor: '#F9F9F9',
+              padding: '2px 10px',
+              color: '#373B56',
+              ...props.style,
+            }}
+          >
+            <div className={style.notificationHead}>
+              <h4>Notification</h4>
+              <img src={Settings} alt="" />
+            </div>
+          </div>
+        )}
+      </Overlay>
+    </main >
   );
 }
 
