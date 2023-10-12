@@ -24,7 +24,7 @@ const Subscribed = (props) => {
   return (
     <Tabs id={style.Navies} defaultActiveKey="profile" className="mb-3">
       <Tab eventKey="Feed" title="Feed">
-        <Feed artistView={true} artist={artist}/>
+        <Feed artistView={true} artist={artist} />
       </Tab >
       <Tab eventKey="PREMIUM" title="PREMIUM">
         <Row className={style.Premium} >
@@ -43,7 +43,23 @@ const Subscribed = (props) => {
         </Row>
         <Modal show={pack} onHide={packClose} id={style.packModal}>
           <Modal.Body id={style.packPremium}>
-            <h1>Yoga</h1>
+            <section>
+              <h1>Yoga</h1>
+            </section>
+            <Row className={style.Premium}>
+              <Col sm='3' className={style.Premium} >
+                <img src={PrimiumPackage} alt="" width={100} />
+              </Col>
+              <Col sm='3' className={style.Premium}>
+                <img src={PrimiumPackage} alt="" width={100} />
+              </Col>
+              <Col sm='3' className={style.Premium}>
+                <img src={PrimiumPackage} alt="" width={100} />
+              </Col>
+              <Col sm='3' className={style.Premium}>
+                <img src={PrimiumPackage} alt="" width={100} />
+              </Col>
+            </Row>
             <Row className={style.Premium}>
               <Col sm='3' className={style.Premium} >
                 <img src={PrimiumPackage} alt="" width={100} />
