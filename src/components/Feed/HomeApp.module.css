@@ -5,12 +5,23 @@
   align-items: center;
 }
 
+.ColItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #LogoSide {
-  width: 30%;
+  width: 100%;
 }
 
 #FeedInput {
-  width: 65%;
+  width: 100%;
+}
+
+#FeedInput input {
+  width: 100%;
   border: none;
   border-radius: 20px;
   box-shadow: 0px 0px 4px 0px #00000040 inset;

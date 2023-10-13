@@ -1,5 +1,5 @@
 import style from './HomeApp.module.css'
-import { Image } from 'react-bootstrap'
+import { Image, Row, Col, Container } from 'react-bootstrap'
 import LogoSide from '../../assets/img/HomeApp/Feed/logoside.png'
 import userPhoto from '../../assets/img/HomeApp/Feed/userPhoto.png'
 import commentReaction from '../../assets/img/HomeApp/Feed/commentReaction.png'
@@ -207,16 +207,21 @@ const Feed = (props) => {
   }, []);
 
   return (
-    <main id={style.Feed}>
+    <main >
       {!artistView &&
-        <div>
-          < Image src={LogoSide} alt="" id={style.LogoSide} fluid />
-          <form onSubmit={handleSearch}>
-            <input type="text" id={style.FeedInput} disabled={loadingSearch} placeholder='@username' />
-          </form>
-        </div>
+        <Container id={style.Feed} fluid>
+          <Row>
+            <Col className={style.ColItem} sm='4'>
+              < Image src={LogoSide} alt="" id={style.LogoSide} fluid />
+            </Col>
+            <Col className={style.ColItem} sm='7'>
+              <form onSubmit={handleSearch} id={style.FeedInput}>
+                <input type="text" disabled={loadingSearch} placeholder='@username' />
+              </form>
+            </Col>
+          </Row>
+        </Container>
       }
-
       {/* {
         posts.map((post, index) => (
           <Post key={index} postId={post[1].id} artistUsername={post[1].creator_id} artistName={post[0]} postImages={post[1].media} postText={post[1].text} handleLike={handleLike} />
