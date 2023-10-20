@@ -12,15 +12,19 @@ const Billing = () => {
       <section id={style.BillingContainer} >
         <Container fluid>
           <Row id={style.BillingRow}>
-            <Col md='4' className={style.BillingItems}>
-              <section id={style.UsdBilling}>
-                <p>35 USD</p>
-              </section>
+            <Col md='4' >
+              <article className={style.CoinsItem}>
+                <section id={style.UsdBilling}>
+                  <p>35 USD</p>
+                </section>
+                <span>Valor total transaciones</span>
+              </article>
             </Col>
             <Col md='4' className={style.BillingItems}>
               <section id={style.Credits}>
                 <div id={style.AvailableCredits}>
                   <p>1 Crédito</p>
+                  <span>Créditos disponibles</span>
                 </div>
                 <div id={style.CreditsBuy}>
                   <Link to='/BuyCoins'>
