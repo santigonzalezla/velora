@@ -1,5 +1,6 @@
 import style from './ArtistApp.module.css'
-import { Image, Row, Col, Container, Modal, Form, Tabs, Tab } from 'react-bootstrap';
+import { Image, Row, Col, Container, Modal, Form } from 'react-bootstrap';
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { useEffect, useState, useRef } from 'react';
 import SideBarArtist from '../SideBarArtist/SideBarArtist';
 import SuggetionsArtist from '../SuggetionsArtist/SuggetionsArtist';
@@ -171,11 +172,16 @@ const ArtistPorfile = () => {
                 <span className={style.Nums}>4.3 <img src={Star} width={15} alt="" /><span id={style.Rev}><span> 52K</span> RESEÑAS</span></span>
               </section>
             </div>
-            <Tabs id={style.Navies} defaultActiveKey="FEED">
-              <Tab eventKey="FEED" title="FEED">
+            <Tabs id={style.Navies}>
+              <TabList>
+                <Tab>Feed</Tab>
+                <Tab>Premium</Tab>
+                <Tab id={style.RoomBtn}>ROOM ME</Tab>
+              </TabList>
+              <TabPanel>
                 <FeedArtist />
-              </Tab>
-              <Tab eventKey="PREMIUM" title="PREMIUM">
+              </TabPanel>
+              <TabPanel eventKey="PREMIUM" title="PREMIUM">
                 <Row className={style.Premium}>
                   <Col sm='3' className={style.Premium}>
                     <img src={Premium} alt="" width={150} />
@@ -190,8 +196,8 @@ const ArtistPorfile = () => {
                     <img src={Premium} alt="" width={150} />
                   </Col>
                 </Row>
-              </Tab>
-              <Tab id={style.RoomBtn} eventKey="ROOM ME" title="ROOM ME">
+              </TabPanel>
+              <TabPanel id={style.RoomBtn} eventKey="ROOM ME" title="ROOM ME">
                 <Row>
                   <Col sm='5'>
                     <Caledar />
@@ -295,7 +301,7 @@ const ArtistPorfile = () => {
                     </section>
                   </Col>
                 </Row>
-              </Tab>
+              </TabPanel>
             </Tabs>
           </Col>
           <Col xs="12" sm="3" md="3" lg="3" className={style.SuggetionsBar}>

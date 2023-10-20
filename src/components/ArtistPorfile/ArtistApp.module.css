@@ -120,13 +120,15 @@
   color: #373B5640;
 }
 
-#Navies {
+#Navies ul {
   display: flex;
   justify-content: space-evenly;
   border-bottom: #373B5640 1px solid;
 }
 
-#Navies a {
+#Navies li {
+  text-decoration: none;
+  list-style: none;
   color: #373B56;
   font-family: Barlow, sans-serif;
 }
