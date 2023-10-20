@@ -50,16 +50,23 @@
   align-items: center;
 }
 
-#Block {
-  width: 10%;
-  height: 10%;
+
+#Coins {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 #msgBtn {
+  margin: 5px;
+  width: 6.5rem;
   cursor: pointer;
   color: #373B56;
   padding: 5px 15px;
   border-radius: 10px;
+  text-align: center;
   border: #373B56 solid 1px;
 }
 

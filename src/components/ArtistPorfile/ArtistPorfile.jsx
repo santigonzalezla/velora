@@ -129,6 +129,10 @@ const ArtistPorfile = () => {
                 <span id={style.LocationTxt} ><img src={Location} id={style.Location} /> COLOMBIA</span>
               </section>
               <section id={style.BtnOptions}>
+                <div id={style.Coins}>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#373B56" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.59387 12.0197C6.81751 12.3019 7.10563 12.5264 7.43402 12.6741C7.76242 12.8219 8.12148 12.8887 8.48105 12.8689H9.61336C10.1139 12.8689 10.5939 12.6701 10.9478 12.3162C11.3017 11.9622 11.5005 11.4822 11.5005 10.9817C11.5005 10.4812 11.3017 10.0012 10.9478 9.64728C10.5939 9.29336 10.1139 9.09453 9.61336 9.09453H8.38669C7.88618 9.09453 7.40617 8.89571 7.05225 8.54179C6.69834 8.18788 6.49951 7.70787 6.49951 7.20735C6.49951 6.70684 6.69834 6.22683 7.05225 5.87292C7.40617 5.519 7.88618 5.32018 8.38669 5.32018H9.519C10.3682 5.32018 10.9344 5.50889 11.4062 6.16941M8.95284 4.28223V13.7181" stroke="#373B56" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  <p>12k</p>
+                </div>
                 <div id={style.msgBtn}>
                   Go Live
                 </div>
