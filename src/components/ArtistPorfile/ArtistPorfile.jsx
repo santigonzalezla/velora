@@ -129,7 +129,6 @@ const ArtistPorfile = () => {
                 <span id={style.LocationTxt} ><img src={Location} id={style.Location} /> COLOMBIA</span>
               </section>
               <section id={style.BtnOptions}>
-                <Image src={Block} id={style.Block} fluid />
                 <div id={style.msgBtn}>
                   Go Live
                 </div>
