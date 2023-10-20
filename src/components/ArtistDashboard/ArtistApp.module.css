@@ -61,6 +61,7 @@
   width: 30px;
   height: 30px;
 }
+
 #Overlay {
   box-shadow: 0px 4px 10px 0px #00000040;
   margin-left: -20px;
@@ -461,6 +462,7 @@
   padding: 0.5rem;
   margin: 1rem;
   border-radius: 10px;
+  color: #373B56;
   box-shadow: 0px 4px 15px 0px #373B5626;
   text-align: center;
 }
@@ -472,7 +474,7 @@
 }
 
 .monthlyIncome p {
-  color: #373B5640;
+  color: #373B56;
 
 }
 
@@ -541,7 +543,8 @@
   justify-content: center;
   flex-wrap: wrap;
   text-align: start !important;
-  color: #373B5626;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  color: rgba(55, 59, 86, 0.25);
 }
 
 .bestSalersItems {
@@ -554,6 +557,7 @@
 
 .bestSalersItems p {
   display: flex;
+  color: #373B56;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
