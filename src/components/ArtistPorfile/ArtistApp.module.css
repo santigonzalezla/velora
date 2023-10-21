@@ -124,6 +124,7 @@
   display: flex;
   justify-content: space-evenly;
   border-bottom: #373B5640 1px solid;
+  cursor: pointer;
 }
 
 #Navies li {

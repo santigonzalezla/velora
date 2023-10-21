@@ -47,10 +47,10 @@ const Post = (props) => {
             </Carousel>
             :
             <div>
-              {postImages[0][1].split("/")[0] === "video" ?
+              {postImages[0][1] ? (postImages[0][1].split("/")[0] === "video" ?
                 <video src={postImages[0][0]} className={style.postImg} controls /> :
                 <Image src={postImages[0][0]} alt="" className={style.postImg} fluid />
-              }
+              ) : <></>}
             </div>
         }
 
