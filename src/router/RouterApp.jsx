@@ -170,11 +170,12 @@ const RouterApp = () => {
       <Route path='/LivesArtist' element={livesArtist()} />
       <Route path='/BillingArtist' element={billingArtist()} />
       <Route path='/home' element={home()} />
-      <Route path='/ViewArtist/:artist' element={viewArtist()} />
+      {/* <Route path='/ViewArtist/:artist' element={viewArtist()} /> */}
+      <Route path='/ViewArtist' element={<ViewArtist />} />
       <Route path='/Chats' element={chats()} />
       <Route path='/Lives' element={lives()} />
       <Route path='/Subscriptions' element={subscriptions()} />
-      <Route path='/Billing' element={billing()}/>
+      <Route path='/Billing' element={billing()} />
       <Route path='/VideoCall' element={videoCall()} />
       <Route path='/BuyCoins' element={buyCoins()} />
     </Routes>

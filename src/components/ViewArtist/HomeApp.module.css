@@ -215,6 +215,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 
 #Block {
@@ -286,28 +287,22 @@
   width: 100%;
 }
 
-#Navies {
+#Navies ul {
   display: flex;
   justify-content: space-evenly;
   border-bottom: #373B5640 1px solid;
-  color: #373B56;
-  font-family: Barlow, sans-serif;
+  cursor: pointer;
 }
 
-#Navies::after {
+#Navies li {
+  text-decoration: none;
+  list-style: none;
   color: #373B56;
   font-family: Barlow, sans-serif;
-  background-color: none;
-}
-
-#Navies:active {
-  color: #373B56;
-  font-family: Barlow, sans-serif;
-  background-color: none;
 }
 
 #RoomBtn {
-  color: #A000FF !important;
+  color: #A000FF;
 }
 
 #Chats {

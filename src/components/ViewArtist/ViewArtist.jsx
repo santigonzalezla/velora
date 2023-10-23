@@ -1,7 +1,7 @@
 import style from './HomeApp.module.css'
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Image, Row, Col, Nav, Container, Modal } from 'react-bootstrap';
+import { Image, Row, Col, Container, Modal } from 'react-bootstrap';
 import SideBar from '../SideBar/SideBar';
 import Suggetions from '../Suggetions/Suggetions';
 import Banner from '../../assets/img/HomeApp/ViewArtist/ArtistBanner.png'
@@ -130,7 +130,7 @@ async function suscribeToArtist(serviceId) {
   }
 }
 
-async function unSuscribeToArtist(clientId ,serviceId) {
+async function unSuscribeToArtist(clientId, serviceId) {
   const token = cookies.get('auth-cookie');
   const url = `${import.meta.env.VITE_INTERACTIONS_URL}/unfollow`;
   const options = {
@@ -140,7 +140,7 @@ async function unSuscribeToArtist(clientId ,serviceId) {
       'Authorization': 'Bearer ' + (token || '')
     },
     method: 'POST',
-    body: JSON.stringify({ clientId ,serviceId })
+    body: JSON.stringify({ clientId, serviceId })
   };
   const response = await fetch(url, options);
 
@@ -172,7 +172,7 @@ const ViewArtist = () => {
   const handleShow = () => {
     if (!sub) {
       setShow(true);
-    }else{
+    } else {
       unSuscribe();
     }
   }
@@ -311,7 +311,7 @@ const ViewArtist = () => {
               <NotSubscribed />
 
    */}
-              <Subscribed artist={artist}/>
+              <Subscribed artist={artist} />
             </div>
           </Col>
           <Col xs="12" sm="3" md="3" lg="3" className={style.SuggetionsBar}>

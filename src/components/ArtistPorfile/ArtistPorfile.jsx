@@ -7,7 +7,6 @@ import SuggetionsArtist from '../SuggetionsArtist/SuggetionsArtist';
 import Banner from '../../assets/img/HomeApp/ViewArtist/ArtistBanner.png'
 import Photo from '../../assets/img/HomeApp/ViewArtist/ArtistPhoto.png'
 import Location from '../../assets/img/HomeApp/ViewArtist/Location.png'
-import Block from '../../assets/img/HomeApp/ViewArtist/Block.png'
 import Star from '../../assets/img/HomeApp/ViewArtist/Star.png'
 import AddMedia from '../../assets/img/ArtistApp/ArtistPorfile/addmedia.png'
 import Premium from '../../assets/img/ArtistApp/ArtistPorfile/Premium.png'

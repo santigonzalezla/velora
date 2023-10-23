@@ -1,10 +1,11 @@
-import { Container, Col, Row, Tabs, Tab, Image, Modal } from "react-bootstrap";
+import { Container, Col, Row, Image, Modal } from "react-bootstrap";
 import { useState } from "react";
 import style from '../HomeApp.module.css'
 import Feed from "../../Feed/Feed";
 import Date from '../../../assets/img/HomeApp/ViewArtist/Date.png'
 import WebCam from '../../../assets/img/HomeApp/ViewArtist/WebCam.png'
 import Premium from '../../../assets/img/HomeApp/ViewArtist/Premium.png'
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PrimiumPackage from '../../../assets/img/HomeApp/ViewArtist/PrimiumPackage.png'
 
 const Subscribed = (props) => {
@@ -23,10 +24,15 @@ const Subscribed = (props) => {
 
   return (
     <Tabs id={style.Navies} defaultActiveKey="profile" className="mb-3">
-      <Tab eventKey="Feed" title="Feed">
+      <TabList>
+        <Tab>FEED</Tab>
+        <Tab>PREMIUM</Tab>
+        <Tab id={style.RoomBtn}>ROOM ME</Tab>
+      </TabList>
+      <TabPanel>
         <Feed artistView={true} artist={artist} />
-      </Tab >
-      <Tab eventKey="PREMIUM" title="PREMIUM">
+      </TabPanel >
+      <TabPanel>
         <Row className={style.Premium} >
           <Col sm='3' className={style.Premium}>
             <img src={Premium} alt="" width={150} onClick={packShow} />
@@ -76,8 +82,8 @@ const Subscribed = (props) => {
             </Row>
           </Modal.Body>
         </Modal>
-      </Tab>
-      <Tab eventKey="ROOM ME" title="ROOM ME" id={style.RoomBtn}>
+      </TabPanel>
+      <TabPanel id={style.RoomBtn}>
         <section>
           <Container>
             <Row>
@@ -138,8 +144,8 @@ const Subscribed = (props) => {
             </Row>
           </Container>
         </section>
-      </Tab>
-    </Tabs>
+      </TabPanel>
+    </Tabs >
   );
 }
 
