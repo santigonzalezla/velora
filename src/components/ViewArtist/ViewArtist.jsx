@@ -188,6 +188,9 @@ const ViewArtist = () => {
   // const [reqSubs, setReqSubs] = useState(false);
   // const reqSubsClose = setReqSubs(false)
   // const reqSubsShow = setReqSubs(true);
+  const [confirmSubs, setConfirmSubs] = useState(false);
+  const confirmSubsCs = () => setConfirmSubs(close);
+  const confirmSubsOp = () => setConfirmSubs(true);
 
   const loadData = async () => {
     getUserInfo(artist).then((data) => {
@@ -258,6 +261,9 @@ const ViewArtist = () => {
                 <div id={style.subBtn} onClick={handleShow}>
                   {sub ? "Subscrito" : "Subscribirse"}
                 </div>
+                <Modal>
+
+                </Modal>
                 <Modal show={show} onHide={handleClose}>
                   <Image src={Banner} className={style.ArtistBanner} fluid />
                   <div className={style.UserData}>
@@ -306,10 +312,8 @@ const ViewArtist = () => {
             </div>
             <div>
               {/* 
-
               Componente para personas que no estan subscritas
               <NotSubscribed />
-
    */}
               <Subscribed artist={artist} />
             </div>

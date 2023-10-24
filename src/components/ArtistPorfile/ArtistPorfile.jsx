@@ -173,8 +173,8 @@ const ArtistPorfile = () => {
             </div>
             <Tabs id={style.Navies}>
               <TabList>
-                <Tab>Feed</Tab>
-                <Tab>Premium</Tab>
+                <Tab>FEED</Tab>
+                <Tab>PREMIUM</Tab>
                 <Tab id={style.RoomBtn}>ROOM ME</Tab>
               </TabList>
               <TabPanel>
