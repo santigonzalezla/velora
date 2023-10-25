@@ -576,6 +576,14 @@ p {
   border: none;
 }
 
+.NewPostHeader p {
+  background-color: #EB4335;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .NewPostBody {
   padding: 1rem;
   border: 1px solid #373B56;
