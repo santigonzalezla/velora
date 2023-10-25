@@ -76,11 +76,8 @@
   padding: 5px 15px;
   color: #ECEDF2;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px 0px #A000FF4F;
-}
-
-#subBtn:hover {
   cursor: pointer;
+  box-shadow: 0px 4px 10px 0px #A000FF4F;
 }
 
 .porfilUser {
@@ -125,17 +122,26 @@
   justify-content: space-evenly;
   border-bottom: #373B5640 1px solid;
   cursor: pointer;
+  padding: 1rem;
 }
 
-#Navies li {
+.Tab {
   text-decoration: none;
   list-style: none;
   color: #373B56;
   font-family: Barlow, sans-serif;
 }
 
-#RoomBtn {
-  color: #A000FF !important;
+.Tab:focus {
+  border: none;
+  outline: none;
+}
+
+.RoomBtn {
+  color: #A000FF;
+  text-decoration: none;
+  list-style: none;
+  font-family: Cantarell, sans-serif;
 }
 
 .serviceRoomME {
@@ -277,10 +283,6 @@ p {
 #AddAction svg,
 p {
   margin: 5px
-}
-
-#ArtistApp {
-  display: flex;
 }
 
 #ContentArtistApp {
@@ -634,6 +636,13 @@ p {
   border-radius: 10px;
   background-color: #A000FF;
   color: #ECEDF2;
+}
+
+.SelectedImage {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-top: 10px;
 }
 
 /* Become Artist Dashboard styles*/

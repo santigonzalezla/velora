@@ -58,7 +58,11 @@ async function createPost(data) {
 
 
 const ArtistPorfile = () => {
+  // Modal de crear post
   const [show, setShow] = useState(false);
+  // Modal de editar post
+  const [editPost, setEditPost] = useState(false)
+
   const [first_name, setName] = useState('');
   const [lastname, setLastname] = useState('');
   const [username, setUsername] = useState('');
@@ -71,13 +75,16 @@ const ArtistPorfile = () => {
 
   const [posts, setPosts] = useState([]);
 
-  const [editPost, setEditPost] = useState(false)
+  // Pre visualizar imagen
+  const [selectedImage, setSelectedImage] = useState(null);
 
-  const editPostClose = () => setEditPost(false)
-  const editPostOpen = () => setEditPost(true)
-
+  // Controles para el modal de crear post
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // Controles para el modal de editar post
+  const editPostClose = () => setEditPost(false)
+  const editPostOpen = () => setEditPost(true)
 
   const addImageButton = useRef(null);
 
@@ -156,7 +163,8 @@ const ArtistPorfile = () => {
                   <Modal.Body>
                     <div className={style.NewPostBody}>
                       <textarea placeholder='¿Qué deseas compartir hoy?...' className={style.PostInput} onChange={(e) => { setPostText(e.target.value) }} name="" cols="30" rows="10"></textarea>
-                      <input type="file" ref={addImageButton} hidden multiple onChange={(e) => { setPostImages(e.target.files) }} />
+                      <input type="file" ref={addImageButton} hidden multiple onChange={(e) => { setSelectedImage(URL.createObjectURL(e.target.files[0])); setPostImages(e.target.files) }} />
+                      {selectedImage && <img src={selectedImage} alt="Imagen seleccionada" className={style.SelectedImage} />}
                       <img src={AddMedia} width={20} onClick={handleAddImage} />
                     </div>
                   </Modal.Body>
@@ -201,9 +209,9 @@ const ArtistPorfile = () => {
             </Modal>
             <Tabs id={style.Navies}>
               <TabList>
-                <Tab>FEED</Tab>
-                <Tab>PREMIUM</Tab>
-                <Tab id={style.RoomBtn}>ROOM ME</Tab>
+                <Tab className={style.Tab}>FEED</Tab>
+                <Tab className={style.Tab}>PREMIUM</Tab>
+                <Tab className={style.RoomBtn}>ROOM ME</Tab>
               </TabList>
               <TabPanel>
                 <FeedArtist />
