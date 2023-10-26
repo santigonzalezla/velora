@@ -62,6 +62,7 @@ const ArtistPorfile = () => {
   const [show, setShow] = useState(false);
   // Modal de editar post
   const [editPost, setEditPost] = useState(false)
+  const [confirmPost, setConfirmPost] = useState(false)
 
   const [first_name, setName] = useState('');
   const [lastname, setLastname] = useState('');
@@ -87,6 +88,13 @@ const ArtistPorfile = () => {
   const editPostOpen = () => setEditPost(true)
 
   const addImageButton = useRef(null);
+
+  // Controles para el modal de confirmacion post
+  const confirmPostClose = () => setConfirmPost(false)
+  const confirmPostShow = () => {
+    setShow(false),
+      setConfirmPost(false);
+  }
 
   const loadProfile = async () => {
     getUserInfo().then((data) => {
@@ -169,9 +177,19 @@ const ArtistPorfile = () => {
                     </div>
                   </Modal.Body>
                   <Modal.Footer id={style.modalFooter}>
-                    <p onClick={handleCreatePost}>Publicar</p>
+                    <p onClick={() => { handleCreatePost(), confirmPostShow() }}>Publicar</p>
                     <span onClick={handleClose}>Cancelar</span>
                   </Modal.Footer>
+                </Modal>
+                <Modal show={confirmPost} onHide={confirmPostClose}>
+                  <Modal.Body className={style.ConfirmModals}>
+                    <article>
+                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 32 32">
+                        <path d="M 16 3 C 8.8 3 3 8.8 3 16 C 3 23.2 8.8 29 16 29 C 23.2 29 29 23.2 29 16 C 29 14.6 28.800781 13.200391 28.300781 11.900391 L 26.699219 13.5 C 26.899219 14.3 27 15.1 27 16 C 27 22.1 22.1 27 16 27 C 9.9 27 5 22.1 5 16 C 5 9.9 9.9 5 16 5 C 19 5 21.599609 6.1996094 23.599609 8.0996094 L 25 6.6992188 C 22.7 4.3992188 19.5 3 16 3 z M 27.300781 7.5 L 16 18.800781 L 11.699219 14.5 L 10.300781 16 L 16 21.699219 L 28.699219 9 L 27.300781 7.5 z"></path>
+                      </svg>
+                      <h4>Se subio exitosamente tu publicacion</h4>
+                    </article>
+                  </Modal.Body>
                 </Modal>
               </section>
             </div>
@@ -203,7 +221,7 @@ const ArtistPorfile = () => {
                 </div>
               </Modal.Body>
               <Modal.Footer id={style.modalFooter}>
-                <p onClick={handleCreatePost}>Publicar</p>
+                <p onClick={() => { handleCreatePost; confirmPostShow }}>Publicar</p>
                 <span onClick={editPostClose}>Cancelar</span>
               </Modal.Footer>
             </Modal>
