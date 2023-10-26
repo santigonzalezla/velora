@@ -184,6 +184,16 @@ const ViewArtist = () => {
     setBuySubs(true);
     setShow(false);
   }
+  // Modal para confirmar subscripcion
+  const [confirmSubsModal, setConfirmSubsModal] = useState(false);
+  const confirmSubsModalClose = () => setConfirmSubsModal(false)
+  const confirmSubsModalShow = () => {
+    setBuySubs(false)
+    setConfirmSubsModal(true)
+  }
+  const [unSuscribeModal, setUnSuscribeModal] = useState(false);
+  const unSubcribeModalClose = () => setUnSuscribeModal(false)
+  const unSubcribeModalShow = () => setUnSuscribeModal(true);
   // Modal para bloquear al artista
   const [block, setBlock] = useState(false)
   const blockClose = () => setBlock(false)
@@ -191,14 +201,21 @@ const ViewArtist = () => {
   // Modal para desbloquear al artista
   const [unBlock, setUnBlock] = useState(false)
   const unBlockClose = () => setUnBlock(false)
-  const unBlockShow = () => setUnBlock(true)
+  // const unBlockShow = () => setUnBlock(true)
   //Modal con requisito de estar subscrito
   // const [reqSubs, setReqSubs] = useState(false);
   // const reqSubsClose = setReqSubs(false)
   // const reqSubsShow = setReqSubs(true);
-  const [confirmSubs, setConfirmSubs] = useState(false);
-  const confirmSubsCs = () => setConfirmSubs(close);
-  const confirmSubsOp = () => setConfirmSubs(true);
+  // const [confirmSubs, setConfirmSubs] = useState(false);
+  // const confirmSubsCs = () => setConfirmSubs(false);
+  // const confirmSubsOp = () => setConfirmSubs(true);
+
+  // Modal de confirmacion al des subscribirse
+  const [confirmUnSubsModal, setConfirmUnSubsModal] = useState(false)
+  const confirmUnSubsModalClose = () => setConfirmUnSubsModal(false)
+  const confirmUnSubsModalShow = () => {
+    setConfirmUnSubsModal(true)
+  }
 
   const loadData = async () => {
     getUserInfo(artist).then((data) => {
@@ -229,6 +246,7 @@ const ViewArtist = () => {
     suscribeToArtist(serviceId).then((data) => {
       console.log(data);
       setSub(true);
+      unSubcribeModalShow();
       handleClose();
       window.location.reload();
     });
@@ -263,6 +281,7 @@ const ViewArtist = () => {
               </section>
               <section id={style.BtnOptions}>
                 <Image src={Block} id={style.Block} fluid onClick={blockShow} />
+                {/* Modal para bloquear a un usuario */}
                 <Modal show={block} onHide={blockClose} className={style.BlockModal}>
                   <Modal.Body className={style.BlockModalBody}>
                     <article>
@@ -282,12 +301,50 @@ const ViewArtist = () => {
                 <div id={style.msgBtn}>
                   Mensaje
                 </div>
-                {/* <div id={style.subBtn} onClick={handleShow}>
+                <div id={style.subBtn} onClick={handleShow}>
                   {sub ? "Subscrito" : "Subscribirse"}
-                </div> */}
+                </div>
+                {/* Modals para confirmar des suvscripcion en caso de estar subscrito */}
+                <Modal show={unSuscribeModal} onHide={unSubcribeModalClose} className={style.BlockModal}>
+                  <Modal.Body className={style.BlockModalBody}>
+                    <article>
+                      <span>¿Esta seguro de cancelar la suscripción a:</span>
+                      <h3>@beautifulmouse112?</h3>
+                    </article>
+                    <section className={style.BlockModalFooter}>
+                      <div>
+                        <span onClick={unSubcribeModalClose}>Salir</span>
+                      </div>
+                      <div>
+                        <p onClick={confirmUnSubsModal}>Cancelar</p>
+                      </div>
+                    </section>
+                  </Modal.Body>
+                </Modal>
+                <Modal show={confirmUnSubsModal} onHide={confirmUnSubsModalClose}>
+                  <Modal.Body className={style.ConfirmModals}>
+                    <article>
+                      <h4>Se ha desuscrito
+                        correctamente a:</h4>
+                      <h3>@beautifulmouse112</h3>
+                    </article>
+                  </Modal.Body>
+                </Modal>
+                {/* Modal para confirmar subscripcion en caso de no estar subscrito */}
+                <Modal show={confirmUnSubsModal} onHide={confirmUnSubsModalClose}>
+                  <Modal.Body className={style.ConfirmModals}>
+                    <article>
+                      <h4>Se ha suscrito
+                        correctamente a:</h4>
+                      <h3>@beautifulmouse112</h3>
+                    </article>
+                  </Modal.Body>
+                </Modal>
+                {/* Boton en vista de bloqueo
                 <div id={style.blockBtn} onClick={unBlockShow}>
                   Bloqueado
-                </div>
+                </div> */}
+                {/* // Modal para desbloquear a un usuario */}
                 <Modal show={unBlock} onHide={unBlockClose} className={style.BlockModal}>
                   <Modal.Body className={style.BlockModalBody}>
                     <article>
@@ -322,6 +379,7 @@ const ViewArtist = () => {
                     </center>
                   </div>
                 </Modal>
+                {/* Modal de comprar subscripcion */}
                 <Modal show={buySubs} onHide={buySubsClose} id={style.buySubsModal}>
                   <Modal.Header className={style.buySubsModalHeader}>
                     <p>Suscríbete por solo</p>
@@ -329,13 +387,23 @@ const ViewArtist = () => {
                   <Modal.Body className={style.buySubsModalBody}>
                     <center>
                       <h3>{susbcriptionInfo ? susbcriptionInfo.serviceInfo[0].price : 0} Creditos/mes</h3>
-                      <div id={style.subBtnData} onClick={suscribe}>COMPRAR SUSCRIPCIÓN</div>
+                      <div id={style.subBtnData} onClick={() => { confirmSubsModalShow(); suscribe(); }}>COMPRAR SUSCRIPCIÓN</div>
                     </center>
                   </Modal.Body>
                   <Modal.Footer className={style.buySubsModalFooter}>
                     <span>{coinBalance ? coinBalance : 0} créditos disponibles</span>
                     <p>comprar créditos</p>
                   </Modal.Footer>
+                </Modal>
+                {/* Modal para confirmar subscripcion */}
+                <Modal show={confirmSubsModal} onHide={confirmSubsModalClose}>
+                  <Modal.Body className={style.ConfirmModals}>
+                    <article>
+                      <h4>Se ha suscrito
+                        correctamente a:</h4>
+                      <h3>@beautifulmouse112</h3>
+                    </article>
+                  </Modal.Body>
                 </Modal>
               </section>
             </div>
@@ -355,8 +423,8 @@ const ViewArtist = () => {
               Componente para personas que no estan subscritas
               <NotSubscribed />
    */}
-              {/* <Subscribed artist={artist} /> */}
-              <BlockUser />
+              <Subscribed artist={artist} />
+              {/* <BlockUser /> */}
             </div>
           </Col>
           <Col xs="12" sm="3" md="3" lg="3" className={style.SuggetionsBar}>

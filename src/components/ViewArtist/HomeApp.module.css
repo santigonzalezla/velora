@@ -487,3 +487,23 @@
   align-items: center;
   font-family: Barlow, sans-serif;
 }
+
+.ConfirmModals {
+  height: 10rem;
+  color: #4F5168;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Barlow, sans-serif;
+}
+
+.ConfirmModals article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+}
