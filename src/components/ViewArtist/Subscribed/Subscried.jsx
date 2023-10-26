@@ -96,12 +96,12 @@ const Subscribed = (props) => {
                 <Modal.Body id={style.AddDateModal}>
                   <p>Programar Encuentro</p>
                   <div id={style.AddDate}>
-                    <input type="text" name="" id="" placeholder="Junio 20 2023" />
+                    <input type="date" name="" id="" placeholder="Junio 20 2023" />
                     <p>a las</p>
                     <input type="text" name="" id="" placeholder="11:00" />
                   </div>
                   <div className={style.Add}>
-                    <p>Cancelar</p>
+                    <p onClick={dateClose}>Cancelar</p>
                     <span>Agendar</span>
                   </div>
                 </Modal.Body>
@@ -115,8 +115,8 @@ const Subscribed = (props) => {
                 <Modal.Body id={style.AddWhereModal}>
                   <p>Programar Encuentro</p>
                   <div id={style.AddDate}>
-                    <input type="text" name="" id="" placeholder="Junio 20 2023" />
-                    <p>a las</p>
+                    <input type="date" name="" id="" placeholder="Junio 20 2023" />
+                    <p onClick={dinnerClose}>a las</p>
                     <input type="text" name="" id="" placeholder="11:00" />
                   </div>
                   <div >
