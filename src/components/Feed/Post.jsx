@@ -1,16 +1,19 @@
 import style from './HomeApp.module.css'
-import { Image } from 'react-bootstrap'
+import { Image, Modal, Row, Col, Carousel } from 'react-bootstrap'
 import userPhoto from '../../assets/img/HomeApp/Feed/userPhoto.png'
 import commentReaction from '../../assets/img/HomeApp/Feed/commentReaction.png'
-import heartReaction from '../../assets/img/HomeApp/Feed/heartReaction.png'
 import donationReaction from '../../assets/img/HomeApp/Feed/donationReaction.png'
-import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom'
+import Photo from '../../assets/img/HomeApp/Feed/postImg.png'
 import { AiFillHeart } from 'react-icons/ai'
 import { useState } from 'react';
 
 
 const Post = (props) => {
+  const [comments, setComments] = useState(false);
+  const commentsClose = () => setComments(false);
+  const commentsShow = () => setComments(true);
+
   const { postId, postText, postImages, artistName, artistUsername, handleLike } = props;
   const [likedPost, setLikedPost] = useState(false);
 
@@ -71,9 +74,44 @@ const Post = (props) => {
         </div>
         <div className={style.postDescription}>
           <p className={style.postTxt}>{postText}</p>
-          <p className={style.postViewMore}>View more...</p>
+          <p className={style.postViewMore} onClick={commentsShow}>View more...</p>
         </div>
       </div>
+      <Modal show={comments} onHide={commentsClose} size="xl">
+        <Modal.Body id={style.commentsModal}>
+          <Row>
+            <Col md='8' className={style.commentPhoto} >
+              <img src={Photo} alt="" />
+              {/* {postImages.length > 0 ?
+                (postImages[0][1].split("/")[0] === "video" ?
+                  <video src={postImages[0][0]} className={style.postImg} controls /> :
+                  <Image src={postImages[0][0]} alt="" className={style.postImg} fluid />
+                ) : <>  </>
+              } */}
+            </Col>
+            <Col md='4' className={style.userSection}>
+              <article>
+                <section className={style.commentsItem}>
+                  <img src={userPhoto} alt="" />
+                  <div className={style.commitContent}>
+                    <section className={style.userComents}>
+                      <h6>Beautiful Mouse</h6>
+                      <span>@beautifulmouse112</span>
+                    </section>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitt</p>
+                    <div className={style.commitsActions}>
+                      <span>1h</span>
+                      <span>reply</span>
+                      <span>edit</span>
+                    </div>
+                  </div>
+                </section>
+              </article>
+              <input type="text" />
+            </Col>
+          </Row>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

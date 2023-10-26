@@ -36,21 +36,21 @@ const Subscribed = (props) => {
       <TabPanel>
         <Row className={style.Premium} >
           <Col sm='3' className={style.Premium}>
-            <img src={Premium} alt="" width={150} onClick={packShow} />
+            <img src={Premium} alt="" onClick={packShow} />
           </Col>
           <Col sm='3' className={style.Premium}>
-            <img src={Premium} alt="" width={150} />
+            <img src={Premium} alt="" />
           </Col>
           <Col sm='3' className={style.Premium}>
-            <img src={Premium} alt="" width={150} />
+            <img src={Premium} alt="" />
           </Col>
           <Col sm='3' className={style.Premium}>
-            <img src={Premium} alt="" width={150} />
+            <img src={Premium} alt="" />
           </Col>
         </Row>
-        <Modal show={pack} onHide={packClose} id={style.packModal}>
+        <Modal show={pack} onHide={packClose} id={style.packModal} size="lg">
           <Modal.Body id={style.packPremium}>
-            <img src={PremiumCover} alt="" width={40} />
+            <img src={PremiumCover} alt="" width={50} />
             <section id={style.PremiumHeader}>
               <span>Yoga</span>
               <div>
@@ -64,16 +64,16 @@ const Subscribed = (props) => {
             </section>
             <Row className={style.Premium}>
               <Col sm='3' className={style.Premium} >
-                <img src={PrimiumPackage} alt="" width={100} />
+                <img src={PrimiumPackage} alt="" />
               </Col>
               <Col sm='3' className={style.Premium}>
-                <img src={PrimiumPackage} alt="" width={100} />
+                <img src={PrimiumPackage} alt="" />
               </Col>
               <Col sm='3' className={style.Premium}>
-                <img src={PrimiumPackage} alt="" width={100} />
+                <img src={PrimiumPackage} alt="" />
               </Col>
               <Col sm='3' className={style.Premium}>
-                <img src={PrimiumPackage} alt="" width={100} />
+                <img src={PrimiumPackage} alt="" />
               </Col>
             </Row>
             <Row className={style.Premium}>

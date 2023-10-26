@@ -143,3 +143,53 @@
 .postViewMore:hover {
   cursor: pointer;
 }
+
+#commentsModal {
+  height: 30rem;
+}
+
+.commentPhoto {
+  display: flex;
+  height: 68vh;
+  justify-content: center;
+  background-color: #ECEDF2;
+  align-items: center;
+}
+
+.commentPhoto img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.commentsItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: Barlow, sans-serif;
+  color: #373B56;
+}
+
+.commentsItem img {
+  width: 50px;
+  height: 50px;
+}
+
+.userComents {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.userComents h6 {
+  margin-right: 5px;
+  font-size: large;
+}
+
+.commitContent {
+  padding: 5px;
+}
+
+.commitsActions {
+  display: flex;
+  justify-content: space-between;
+}

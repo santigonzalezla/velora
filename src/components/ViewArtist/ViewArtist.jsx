@@ -13,6 +13,7 @@ import NotSubscribed from './NotSubscribed/NotSubscribed';
 import Subscribed from './Subscribed/Subscried';
 import BlockUser from './BlockUser/BlockUser';
 import { Cookies } from 'react-cookie'
+import { Link } from 'react-router-dom';
 import jwt from 'jwt-decode'
 
 const cookies = new Cookies();
@@ -340,7 +341,9 @@ const ViewArtist = () => {
                         <span onClick={buyCreditsClose}>Cancelar</span>
                       </div>
                       <div>
-                        <p>Comprar</p>
+                        <Link to={'/BuyCoins'}>
+                          <p>Comprar</p>
+                        </Link>
                       </div>
                     </section>
                   </Modal.Body>

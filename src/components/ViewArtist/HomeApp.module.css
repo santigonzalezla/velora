@@ -386,12 +386,23 @@
   align-items: center;
 }
 
+.Premium img {
+  object-fit: cover;
+  width: 150px;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 250px;
+}
+
 #PremiumHeader {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   padding-bottom: 5px;
+  font-family: Barlow, sans-serif;
   border-bottom: 1px solid #373B5640;
+  cursor: pointer;
+  padding-top: 10px;
 }
 
 #PremiumHeader div {
