@@ -170,8 +170,8 @@ const RouterApp = () => {
       <Route path='/LivesArtist' element={livesArtist()} />
       <Route path='/BillingArtist' element={billingArtist()} />
       <Route path='/home' element={home()} />
-      <Route path='/ViewArtist/:artist' element={viewArtist()} />
-      {/* <Route path='/ViewArtist' element={<ViewArtist />} /> */}
+      {/* <Route path='/ViewArtist/:artist' element={viewArtist()} /> */}
+      <Route path='/ViewArtist' element={<ViewArtist />} />
       <Route path='/Chats' element={chats()} />
       <Route path='/Lives' element={lives()} />
       <Route path='/Subscriptions' element={subscriptions()} />

@@ -26,6 +26,9 @@ function Caledar() {
     setAno(nuevoAno);
   };
 
+  const [inicioReserva, setInicioReserva] = useState(null);
+  const [finReserva, setFinReserva] = useState(null);
+
   return (
     <div className={style.calendario}>
       <div className={style.encabezado}>
@@ -42,9 +45,29 @@ function Caledar() {
         {[...Array(primerDiaMes).keys()].map((dia) => (
           <div key={dia}></div>
         ))}
-        {[...Array(ultimoDiaMes).keys()].map((dia) => (
-          <div key={dia + 1} className={style.diaMorado}>{dia + 1}</div>
-        ))}
+        {[...Array(ultimoDiaMes).keys()].map((dia) => {
+          const diaActual = dia + 1;
+          const esDiaInicio = inicioReserva && inicioReserva.getDate() === diaActual;
+          const esDiaFin = finReserva && finReserva.getDate() === diaActual;
+          const esDentroDeReserva = inicioReserva && finReserva && diaActual > inicioReserva.getDate() && diaActual < finReserva.getDate();
+
+          const diaClase = esDiaInicio ? style.diaInicio : esDiaFin ? style.diaFin : esDentroDeReserva ? style.diaReserva : style.diaMorado;
+
+          return (
+            <div key={diaActual} className={diaClase} onClick={() => {
+              if (!inicioReserva) {
+                setInicioReserva(new Date(ano, mes, diaActual));
+              } else if (!finReserva) {
+                setFinReserva(new Date(ano, mes, diaActual));
+              } else {
+                setInicioReserva(new Date(ano, mes, diaActual));
+                setFinReserva(null);
+              }
+            }}>
+              {diaActual}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

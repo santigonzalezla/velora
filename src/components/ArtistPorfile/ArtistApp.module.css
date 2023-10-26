@@ -179,43 +179,6 @@
   color: #373B5626;
 }
 
-.calendario {
-  margin: 1rem;
-  width: 300px;
-  height: 280px;
-  text-align: center;
-  font-family: Inter;
-  color: #373B56;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-}
-
-.encabezado {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-#Select {
-  border: none;
-  color: #373B56;
-  background-color: #f9f9f9;
-}
-
-.diasYSemana {
-  display: flex;
-  color: #373B56B2;
-  justify-content: space-evenly;
-  background-color: #f9f9f9;
-}
-
-.dias {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  padding: 10px;
-}
 
 #Dates {
   margin: 1rem;
@@ -1140,4 +1103,62 @@ p {
   align-items: center;
   padding-bottom: 5px;
   border-bottom: 1px solid #373B5640;
+}
+
+.calendario {
+  margin: 1rem;
+  width: 300px;
+  height: 280px;
+  text-align: center;
+  font-family: Inter;
+  color: #373B56;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#Select {
+  border: none;
+  color: #373B56;
+  background-color: #f9f9f9;
+}
+
+.diasYSemana {
+  display: flex;
+  color: #373B56B2;
+  justify-content: space-evenly;
+  background-color: #f9f9f9;
+}
+
+.dias {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.diaInicio {
+  background: #a200ff9a;
+  border-radius: 5px;
+}
+
+.diaFin {
+  background: #a200ff9a;
+  border-radius: 5px;
+}
+
+.diaReserva {
+  background: rgba(160, 0, 255, 0.31);
+  border-radius: 5px;
 }
