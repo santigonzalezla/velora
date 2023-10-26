@@ -284,11 +284,11 @@ const Feed = (props) => {
           </Row>
         </Container>
       }
-      {/* {
+      {
         posts.map((post, index) => (
           <Post key={index} postId={post[1].id} artistUsername={post[1].creator_id} artistName={post[0]} postImages={post[1].media} postText={post[1].text} handleLike={handleLike} />
         ))
-      } */}
+      }
     </main>
   );
 }

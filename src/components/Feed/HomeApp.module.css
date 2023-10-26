@@ -32,7 +32,7 @@
   border-radius: 20px;
   box-shadow: 0px 0px 4px 0px #00000040 inset;
   background: #ECEDF2;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 #FeedInput input:focus {
@@ -43,6 +43,7 @@
   position: absolute;
   width: 30%;
   border: none;
+  margin-left: 1.5%;
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 0px 4px 0px #00000040 inset;
   background: #ECEDF2;
