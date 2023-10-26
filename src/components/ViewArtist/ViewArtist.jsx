@@ -11,7 +11,7 @@ import Block from '../../assets/img/HomeApp/ViewArtist/Block.png'
 import Star from '../../assets/img/HomeApp/ViewArtist/Star.png'
 import NotSubscribed from './NotSubscribed/NotSubscribed';
 import Subscribed from './Subscribed/Subscried';
-import Feed from '../Feed/Feed'
+import BlockUser from './BlockUser/BlockUser';
 import { Cookies } from 'react-cookie'
 import jwt from 'jwt-decode'
 
@@ -333,7 +333,8 @@ const ViewArtist = () => {
               Componente para personas que no estan subscritas
               <NotSubscribed />
    */}
-              <Subscribed artist={artist} />
+              {/* <Subscribed artist={artist} /> */}
+              <BlockUser />
             </div>
           </Col>
           <Col xs="12" sm="3" md="3" lg="3" className={style.SuggetionsBar}>

@@ -471,3 +471,12 @@
 #packPremium {
   width: 100%;
 }
+
+#BlockUser {
+  display: flex;
+  justify-content: center;
+  color: #4F5168;
+  height: 45vh;
+  align-items: center;
+  font-family: Barlow, sans-serif;
+}

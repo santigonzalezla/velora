@@ -1,9 +1,12 @@
-import React from 'react';
+import style from '../HomeApp.module.css'
 
 const BlockUser = () => {
   return (
-    <div>
-
+    <div id={style.BlockUser}>
+      <article>
+        <h3>El usuario @beautifulmouse112 está bloqueado</h3>
+        <span>No podrás ver publicaciones ni notificaciones de @beautifulmouse112</span>
+      </article>
     </div>
   );
 }
