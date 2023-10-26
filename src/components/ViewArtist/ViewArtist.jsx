@@ -184,11 +184,14 @@ const ViewArtist = () => {
     setBuySubs(true);
     setShow(false);
   }
-
   // Modal para bloquear al artista
   const [block, setBlock] = useState(false)
   const blockClose = () => setBlock(false)
   const blockShow = () => setBlock(true)
+  // Modal para desbloquear al artista
+  const [unBlock, setUnBlock] = useState(false)
+  const unBlockClose = () => setUnBlock(false)
+  const unBlockShow = () => setUnBlock(true)
   //Modal con requisito de estar subscrito
   // const [reqSubs, setReqSubs] = useState(false);
   // const reqSubsClose = setReqSubs(false)
@@ -260,13 +263,7 @@ const ViewArtist = () => {
               </section>
               <section id={style.BtnOptions}>
                 <Image src={Block} id={style.Block} fluid onClick={blockShow} />
-                <div id={style.msgBtn}>
-                  Mensaje
-                </div>
-                <div id={style.subBtn} onClick={handleShow}>
-                  {sub ? "Subscrito" : "Subscribirse"}
-                </div>
-                <Modal show={block} className={style.BlockModal}>
+                <Modal show={block} onHide={blockClose} className={style.BlockModal}>
                   <Modal.Body className={style.BlockModalBody}>
                     <article>
                       <h3>Bloquear a @beautifulmouse112</h3>
@@ -278,6 +275,31 @@ const ViewArtist = () => {
                       </div>
                       <div>
                         <span onClick={blockClose}>Cancelar</span>
+                      </div>
+                    </section>
+                  </Modal.Body>
+                </Modal>
+                <div id={style.msgBtn}>
+                  Mensaje
+                </div>
+                {/* <div id={style.subBtn} onClick={handleShow}>
+                  {sub ? "Subscrito" : "Subscribirse"}
+                </div> */}
+                <div id={style.blockBtn} onClick={unBlockShow}>
+                  Bloqueado
+                </div>
+                <Modal show={unBlock} onHide={unBlockClose} className={style.BlockModal}>
+                  <Modal.Body className={style.BlockModalBody}>
+                    <article>
+                      <h3>Desbloquear a @beautifulmouse112</h3>
+                      <span>Podrás volver a ver las publicaciones y notificaciones de @beautifulmouse112</span>
+                    </article>
+                    <section className={style.BlockModalFooter}>
+                      <div>
+                        <p>Desbloquear</p>
+                      </div>
+                      <div>
+                        <span onClick={unBlockClose}>Cancelar</span>
                       </div>
                     </section>
                   </Modal.Body>
