@@ -231,10 +231,39 @@ const Feed = (props) => {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    // Lógica para generar sugerencias de búsqueda basadas en el valor del campo de entrada...
-    // ... (tu lógica aquí)
+    // Lógica para generar sugerencias de búsqueda basadas en el valor del campo de entrada
+
     setShowSuggestions(true); // Mostrar las sugerencias cuando el usuario escribe algo
   };
+  const [loadedPosts, setLoadedPosts] = useState([]);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const batchSize = 10; // Número de publicaciones para cargar por lote
+  useEffect(() => {
+    function handleScroll() {
+      if (
+        window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 100 &&
+        !loadingMore
+      ) {
+        // El usuario ha llegado al final de la página y no se están cargando más publicaciones
+        setLoadingMore(true);
+        const loadMorePosts = async () => {
+          // Lógica para cargar más publicaciones, por ejemplo, llamando a tu función getPosts()
+          const newPosts = await getPosts([...artistArray]); // Asegúrate de pasar la lista correcta de artistas
+          setLoadedPosts(prevPosts => [...prevPosts, ...newPosts]);
+          setLoadingMore(false);
+        };
+        loadMorePosts();
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpia el event listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [loadingMore]);
+
   return (
     <main >
       {!artistView &&
