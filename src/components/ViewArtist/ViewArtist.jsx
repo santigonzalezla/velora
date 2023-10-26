@@ -201,6 +201,14 @@ const ViewArtist = () => {
   // Modal para desbloquear al artista
   const [unBlock, setUnBlock] = useState(false)
   const unBlockClose = () => setUnBlock(false)
+  const unBlockShow = () => setUnBlock(true)
+  // Modal para personas que no cuentan con el saldo suficiente de creditos para subscribirse al artista
+  const [buyCredits, setBuyCredits] = useState(false)
+  const buyCreditsClose = () => setBuyCredits(false)
+  const buyCreditsShow = () => {
+    setConfirmSubsModal(false),
+      setBuyCredits(true)
+  }
   // const unBlockShow = () => setUnBlock(true)
   //Modal con requisito de estar subscrito
   // const [reqSubs, setReqSubs] = useState(false);
@@ -317,6 +325,22 @@ const ViewArtist = () => {
                       </div>
                       <div>
                         <p onClick={confirmUnSubsModal}>Cancelar</p>
+                      </div>
+                    </section>
+                  </Modal.Body>
+                </Modal>
+                <Modal show={buyCredits} onHide={buyCreditsClose} className={style.BlockModal}>
+                  <Modal.Body className={style.BlockModalBody}>
+                    <article>
+                      <span>Lo sentimos, no cuentas con los creditos suficientes para subscribirte a:</span>
+                      <h3>@beautifulmouse112?</h3>
+                    </article>
+                    <section className={style.BlockModalFooter}>
+                      <div>
+                        <span onClick={buyCreditsClose}>Cancelar</span>
+                      </div>
+                      <div>
+                        <p>Comprar</p>
                       </div>
                     </section>
                   </Modal.Body>
