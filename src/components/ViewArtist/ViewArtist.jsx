@@ -184,6 +184,11 @@ const ViewArtist = () => {
     setBuySubs(true);
     setShow(false);
   }
+
+  // Modal para bloquear al artista
+  const [block, setBlock] = useState(false)
+  const blockClose = () => setBlock(false)
+  const blockShow = () => setBlock(true)
   //Modal con requisito de estar subscrito
   // const [reqSubs, setReqSubs] = useState(false);
   // const reqSubsClose = setReqSubs(false)
@@ -254,15 +259,28 @@ const ViewArtist = () => {
                 <span id={style.LocationTxt} ><img src={Location} id={style.Location} /> COLOMBIA</span>
               </section>
               <section id={style.BtnOptions}>
-                <Image src={Block} id={style.Block} fluid />
+                <Image src={Block} id={style.Block} fluid onClick={blockShow} />
                 <div id={style.msgBtn}>
                   Mensaje
                 </div>
                 <div id={style.subBtn} onClick={handleShow}>
                   {sub ? "Subscrito" : "Subscribirse"}
                 </div>
-                <Modal>
-
+                <Modal show={block} className={style.BlockModal}>
+                  <Modal.Body className={style.BlockModalBody}>
+                    <article>
+                      <h3>Bloquear a @beautifulmouse112</h3>
+                      <span>No podrás ver publicaciones ni notificaciones de @beautifulmouse112</span>
+                    </article>
+                    <section className={style.BlockModalFooter}>
+                      <div>
+                        <p>Bloquear</p>
+                      </div>
+                      <div>
+                        <span onClick={blockClose}>Cancelar</span>
+                      </div>
+                    </section>
+                  </Modal.Body>
                 </Modal>
                 <Modal show={show} onHide={handleClose}>
                   <Image src={Banner} className={style.ArtistBanner} fluid />
