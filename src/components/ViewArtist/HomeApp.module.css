@@ -335,9 +335,29 @@
 }
 
 .Premium {
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#PremiumHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #373B5640;
+}
+
+#PremiumHeader div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#PremiumHeader svg {
+  margin-left: 5px;
 }
 
 .RoomME {

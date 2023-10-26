@@ -170,7 +170,7 @@ const ArtistPorfile = () => {
                   </Modal.Body>
                   <Modal.Footer id={style.modalFooter}>
                     <p onClick={handleCreatePost}>Publicar</p>
-                    <span>Cancelar</span>
+                    <span onClick={handleClose}>Cancelar</span>
                   </Modal.Footer>
                 </Modal>
               </section>
@@ -204,7 +204,7 @@ const ArtistPorfile = () => {
               </Modal.Body>
               <Modal.Footer id={style.modalFooter}>
                 <p onClick={handleCreatePost}>Publicar</p>
-                <span>Cancelar</span>
+                <span onClick={editPostClose}>Cancelar</span>
               </Modal.Footer>
             </Modal>
             <Tabs id={style.Navies}>
