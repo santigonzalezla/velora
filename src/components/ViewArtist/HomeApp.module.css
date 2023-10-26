@@ -388,7 +388,15 @@
 
 .Premium img {
   object-fit: cover;
-  width: 150px;
+  width: 180px;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 250px;
+}
+
+.PremiumModal img {
+  object-fit: cover;
+  width: 200px;
   border-radius: 20px;
   cursor: pointer;
   height: 250px;

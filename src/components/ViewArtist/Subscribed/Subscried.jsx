@@ -62,32 +62,26 @@ const Subscribed = (props) => {
               </div>
               <span onClick={packClose}>x</span>
             </section>
-            <Row className={style.Premium}>
-              <Col sm='3' className={style.Premium} >
+            <Row className={style.PremiumModal}>
+              <Col sm='4' className={style.Premium} >
                 <img src={PrimiumPackage} alt="" />
               </Col>
-              <Col sm='3' className={style.Premium}>
+              <Col sm='4' className={style.Premium}>
                 <img src={PrimiumPackage} alt="" />
               </Col>
-              <Col sm='3' className={style.Premium}>
-                <img src={PrimiumPackage} alt="" />
-              </Col>
-              <Col sm='3' className={style.Premium}>
+              <Col sm='4' className={style.Premium}>
                 <img src={PrimiumPackage} alt="" />
               </Col>
             </Row>
-            <Row className={style.Premium}>
-              <Col sm='3' className={style.Premium} >
-                <img src={PrimiumPackage} alt="" width={100} />
+            <Row className={style.PremiumModal}>
+              <Col sm='4' className={style.Premium} >
+                <img src={PrimiumPackage} alt="" />
               </Col>
-              <Col sm='3' className={style.Premium}>
-                <img src={PrimiumPackage} alt="" width={100} />
+              <Col sm='4' className={style.Premium}>
+                <img src={PrimiumPackage} alt="" />
               </Col>
-              <Col sm='3' className={style.Premium}>
-                <img src={PrimiumPackage} alt="" width={100} />
-              </Col>
-              <Col sm='3' className={style.Premium}>
-                <img src={PrimiumPackage} alt="" width={100} />
+              <Col sm='4' className={style.Premium}>
+                <img src={PrimiumPackage} alt="" />
               </Col>
             </Row>
           </Modal.Body>
