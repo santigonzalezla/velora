@@ -2,12 +2,9 @@ import style from './HomeApp.module.css'
 import { Image, Row, Col, Container } from 'react-bootstrap'
 import LogoSide from '../../assets/img/HomeApp/Feed/logoside.png'
 import userPhoto from '../../assets/img/HomeApp/Feed/userPhoto.png'
-import commentReaction from '../../assets/img/HomeApp/Feed/commentReaction.png'
-import heartReaction from '../../assets/img/HomeApp/Feed/heartReaction.png'
-import donationReaction from '../../assets/img/HomeApp/Feed/donationReaction.png'
 import Post from './Post'
 import { Cookies } from 'react-cookie'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import jwt from 'jwt-decode'
 
 const cookies = new Cookies();
@@ -206,18 +203,83 @@ const Feed = (props) => {
     }
   }, []);
 
+  const [inputValue, setInputValue] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const inputRef = useRef(null);
+
+  const handleBlur = (event) => {
+    // Lógica a realizar cuando el campo de entrada pierde el foco
+    console.log('Campo de entrada perdió el foco. Valor actual:', event.target.value);
+  };
+
+  const handleClickOutside = (event) => {
+    if (inputRef.current && !inputRef.current.contains(event.target)) {
+      // El clic ocurrió fuera del campo de entrada
+      setShowSuggestions(false);
+    }
+  };
+
+  useEffect(() => {
+    // Agregar event listener para el clic cuando el componente se monta
+    document.addEventListener('click', handleClickOutside);
+
+    // Limpiar el event listener cuando el componente se desmonta
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []); // [] asegura que este efecto se ejecute solo una vez al montar el componente
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+    // Lógica para generar sugerencias de búsqueda basadas en el valor del campo de entrada...
+    // ... (tu lógica aquí)
+    setShowSuggestions(true); // Mostrar las sugerencias cuando el usuario escribe algo
+  };
   return (
     <main >
       {!artistView &&
         <Container id={style.Feed} fluid>
           <Row>
             <Col className={style.ColItem} sm='4'>
-              < Image src={LogoSide} alt="" id={style.LogoSide} fluid />
+              <article>
+                < Image src={LogoSide} alt="" id={style.LogoSide} />
+              </article>
             </Col>
             <Col className={style.ColItem} sm='7'>
-              <form onSubmit={handleSearch} id={style.FeedInput}>
-                <input type="text" disabled={loadingSearch} placeholder='@username' />
-              </form>
+              <div onSubmit={handleSearch} id={style.FeedInput} ref={inputRef}>
+                <input
+                  type="text"
+                  disabled={loadingSearch}
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  onBlur={handleBlur} placeholder='@username' />
+                {showSuggestions && (
+                  <ul id={style.suggestionsBar}>
+                    {/* Lógica para mostrar las sugerencias */}
+                    <li className={style.suggestionsItem}>
+                      <img src={userPhoto} alt="" />
+                      <div>
+                        <p>Beautiful Mouse</p>
+                        <span>@beautifulmouse112</span>
+                      </div>
+                    </li>
+                    <li className={style.suggestionsItem}>
+                      <img src={userPhoto} alt="" />
+                      <div>
+                        <p>Beautiful Mouse</p>
+                        <span>@beautifulmouse112</span>
+                      </div>
+                    </li>
+                    <li className={style.suggestionsItem}>
+                      <img src={userPhoto} alt="" />
+                      <div>
+                        <p>Beautiful Mouse</p>
+                        <span>@beautifulmouse112</span>
+                      </div>
+                    </li>
+                  </ul>
+                )}
+              </div>
             </Col>
           </Row>
         </Container>
