@@ -14,6 +14,10 @@ const Post = (props) => {
   const commentsClose = () => setComments(false);
   const commentsShow = () => setComments(true);
 
+  const [editCommit, setEditCommit] = useState(false);
+  const editCommitClose = () => setEditCommit(false);
+  const editCommitShow = () => setEditCommit(true);
+
   const { postId, postText, postImages, artistName, artistUsername, handleLike } = props;
   const [likedPost, setLikedPost] = useState(false);
 
@@ -89,8 +93,8 @@ const Post = (props) => {
                 ) : <>  </>
               } */}
             </Col>
-            <Col md='4' className={style.userSection}>
-              <article>
+            <Col md='4' >
+              <article className={style.userSection}>
                 <section className={style.commentsItem}>
                   <img src={userPhoto} alt="" />
                   <div className={style.commitContent}>
@@ -102,17 +106,40 @@ const Post = (props) => {
                     <div className={style.commitsActions}>
                       <span>1h</span>
                       <span>reply</span>
-                      <span>edit</span>
+                      <span onClick={editCommitShow}>edit</span>
                     </div>
                   </div>
                 </section>
               </article>
-              <input type="text" />
+              <article className={style.createCommit}>
+                <img src={userPhoto} alt="" />
+                <input type="text" placeholder='add a comment...' />
+                <span>Post</span>
+              </article>
             </Col>
           </Row>
         </Modal.Body>
       </Modal>
-    </div>
+      <Modal show={editCommit} onHide={editCommitClose}>
+        <Modal.Body id={style.editCommitModal}>
+          Editar comentario
+          <section className={style.commentsItem}>
+            <img src={userPhoto} alt="" />
+            <div className={style.commitContent}>
+              <section className={style.userComents}>
+                <h6>Beautiful Mouse</h6>
+                <span>@beautifulmouse112</span>
+              </section>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitt</p>
+            </div>
+          </section>
+          <textarea name="" id="" cols="30" rows="10" />
+          <div id={style.saveChanges}>
+            <p onClick={editCommitClose}>Guardar Cambios</p>
+          </div>
+        </Modal.Body>
+      </Modal>
+    </div >
   );
 }
 
