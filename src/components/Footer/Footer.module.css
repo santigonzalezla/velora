@@ -1,126 +1,199 @@
 #Footer {
-  background: #373B56;
-  color: #F9F9F9;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background: #000;
+    color: #F9F9F9;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #Logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #Brand {
-  width: 180px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-right: 7rem;
-  margin-left: 7rem;
+    width: 180px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 7rem;
+    margin-left: 7rem;
 }
 
+.FooterContainer
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterContainerTop
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.FooterContainerBottom
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+}
+
+.FooterContainer hr
+{
+    color: #FFF;
+    width: 100%;
+    margin: 30px auto;
+}
 
 .NavItem {
-  margin: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #F9F9F9;
-  font-family: Inter, sans-serif;
-  font-size: small;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F9F9F9;
+    font-family: Helvetica, sans-serif;
+    font-size: small;
 }
 
 .NavLink {
-  color: #ECEDF2;
-  font-family: Inter-Light, sans-serif;
-  font-size: small;
+    color: #ECEDF2;
+    font-family: Inter-Light, sans-serif;
+    font-size: small;
 }
 
 .Dropdown {
-  all: none;
-  border: none;
-  color: #ECEDF2;
-  background-color: #373B56;
+    all: none;
+    border: none;
+    color: #ECEDF2;
+    background-color: #373B56;
 }
 
 
 #Terms {
-  margin-top: 4.5rem;
-  background-color: #ECEDF2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    margin-top: 4.5rem;
+    background-color: #ECEDF2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TermsHead
+{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 95px;
+    background-color: #272453;
 }
 
 #TermsContainer {
-  margin: 1rem;
-  background-color: #F9F9F9;
-  padding: 0%;
+    margin: 1rem;
+    background-color: #F9F9F9;
+    padding: 0%;
+    position: relative;
 }
 
 #TermsHeader {
-  background: linear-gradient(180deg, #A000FF 0%, #373B56 100%);
-  color: #F9F9F9;
-  margin: 0%;
-  width: 100%;
-  padding: 1rem;
-  font-family: Barlow, sans-serif;
+    background: #272453;
+    color: #F9F9F9;
+    margin: 0%;
+    width: 100%;
+    padding: 1rem;
+    font-family: Barlow, sans-serif;
+    position: relative;
+    z-index: 1;
 }
 
-.TermsContent {
-  font-family: Barlow, sans-serif;
-  padding: 1rem;
+.TermsHeadBack
+{
+    display: flex;
+    position: absolute;
+    background-color: #272453;
+    height: 90px;
+    width: 100vw;
+    z-index: 0;
+    top: 0;
+    left: -95px;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.TermsHeadBack h1
+{
+    margin-top: 10px;
+    font-family: Boba, sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.TermsContent
+{
+    font-family: Barlow, sans-serif;
+    padding: 1rem;
 }
 
 .TermsNav {
-  cursor: pointer;
-  height: 100%;
-  border-right: 1px solid #ECEDF2;
-  padding-right: 0.5rem;
-  font-family: Barlow-Medium, sans-serif;
+    cursor: pointer;
+    height: 100%;
+    border-right: 1px solid #ECEDF2;
+    padding-right: 0.5rem;
+    font-weight: 500;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
+
+
 .TermsTxt h6 {
-  font-family: Barlow-Medium, sans-serif;
+    font-family: Matchbook, sans-serif;
+    font-size: 60px;
 }
 
 .TermsTxt p {
-  margin: 1rem;
-  font-family: Barlow, sans-serif;
+    margin: 1rem;
+    font-family: Barlow, sans-serif;
 }
 
 #Icons {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .Icons {
-  width: 1.5rem;
-  margin: 5px;
+    width: 1.5rem;
+    margin: 5px;
+
 }
 
-@media (min-width:350px) and (max-width: 550px) {
-  #Brand {
-    width: 150px;
+@media (min-width: 350px) and (max-width: 550px) {
+    #Brand {
+        width: 150px;
 
-  }
+    }
 
-  #Logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    #Logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .NavItem {
-    font-size: small;
-  }
+    .NavItem {
+        font-size: small;
+    }
 
-  .Icons {
-    width: 1rem;
-    margin: 5px;
-  }
+    .Icons {
+        width: 1rem;
+        margin: 5px;
+    }
 }

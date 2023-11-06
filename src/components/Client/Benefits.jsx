@@ -1,56 +1,101 @@
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import {Card, Container, Row, Col} from 'react-bootstrap';
 import style from './Client.module.css'
+import BeImg from "../../assets/img/Client/benefits.png";
+import {Link} from "react-router-dom";
 
-const Benefits = () => {
-  return (
-    <div id={style.Benefits}>
-      <Container id={style.Benefits}>
-        <Row>
-          <h1>Beneficios</h1>
-          <Col className={style.BenefitsRow}>
-            <Card className={style.Cards} >
-              <Card.Body>
-                <Card.Title>Contenido Exclusivo</Card.Title>
-                <Card.Text className={style.CardsTxt}>
-                  <p>Descubre un mundo de contenido que no encontrarás en ningún otro lugar. Desde fotos y videos privados hasta experiencias únicas, te ofrecemos exclusividad.</p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className={style.BenefitsRow}>
-            <Card className={style.Cards} >
-              <Card.Body>
-                <Card.Title>Conexiones Auténticas</Card.Title>
-                <Card.Text className={style.CardsTxt}>
-                  <p>Conéctate con tus artistas favoritos de manera cercana. Comentarios, mensajes privados y eventos en vivo te acercan más que nunca.</p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className={style.BenefitsRow}>
-            <Card className={style.Cards} >
-              <Card.Body>
-                <Card.Title>Experiencias Inolvidables</Card.Title>
-                <Card.Text className={style.CardsTxt}>
-                  <p>Vive momentos íntimos y emocionantes que te dejarán sin aliento. Nuestra comunidad te ofrece experiencias que perdurarán en tu memoria.</p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className={style.BenefitsRow}>
-            <Card className={style.Cards} >
-              <Card.Body>
-                <Card.Title>Privacidad Garantizada</Card.Title>
-                <Card.Text className={style.CardsTxt}>
-                  <p>Tu privacidad es nuestra prioridad. Tu actividad en nuestra plataforma es confidencial,discreta y segura, para que disfrutes sin preocupaciones.</p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
+const Benefits = () =>
+{
+    const scrollToTop = () =>
+    {
+        //Funcion para llevar a la parte superior de la app al dar click
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Hace el desplazamiento suave
+        });
+    }
+
+    return (
+        <div id={style.Benefits}>
+            <Container className={style.Benefits}>
+                <h1>Beneficios</h1>
+                <Row className={style.BenefitsRow}>
+                    <Col sm="3" md="3" lg="3" xl="3">
+                        <Card className={style.Cards}>
+                            <Card.Body className={style.CardsContainer}>
+                                <Card.Title className={style.CardsTitle}>Contenido Exclusivo</Card.Title>
+                                <Card.Text className={style.CardsTxt}>
+                                    <p>
+                                        En diferentes formatos, como fotos, videos, transmisiones en vivo, interacciones
+                                        cara a cara, etc.
+                                    </p>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col sm="3" md="3" lg="3" xl="3">
+                        <Card className={style.Cards}>
+                            <Card.Body className={style.CardsContainer}>
+                                <Card.Title className={style.CardsTitle}>Interactúa directamente</Card.Title>
+                                <Card.Text className={style.CardsTxt}>
+                                    <p>
+                                        Conversa con los creadores, envía mensajes privados y accede a eventos
+                                        exclusivos en tiempo real. Crea conexiones genuinas con tus artistas favoritos.
+                                    </p>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col sm="3" md="3" lg="3" xl="3">
+                        <Card className={style.Cards}>
+                            <Card.Body className={style.CardsContainer}>
+                                <Card.Title className={style.CardsTitle}>Experiencias Inolvidables</Card.Title>
+                                <Card.Text className={style.CardsTxt}>
+                                    <p>
+                                        Virtualmente o cara a cara, Velora Room te brinda la oportunidad de vivir
+                                        experiencias memorables que se quedarán contigo por mucho tiempo.
+                                    </p>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col sm="3" md="3" lg="3" xl="3">
+                        <Card className={style.Cards}>
+                            <Card.Body className={style.CardsContainer}>
+                                <Card.Title className={style.CardsTitle}>Privado y seguro</Card.Title>
+                                <Card.Text className={style.CardsTxt}>
+                                    <p>
+                                        Implementamos rigurosas medidas y filtros digitales para que tu actividad en
+                                        nuestra plataforma sea confidencial y segura.
+                                    </p>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+            <Container className={style.benefitsBottom}>
+                <div className={style.benefitsBottomBack}>
+
+                </div>
+                <Row>
+                    <Col sm="12" md="6" lg="6" xl="6" className={style.benefitsBottomText}>
+                        <h1>Un cataogo de entretenimiento</h1>
+                        <p>
+                            Prepárate para un viaje inolvidable. Velora Room es tu pasaporte a un mundo de
+                            experiencias auténticas. Regístrate hoy mismo para conocer todos los servicios exclusivos y
+                            conectar con artistas apasionados.
+                        </p>
+                        <Link to='/Artist'>
+                            <button className={style.singUpBtn} onClick={scrollToTop}>Ver contenido exclusivo</button>
+                        </Link>
+                    </Col>
+                    <Col sm="12" md="6" lg="6" xl="6">
+                        <img src={BeImg} alt="" id={style.ImgBe}/>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    );
 }
 
 export default Benefits;

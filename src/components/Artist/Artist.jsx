@@ -12,7 +12,6 @@ const Artist = () => {
       <Header />
       <CarruselArtist />
       <BenefitsArtist />
-      <SesionsArtist />
       <ServicesArtist />
       <Footer />
     </div>

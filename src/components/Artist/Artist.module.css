@@ -1,142 +1,288 @@
-#Artist {
-  margin-top: 4.5rem;
-  font-family: "Barlow", sans-serif;
-  color: #4F5168;
-  background-color: #F9F9F9;
+#Artist
+{
+    font-family: "Barlow", sans-serif;
+    color: #4F5168;
+    background-color: #F9F9F9;
 }
 
-.singUpBtn {
-  all: unset;
-  background-color: #A000FF;
-  color: #ECEDF2;
-  border-radius: 5px;
-  padding: 5px 1rem;
-  font-family: 'Inter', sans-serif;
-
+.Caption
+{
+    text-align: left;
+    bottom: 29%;
 }
 
-.singUpBtn:hover {
-  background-color: #ECEDF2;
-  color: #A000FF;
+.Caption h1
+{
+    font-family: 'Boba', sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
 }
 
-.Caption {
-  text-align: left;
-  bottom: 30%;
-  font-family: Cantarell, sans-serif;
+.Caption p
+{
+    width: 70%;
+    font-family: Helvetica, sans-serif;
 }
 
-#Benefits {
-  padding: 1rem;
+.ImgCarrusel
+{
+    width: 100% !important;
 }
 
-#Services {
-  margin-bottom: 4rem;
+.Benefits
+{
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Benefits h1
+{
+    font-family: 'Matchbook', sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
 }
 
 #BenefitsContainer {
-  width: 100%;
+    width: 100%;
 }
 
-
-.BenefitsRow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
+.BenefitsRow
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-.Cards {
-  background-color: #4F5168;
-  color: #ECEDF2;
-  font-family: Cantarell, sans-serif;
-  border-radius: 10px;
-  width: 14.5rem;
-  border: none;
+#Benefits
+{
+    padding: 1rem;
 }
 
-.Cards:hover {
-  cursor: pointer;
-  transform: scale(1);
+.Cards
+{
+    background-color: #272453;
+    color: #ECEDF2;
+    font-family: Cantarell, sans-serif;
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+    border: none;
 }
 
-.CardsTxt {
-  background-color: #F9F9F9;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #4F5168;
+.Cards:hover
+{
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.CardsContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.CardsTitle
+{
+    flex-basis: 30%;
+    font-family: Matchbook, sans-serif;
+    font-size: 40px;
+    align-self: flex-start;
+}
+
+.CardsTxt
+{
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    flex-basis: 70%;
+    background-color: #F9F9F9;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: #000;
+}
+
+.benefitsArtistBottom
+{
+    display: flex;
+    align-items: center;
+    background-color: #272453;
+    padding: 40px 0;
+    position: relative;
+    color: #ECEDF2;
+    z-index: 1;
+}
+
+.benefitsArtistBottomBack
+{
+    position: absolute;
+    left: -85px;
+    right: -80px;
+    height: 100%;
+    background-color: #272453;
+    z-index: -1;
+}
+
+.benefitsArtistBottom h1
+{
+    font-family: 'Boba', sans-serif;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: #ECEDF2;
+}
+
+.benefitsArtistBottom p
+{
+    font-family: Helvetica, sans-serif;
+    color: #ECEDF2;
+}
+
+.benefitsArtistBottom a
+{
+    text-decoration: none;
+}
+
+.benefitsArtistBottomText
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #Sesions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #ImgHero {
-  width: 100%;
+    width: 100%;
 }
 
-.ServiceCards {
-  font-family: Inter, sans-serif;
-  background-color: #ECEDF2;
-  border: none;
-  height: 200px;
+#Services
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 5rem 0;
+    margin-bottom: 10rem;
 }
 
-.ServCardTxt {
-  font-size: small;
+#Services h1
+{
+    font-family: 'Matchbook', sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
 }
 
-.ServiceCardsText {
-  font-size: small;
+.ServiceRow
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.ImgCarrusel {
-  width: 100% !important;
+.ServiceCards
+{
+    font-family: Inter, sans-serif;
+    background-color: #ECEDF2;
+    border: none;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-@media (min-width: 300px) and (max-width: 550px) {
-  #Artist {
-    margin-top: 4.5rem;
-  }
+.ServiceCardBody
+{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-  .CardCol {
-    margin: 40px;
-  }
+.ServCardTxt
+{
+    font-family: Matchbook,sans-serif;
+    font-size: 40px;
+    color: #000;
+}
 
-  .Carousel {
-    height: 10rem;
-    bottom: 10%;
-  }
+.ServiceCardsImg
+{
+    flex-basis: 50%;
+    height: 100%;
+}
 
-  .Carousel h1 {
-    font-size: medium;
-  }
+.ServiceCardsText
+{
+    font-size: 14px;
+    font-weight: 500;
+}
 
-  .Carousel p {
-    font-size: small;
-  }
-
-  .ImgCarrusel {
-    width: 100% !important;
-    object-fit: cover;
-  }
-
-  .Caption {
-    text-align: left;
-    bottom: 15px;
-    font-size: small;
-    font-family: Cantarell, sans-serif;
-  }
-
-  .singUpBtn {
+.singUpBtn
+{
     all: unset;
-    background-color: #A000FF;
+    background-color: #C62FBE;
     color: #ECEDF2;
     border-radius: 5px;
-    padding: 2.5px 0.5rem;
-    font-family: 'Inter', sans-serif;
-  }
+    padding: 10px 2rem;
+    margin-top: 15px;
+    font-family: Helvetica, sans-serif;
+}
+
+.singUpBtn:hover
+{
+    background-color: #ECEDF2;
+    color: #A000FF;
+}
+
+@media (min-width: 300px) and (max-width: 550px)
+{
+    #Artist {
+        margin-top: 4.5rem;
+    }
+
+    .CardCol {
+        margin: 40px;
+    }
+
+    .Carousel {
+        height: 10rem;
+        bottom: 10%;
+    }
+
+    .Carousel h1 {
+        font-size: medium;
+    }
+
+    .Carousel p {
+        font-size: small;
+    }
+
+    .ImgCarrusel {
+        width: 100% !important;
+        object-fit: cover;
+    }
+
+    .Caption {
+        text-align: left;
+        bottom: 15px;
+        font-size: small;
+        font-family: Cantarell, sans-serif;
+    }
+
+    .singUpBtn {
+        all: unset;
+        background-color: #A000FF;
+        color: #ECEDF2;
+        border-radius: 5px;
+        padding: 2.5px 0.5rem;
+        font-family: 'Inter', sans-serif;
+    }
 }

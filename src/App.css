@@ -2,3 +2,8 @@
   padding: 0%;
   margin: 0%;
 }
+
+@font-face {
+  font-family: 'Boba';
+  src: local('Boba'), url('./assets/fonts/Boba/Boba.ttf') format('ttf');
+}

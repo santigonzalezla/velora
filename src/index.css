@@ -226,3 +226,14 @@
     url("./assets/fonts/Barlow/Barlow-Thin.ttf") format("truetype");
   font-weight: 100;
 }
+
+@font-face {
+  font-family: "Boba";
+  src: local("Boba"), url("./assets/fonts/Boba/Boba.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Matchbook";
+  src: local("Matchbook"),
+    url("./assets/fonts/Matchbook/Matchbook.ttf") format("truetype");
+}

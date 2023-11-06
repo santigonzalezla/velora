@@ -7,16 +7,14 @@ import Services from './Services'
 import Footer from '../Footer/Footer';
 
 const Client = () => {
-  return (
-    <div id={style.Client}>
-      <Header />
-      <CarruselClient />
-      <Benefits />
-      <Sesions />
-      <Services />
-      <Footer />
-    </div>
-  );
+    return (
+        <div id={style.Client}>
+            <Header/>
+            <CarruselClient/>
+            <Benefits/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default Client;
