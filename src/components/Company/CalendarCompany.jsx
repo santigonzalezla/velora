@@ -9,7 +9,7 @@ const CalendarCompany = () =>
             <Container className={style.Calendar}>
                 <img src={BeImg} alt="" id={style.CalendarImg}/>
                 <Row className={style.CalendarContainer}>
-                    <Col sm="6" md="6" lg="6" xl="6" className={style.CalendarCardContainer}>
+                    <Col sm="12" md="12" lg="6" xl="6" className={style.CalendarCardContainer}>
                         <div className={style.CalendarCard}>
                             <h1>Acceso a artistas Velora</h1>
                             <div className={style.CalendarCardCont}>
@@ -19,7 +19,7 @@ const CalendarCompany = () =>
                         </div>
                         <button>Comprar servicio</button>
                     </Col>
-                    <Col sm="6" md="6" lg="6" xl="6" className={style.CalendarCardContainer}>
+                    <Col sm="12" md="12" lg="6" xl="6" className={style.CalendarCardContainer}>
                         <div className={style.CalendarCard}>
                             <h1>Acceso a publicidad Velora</h1>
                             <div className={style.CalendarCardCont}>

@@ -18,7 +18,7 @@ const BenefitsCompany = () =>
             <Container className={style.Benefits}>
                 <h1>Beneficios</h1>
                 <Row className={style.BenefitsRow}>
-                    <Col sm="3" md="3" lg="3" xl="3">
+                    <Col sm="12" md="3" lg="3" xl="3">
                         <Card className={style.Cards}>
                             <Card.Body className={style.CardsContainer}>
                                 <Card.Title className={style.CardsTitle}>Mejora el alcance</Card.Title>
@@ -31,7 +31,7 @@ const BenefitsCompany = () =>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col sm="3" md="3" lg="3" xl="3">
+                    <Col sm="12" md="3" lg="3" xl="3">
                         <Card className={style.Cards}>
                             <Card.Body className={style.CardsContainer}>
                                 <Card.Title className={style.CardsTitle}>Colaboraciones de valor</Card.Title>
@@ -45,7 +45,7 @@ const BenefitsCompany = () =>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col sm="3" md="3" lg="3" xl="3">
+                    <Col sm="12" md="3" lg="3" xl="3">
                         <Card className={style.Cards}>
                             <Card.Body className={style.CardsContainer}>
                                 <Card.Title className={style.CardsTitle}>Experiencias de marca</Card.Title>
@@ -58,7 +58,7 @@ const BenefitsCompany = () =>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col sm="3" md="3" lg="3" xl="3">
+                    <Col sm="12" md="3" lg="3" xl="3">
                         <Card className={style.Cards}>
                             <Card.Body className={style.CardsContainer}>
                                 <Card.Title className={style.CardsTitle}>Análisis de datos</Card.Title>

@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Landing from '../view/Landing'
 import Client from '../components/Client/Client';
 import Artist from '../components/Artist/Artist'
@@ -24,162 +24,162 @@ import BuyCoins from '../components/BuyCoins/BuyCoins';
 import ClientProtectedRoute from '../utils/clientProtectedRoute';
 
 const home = () => {
-  return (
-    <ClientProtectedRoute>
-      <HomeApp />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <HomeApp/>
+        </ClientProtectedRoute>
+    )
 }
 
 const chats = () => {
-  return (
-    <ClientProtectedRoute>
-      <Chats />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <Chats/>
+        </ClientProtectedRoute>
+    )
 }
 
 const subscriptions = () => {
-  return (
-    <ClientProtectedRoute>
-      <Subscriptions />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <Subscriptions/>
+        </ClientProtectedRoute>
+    )
 }
 
 const billing = () => {
-  return (
-    <ClientProtectedRoute>
-      <Billing />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <Billing/>
+        </ClientProtectedRoute>
+    )
 }
 
 const videoCall = () => {
-  return (
-    <ClientProtectedRoute>
-      <VideoCall />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <VideoCall/>
+        </ClientProtectedRoute>
+    )
 }
 
 const artistApp = () => {
-  return (
-    <ClientProtectedRoute>
-      <ArtistApp />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <ArtistApp/>
+        </ClientProtectedRoute>
+    )
 }
 
 const artistChats = () => {
-  return (
-    <ClientProtectedRoute>
-      <ArtstChats />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <ArtstChats/>
+        </ClientProtectedRoute>
+    )
 }
 
 const artistProfile = () => {
-  return (
-    <ClientProtectedRoute>
-      <ArtistPorfile />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <ArtistPorfile/>
+        </ClientProtectedRoute>
+    )
 }
 
 const clientProfile = () => {
-  return (
-    <ClientProtectedRoute>
-      <ClientPorfile />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <ClientPorfile/>
+        </ClientProtectedRoute>
+    )
 }
 
 const artistDashboard = () => {
-  return (
-    <ClientProtectedRoute>
-      <ArtistDashboard />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <ArtistDashboard/>
+        </ClientProtectedRoute>
+    )
 }
 
 const videoCallArtist = () => {
-  return (
-    <ClientProtectedRoute>
-      <VideoCallArtist />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <VideoCallArtist/>
+        </ClientProtectedRoute>
+    )
 }
 
 const livesArtist = () => {
-  return (
-    <ClientProtectedRoute>
-      <LivesArtist />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <LivesArtist/>
+        </ClientProtectedRoute>
+    )
 }
 
 const billingArtist = () => {
-  return (
-    <ClientProtectedRoute>
-      <BillingArtist />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <BillingArtist/>
+        </ClientProtectedRoute>
+    )
 }
 
 const viewArtist = () => {
-  return (
-    <ClientProtectedRoute>
-      <ViewArtist />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <ViewArtist/>
+        </ClientProtectedRoute>
+    )
 }
 
 const lives = () => {
-  return (
-    <ClientProtectedRoute>
-      <Lives />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <Lives/>
+        </ClientProtectedRoute>
+    )
 }
 
 const buyCoins = () => {
-  return (
-    <ClientProtectedRoute>
-      <BuyCoins />
-    </ClientProtectedRoute>
-  )
+    return (
+        <ClientProtectedRoute>
+            <BuyCoins/>
+        </ClientProtectedRoute>
+    )
 }
 
 const RouterApp = () => {
-  return (
-    <Routes>
-      <Route path='/' element={<Landing />} />
-      <Route path='/Client' element={<Client />} />
-      <Route path='/Artist' element={<Artist />} />
-      <Route path='/Company' element={<Company />} />
-      <Route path='/Terms' element={<Terms />} />
-      <Route path='/Help' element={<Help />} />
-      {/*-------------------------------------------------*/}
-      <Route path='/ArtistApp' element={artistApp()} />
-      <Route path='/ArtstChats' element={artistChats()} />
-      <Route path='/ArtistProfile' element={artistProfile()} />
-      <Route path='/UserReviews/:user' element={clientProfile()} />
-      <Route path='/ArtistDashboard' element={artistDashboard()} />
-      <Route path='/VideoCallArtist' element={videoCallArtist()} />
-      <Route path='/LivesArtist' element={livesArtist()} />
-      <Route path='/BillingArtist' element={billingArtist()} />
-      <Route path='/home' element={home()} />
-      <Route path='/ViewArtist/:artist' element={viewArtist()} />
-      {/* <Route path='/ViewArtist' element={<ViewArtist />} /> */}
-      <Route path='/Chats' element={chats()} />
-      <Route path='/Lives' element={lives()} />
-      <Route path='/Subscriptions' element={subscriptions()} />
-      <Route path='/Billing' element={billing()} />
-      <Route path='/VideoCall' element={videoCall()} />
-      <Route path='/BuyCoins' element={buyCoins()} />
-    </Routes>
-  );
+    return (
+        <Routes>
+            <Route path='/' element={<Landing/>}/>
+            <Route path='/Client' element={<Client/>}/>
+            <Route path='/Artist' element={<Artist/>}/>
+            <Route path='/Company' element={<Company/>}/>
+            <Route path='/Terms' element={<Terms/>}/>
+            <Route path='/Help' element={<Help/>}/>
+            {/*-------------------------------------------------*/}
+            <Route path='/ArtistApp' element={artistApp()}/>
+            <Route path='/ArtstChats' element={artistChats()}/>
+            <Route path='/ArtistProfile' element={artistProfile()}/>
+            <Route path='/UserReviews/:user' element={clientProfile()}/>
+            <Route path='/ArtistDashboard' element={artistDashboard()}/>
+            <Route path='/VideoCallArtist' element={videoCallArtist()}/>
+            <Route path='/LivesArtist' element={livesArtist()}/>
+            <Route path='/BillingArtist' element={billingArtist()}/>
+            <Route path='/home' element={home()}/>
+            <Route path='/ViewArtist/:artist' element={viewArtist()}/>
+            {/* <Route path='/ViewArtist' element={<ViewArtist />} /> */}
+            <Route path='/Chats' element={chats()}/>
+            <Route path='/Lives' element={lives()}/>
+            <Route path='/Subscriptions' element={subscriptions()}/>
+            <Route path='/Billing' element={billing()}/>
+            <Route path='/VideoCall' element={videoCall()}/>
+            <Route path='/BuyCoins' element={buyCoins()}/>
+        </Routes>
+    );
 }
 
 export default RouterApp;

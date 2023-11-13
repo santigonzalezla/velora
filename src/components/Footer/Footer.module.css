@@ -153,8 +153,6 @@
     gap: 30px;
 }
 
-
-
 .TermsTxt h6 {
     font-family: Matchbook, sans-serif;
     font-size: 60px;
@@ -179,21 +177,48 @@
 @media (min-width: 350px) and (max-width: 550px) {
     #Brand {
         width: 150px;
-
     }
 
     #Logo {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 30px;
     }
 
     .NavItem {
         font-size: small;
     }
 
+    .NavTitle
+    {
+        font-size: 22px;
+    }
+
+    .NavLink
+    {
+        font-size: 12px;
+    }
+
     .Icons {
         width: 1rem;
         margin: 5px;
+    }
+
+    .TermsHeadBack
+    {
+        width: 100%;
+        left: 0;
+        text-align: left;
+    }
+
+    .TermsSidebar
+    {
+        display: none;
+    }
+
+    .TermsTxt
+    {
+        margin-top: 20px;
     }
 }

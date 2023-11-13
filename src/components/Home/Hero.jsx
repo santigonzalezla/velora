@@ -22,7 +22,7 @@ const Hero = () =>
         <div id={style.HeaderBackground}>
             <Container>
                 <Row className={style.Hero}>
-                    <Col sm="6" md="8" lg="8" xl="7">
+                    <Col sm="12" md="12" lg="8" xl="7">
                         <h1>Acceso a exxperiencias innolvidables </h1>
                         <p>Únete a la red social para adultos que cambia las reglas del juego ¡Encuentra las mejores
                             fotos y videos íntimos, transmisiones en vivo que te dejarán sin palabras y muchos más
@@ -33,7 +33,7 @@ const Hero = () =>
                             <button className={style.singUpBtn} onClick={scrollToTop}>Ver beneficios</button>
                         </Link>
                     </Col>
-                    <Col sm="6" md="4" lg="4" xl="5" className={style.ImgContainer}>
+                    <Col sm="12" md="12" lg="4" xl="5" className={style.ImgContainer}>
                         <img src={HeroImg} alt="" id={style.ImgHero}/>
                     </Col>
                 </Row>
@@ -43,10 +43,10 @@ const Hero = () =>
 
                 </Container>
                 <Row className={style.Hero}>
-                    <Col sm="12" md="6" lg="6" xl="6">
+                    <Col sm="6" md="6" lg="6" xl="6">
                         <img src={BeImg} alt="" id={style.ImgBe}/>
                     </Col>
-                    <Col sm="12" md="6" lg="6" xl="6">
+                    <Col sm="6" md="6" lg="6" xl="6">
                         <h1>Que tu talento pague ¡Únete como creador!</h1>
                         <p>¿Tienes contenido que deseas compartir? Únete y comienza a generar ganancias.</p>
                         <p>
@@ -77,7 +77,7 @@ const Hero = () =>
                         </Link>
                     </Col>
                     <Col sm="12" md="6" lg="6" xl="6">
-                        <img src={UsImg} alt="" id={style.ImgUs}/>
+                        <img src={UsImg} alt="" id={style.ImgUs} className={style.ImgBottomCont}/>
                     </Col>
                 </Row>
             </Container>

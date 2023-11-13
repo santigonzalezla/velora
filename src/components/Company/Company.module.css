@@ -423,28 +423,34 @@
 
 @media (min-width: 300px) and (max-width: 550px) {
     #Company {
-        margin-top: 4rem;
+        width: 100%;
     }
 
-    .CardCol {
-        margin: 40px;
+    #Services
+    {
+        padding: 2rem;
     }
 
-    .Carousel {
-        height: 10rem;
+    .Carousel
+    {
+        width: 100%;
+        height: 27rem;
         bottom: 10%;
     }
 
     .Carousel h1 {
-        font-size: medium;
+        font-size: 40px;
     }
 
     .Carousel p {
+        width: 100%;
         font-size: small;
     }
 
-    .ImgCarrusel {
-        width: 100% !important;
+    .ImgCarrusel
+    {
+        height: 100%;
+        width: 100%;
         object-fit: cover;
     }
 
@@ -457,10 +463,125 @@
 
     .singUpBtn {
         all: unset;
-        background-color: #A000FF;
+        background-color: #C62FBE;
         color: #ECEDF2;
         border-radius: 5px;
-        padding: 2.5px 0.5rem;
-        font-family: 'Inter', sans-serif;
+        padding: 10px 2rem;
+        margin-top: 15px;
+        font-family: Helvetica, sans-serif;
+    }
+
+    .ImgContainer
+    {
+        display: none;
+    }
+
+    .heroMiddle
+    {
+        width: 100%;
+        background-color: #272453;
+    }
+
+    .heroMiddleCont,
+    .ImgBottomCont
+    {
+        display: none;
+    }
+
+    .BenefitsRow
+    {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .benefitsCompanyBottom
+    {
+        background-color: #272453;
+        padding: 20px;
+        display: block;
+    }
+
+    .benefitsCompanyBottomBack
+    {
+        display: block;
+        margin-top: -20px;
+    }
+
+    .benefitsCompanyBottomText
+    {
+        width: 90%;
+    }
+
+    .benefitsCompanyBottom img
+    {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .topImg
+    {
+        display: none;
+    }
+
+    .ServiceRow
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 130px;
+    }
+
+    .ServiceCards
+    {
+        justify-content: flex-start;
+        font-family: Helvetica,sans-serif;
+    }
+
+    .ServiceRowBottom
+    {
+        width: 70%;
+    }
+
+    .Calendar
+    {
+        display: flex;
+        height: 750px;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 10px;
+        background-color: #000;
+    }
+
+    #CalendarImg
+    {
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+    }
+
+    .CalendarContainer
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 10px;
+    }
+
+    .CalendarCard
+    {
+        width: 350px;
+        height: 250px;
+    }
+
+    .CalendarCardContainer button
+    {
+        width: 350px;
+    }
+
+    .CalendarCard h1
+    {
+        font-size: 45px;
     }
 }

@@ -1,12 +1,10 @@
-#Client
-{
+#Client {
     font-family: "Barlow", sans-serif;
     color: #4F5168;
     background-color: #F9F9F9;
 }
 
-.singUpBtn
-{
+.singUpBtn {
     all: unset;
     background-color: #C62FBE;
     color: #ECEDF2;
@@ -16,41 +14,35 @@
     font-family: Helvetica, sans-serif;
 }
 
-.singUpBtn:hover
-{
+.singUpBtn:hover {
     background-color: #ECEDF2;
     color: #A000FF;
 }
 
-.Caption
-{
+.Caption {
     text-align: left;
     bottom: 29%;
 }
 
-.Caption h1
-{
+.Caption h1 {
     font-family: 'Boba', sans-serif;
     font-size: 80px;
     text-transform: uppercase;
 }
 
-.Caption p
-{
+.Caption p {
     width: 70%;
     font-family: Helvetica, sans-serif;
 }
 
-.Benefits
-{
+.Benefits {
     padding: 5rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.Benefits h1
-{
+.Benefits h1 {
     font-family: 'Matchbook', sans-serif;
     font-size: 80px;
     text-transform: uppercase;
@@ -60,8 +52,7 @@
     width: 100%;
 }
 
-.BenefitsRow
-{
+.BenefitsRow {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -74,8 +65,7 @@
     }
 }
 
-.Cards
-{
+.Cards {
     background-color: #272453;
     color: #ECEDF2;
     font-family: Cantarell, sans-serif;
@@ -85,29 +75,25 @@
     border: none;
 }
 
-.Cards:hover
-{
+.Cards:hover {
     cursor: pointer;
     transform: scale(1);
 }
 
-.CardsContainer
-{
+.CardsContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.CardsTitle
-{
+.CardsTitle {
     flex-basis: 30%;
     font-family: Matchbook, sans-serif;
     font-size: 40px;
     align-self: flex-start;
 }
 
-.CardsTxt
-{
+.CardsTxt {
     font-family: Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 600;
@@ -118,8 +104,7 @@
     color: #000;
 }
 
-.benefitsBottom
-{
+.benefitsBottom {
     display: flex;
     align-items: center;
     background-color: #272453;
@@ -138,27 +123,23 @@
     z-index: -1;
 }
 
-.benefitsBottom h1
-{
+.benefitsBottom h1 {
     font-family: 'Boba', sans-serif;
     font-size: 70px;
     text-transform: uppercase;
     color: #ECEDF2;
 }
 
-.benefitsBottom p
-{
+.benefitsBottom p {
     font-family: Helvetica, sans-serif;
     color: #ECEDF2;
 }
 
-.benefitsBottom a
-{
+.benefitsBottom a {
     text-decoration: none;
 }
 
-.benefitsBottomText
-{
+.benefitsBottomText {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -195,25 +176,30 @@
 }
 
 @media (min-width: 300px) and (max-width: 550px) {
-    #Client {
-        margin-top: 4rem;
+    #Client
+    {
+        width: 100%;
     }
 
-    .Carousel {
-        height: 10rem;
+    .Carousel
+    {
+        width: 100%;
+        height: 27rem;
         bottom: 10%;
     }
 
     .Carousel h1 {
-        font-size: medium;
+        font-size: 40px;
     }
 
     .Carousel p {
+        width: 100%;
         font-size: small;
     }
 
     .ImgCarrusel {
-        width: 100% !important;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
     }
 
@@ -226,10 +212,53 @@
 
     .singUpBtn {
         all: unset;
-        background-color: #A000FF;
+        background-color: #C62FBE;
         color: #ECEDF2;
         border-radius: 5px;
-        padding: 2.5px 0.5rem;
-        font-family: 'Inter', sans-serif;
+        padding: 10px 2rem;
+        margin-top: 15px;
+        font-family: Helvetica, sans-serif;
+    }
+
+    .ImgContainer
+    {
+        display: none;
+    }
+
+    .heroMiddle
+    {
+        width: 100%;
+        background-color: #272453;
+    }
+
+    .heroMiddleCont,
+    .ImgBottomCont
+    {
+        display: none;
+    }
+
+    .BenefitsRow
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .benefitsBottom
+    {
+        background-color: #272453;
+        padding: 20px;
+        display: block;
+    }
+
+    .benefitsBottomBack
+    {
+        display: none;
+    }
+
+    .benefitsBottom img
+    {
+        margin-top: 30px;
+        width: 100%;
     }
 }

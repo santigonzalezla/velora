@@ -12,7 +12,7 @@ const ServicesCompany = () =>
             <Container id={style.Services}>
                 <Row className={style.TopServiceRow}>
                     <Col xs='12' md='6' lg='6' xl="5" className={style.TopServiceRowCol}>
-                        <img src={BeImg} alt="" id={style.ImgBe}/>
+                        <img src={BeImg} alt="" id={style.ImgBe} className={style.topImg}/>
                     </Col>
                     <Col xs='12' md='6' lg='6' xl="7" className={style.TopServiceRowCol}>
                         <h1>Conexión con artistas top</h1>

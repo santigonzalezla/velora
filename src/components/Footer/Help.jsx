@@ -20,7 +20,7 @@ const Help = () => {
                     </section>
                     <section className={style.TermsContent}>
                         <Row>
-                            <Col xs='2' sm='2' md='2'>
+                            <Col xs='2' sm='2' md='2' className={style.TermsSidebar}>
                                 <section className={style.TermsNav}>
                                     <p>Categoria</p>
                                     <p>Categoria</p>

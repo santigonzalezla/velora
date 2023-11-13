@@ -20,7 +20,7 @@ const Terms = () => {
                     </section>
                     <section className={style.TermsContent}>
                         <Row>
-                            <Col xs='2' sm='2' md='2'>
+                            <Col xs='12' sm='2' md='2' className={style.TermsSidebar}>
                                 <section className={style.TermsNav}>
                                     <p>Privacy Police</p>
                                     <p>Terms Of Use</p>

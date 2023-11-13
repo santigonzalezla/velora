@@ -245,28 +245,34 @@
 @media (min-width: 300px) and (max-width: 550px)
 {
     #Artist {
-        margin-top: 4.5rem;
+        width: 100%;
     }
 
-    .CardCol {
-        margin: 40px;
+    #Services
+    {
+        padding: 2rem;
     }
 
-    .Carousel {
-        height: 10rem;
+    .Carousel
+    {
+        width: 100%;
+        height: 27rem;
         bottom: 10%;
     }
 
     .Carousel h1 {
-        font-size: medium;
+        font-size: 40px;
     }
 
     .Carousel p {
+        width: 100%;
         font-size: small;
     }
 
-    .ImgCarrusel {
-        width: 100% !important;
+    .ImgCarrusel
+    {
+        height: 100%;
+        width: 100%;
         object-fit: cover;
     }
 
@@ -279,10 +285,72 @@
 
     .singUpBtn {
         all: unset;
-        background-color: #A000FF;
+        background-color: #C62FBE;
         color: #ECEDF2;
         border-radius: 5px;
-        padding: 2.5px 0.5rem;
-        font-family: 'Inter', sans-serif;
+        padding: 10px 2rem;
+        margin-top: 15px;
+        font-family: Helvetica, sans-serif;
+    }
+
+    .ImgContainer
+    {
+        display: none;
+    }
+
+    .heroMiddle
+    {
+        width: 100%;
+        background-color: #272453;
+    }
+
+    .heroMiddleCont,
+    .ImgBottomCont
+    {
+        display: none;
+    }
+
+    .BenefitsRow
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .benefitsArtistBottom
+    {
+        background-color: #272453;
+        padding: 20px;
+        display: block;
+    }
+
+    .benefitsArtistBottomBack
+    {
+        display: block;
+        margin-top: -20px;
+    }
+
+    .benefitsArtistBottomText
+    {
+        width: 90%;
+    }
+
+    .benefitsArtistBottom img
+    {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .ServiceRow
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+    }
+
+    .ServiceCards
+    {
+        justify-content: flex-start;
+        font-family: Helvetica,sans-serif;
     }
 }

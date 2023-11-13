@@ -42,7 +42,7 @@ const ServicesArtist = () => {
                                 <Card.Title className={style.ServCardTxt}>Las reglas las pones tú</Card.Title>
                                 <Card.Text className={style.ServiceCardsText}>
                                     Maneja tu agenda y preferencias para los eventos y servicios a tu gusto, define las
-                                    actividades  que hacen parte de los servicios que ofreces y ten la libertad de
+                                    actividades que hacen parte de los servicios que ofreces y ten la libertad de
                                     decidir sobre las propuestas de tus clientes.
                                 </Card.Text>
                             </Card.Body>

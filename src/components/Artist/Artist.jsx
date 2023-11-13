@@ -7,15 +7,15 @@ import SesionsArtist from './SesionsArtist';
 import Footer from '../Footer/Footer';
 
 const Artist = () => {
-  return (
-    <div id={style.Artist}>
-      <Header />
-      <CarruselArtist />
-      <BenefitsArtist />
-      <ServicesArtist />
-      <Footer />
-    </div>
-  );
+    return (
+        <div id={style.Artist}>
+            <Header/>
+            <CarruselArtist/>
+            <BenefitsArtist/>
+            <ServicesArtist/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default Artist;

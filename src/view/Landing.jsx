@@ -3,7 +3,8 @@ import Home from '../components/Home/Home';
 import Footer from '../components/Footer/Footer';
 import {useState} from 'react';
 
-const Landing = () => {
+const Landing = () =>
+{
 
     const [test, setTest] = useState(false)
     const handleSignIn = () =>
