@@ -25,9 +25,11 @@ import ClientProtectedRoute from '../utils/clientProtectedRoute';
 
 const home = () => {
     return (
+        /*
         <ClientProtectedRoute>
-            <HomeApp/>
         </ClientProtectedRoute>
+        */
+        <HomeApp/>
     )
 }
 
