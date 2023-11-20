@@ -1,570 +1,604 @@
 #ArtistApp {
-  display: flex;
+    display: flex;
 }
 
 #ContentArtistApp {
-  margin-left: 6.4rem;
-  background: #ECEDF2;
+    margin-left: 6.4rem;
+    background: #ECEDF2;
 }
 
 #SideBar {
-  background-color: #F9F9F9;
-  height: 100%;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background-color: #F9F9F9;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #SideBarIcons {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
 }
 
 #SideBarMore {
-  text-align: center;
+    text-align: center;
 }
 
 .SideBarItem {
-  width: 50px;
-  margin: 10px;
+    width: 50px;
+    margin: 10px;
 }
 
 
 #Notification {
-  width: 18rem;
-  margin-left: 20px;
-  border-radius: 0px 7px 7px 0px;
-  box-shadow: 0px 8.445945739746094px 16.891891479492188px 0px #373B5626;
+    width: 18rem;
+    margin-left: 20px;
+    border-radius: 0px 7px 7px 0px;
+    box-shadow: 0px 8.445945739746094px 16.891891479492188px 0px #373B5626;
 }
 
 .notificationHead {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
 }
 
 .notificationHead img {
-  width: 20px;
-  height: 20px;
-  margin: 5px;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
 }
 
 .notificationItem {
-  margin: 5px;
-  display: flex;
-  justify-content: space-between;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .notificationItem img {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 #Overlay {
-  box-shadow: 0px 4px 10px 0px #00000040;
-  margin-left: -20px;
-  margin-bottom: 1rem;
-  padding: 20px;
+    box-shadow: 0px 4px 10px 0px #00000040;
+    margin-left: -20px;
+    margin-bottom: 1rem;
+    padding: 20px;
 }
 
 .iconsOverlay {
-  height: 20px;
-  margin: 1px;
+    height: 20px;
+    margin: 1px;
 }
 
 .overlayItem {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 #Feed {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #LogoSide {
-  width: 30%;
+    width: 30%;
 }
 
 #FeedInput {
-  width: 65%;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0px 0px 4px 0px #00000040 inset;
-  background: #ECEDF2;
+    width: 65%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 0px #00000040 inset;
+    background: #ECEDF2;
 }
 
 .Post {
-  margin: 1rem;
-  width: 95%;
-  background-color: #F9F9F9;
-  border-radius: 10px;
+    margin: 1rem;
+    width: 95%;
+    background-color: #F9F9F9;
+    border-radius: 10px;
 }
 
 .porfile {
-  margin: 1rem;
-  display: flex;
-  align-items: center;
-  font-family: "Barlow", sans-serif;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    font-family: "Barlow", sans-serif;
 }
 
 .userPhoto {
-  width: 50px;
-  margin: 1%;
+    width: 50px;
+    margin: 1%;
 }
 
 
 .userData {
-  display: flex;
-  flex-direction: column;
-  color: #373B56;
+    display: flex;
+    flex-direction: column;
+    color: #373B56;
 }
 
 .userNick {
-  font-family: "Barlow Medium", sans-serif;
-  color: #373B56;
+    font-family: "Barlow Medium", sans-serif;
+    color: #373B56;
 }
 
 .PostImg {
-  width: 40rem;
+    width: 40rem;
 }
 
 .PostContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .PostReaction {
-  width: 87%;
+    width: 87%;
 }
 
 .iconsReaction {
-  width: 25px;
-  margin: 1rem;
+    width: 25px;
+    margin: 1rem;
 }
 
 .postDescription {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
 }
 
 .postTxt {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .postViewMore {
-  color: #373B56B2;
+    color: #373B56B2;
 }
 
 .postViewMore:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #Chats {
-  background-color: #F9F9F9;
-  height: 100vh;
+    background-color: #F9F9F9;
+    height: 100vh;
 }
 
 .ChatsContainer {
-  padding-left: 6.4rem;
-  max-width: 100%;
+    padding-left: 6.4rem;
+    max-width: 100%;
 }
 
 .ChatsBar {
-  height: 100vh;
-  border-left: #373B5640 1px solid;
-  border-right: #373B5640 1px solid;
+    height: 100vh;
+    border-left: #373B5640 1px solid;
+    border-right: #373B5640 1px solid;
 }
 
 #LogoChats {
-  width: 100%;
+    width: 100%;
 }
 
 #SerchUser {
-  box-shadow: 0px 0px 2px 0px #00000040 inset;
-  margin-top: 1rem;
-  border-radius: 15px;
-  background-color: #F9F9F9;
+    box-shadow: 0px 0px 2px 0px #00000040 inset;
+    margin-top: 1rem;
+    border-radius: 15px;
+    background-color: #F9F9F9;
 }
 
 .UserPhoto {
-  width: 50px;
+    width: 50px;
 }
 
 .UserChatData {
-  display: flex;
-  margin: 2.5rem 1.5rem;
+    display: flex;
+    margin: 2.5rem 1.5rem;
 }
 
 .UserChatDataTxT {
-  color: #373B56;
-  display: flex;
-  flex-direction: column;
-  margin: 0rem 0.5rem;
-  font-family: Barlow, sans-serif;
+    color: #373B56;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 0.5rem;
+    font-family: Barlow, sans-serif;
 }
 
 .UserChat {
-  background-color: #ECEDF2;
+    background-color: #ECEDF2;
 }
 
 .OtherUser {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .chatBubble1 {
-  width: 365px;
-  background: #F9F9F9;
-  margin: 1rem 2rem;
-  border-radius: 20px 20px 20px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  color: #373B56;
+    width: 365px;
+    background: #F9F9F9;
+    margin: 1rem 2rem;
+    border-radius: 20px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #373B56;
 }
 
 .MyUser {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .chatBubble2 {
-  width: 365px;
-  background: #373B56;
-  margin: 1rem 2rem;
-  border-radius: 20px 20px 0px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  color: #F9F9F9;
+    width: 365px;
+    background: #373B56;
+    margin: 1rem 2rem;
+    border-radius: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #F9F9F9;
 }
 
 #Send {
-  width: 70%;
-  box-shadow: 0px 0px 2px 0px #00000040 inset;
-  margin-top: 1rem;
-  border-radius: 15px;
-  background-color: #F9F9F9;
+    width: 70%;
+    box-shadow: 0px 0px 2px 0px #00000040 inset;
+    margin-top: 1rem;
+    border-radius: 15px;
+    background-color: #F9F9F9;
 }
 
 .SendMsg {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border-top: #373B5640 1px solid;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-top: #373B5640 1px solid;
 }
 
 .SendIcons {
-  width: 30px;
-  height: 30px;
-  margin: 1rem;
+    width: 30px;
+    height: 30px;
+    margin: 1rem;
 }
 
 .SendIcons:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #ViewArtistCol {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #ViewArtistContent {
-  color: #373B56;
-  margin-left: 6.4rem;
-  background-color: #ECEDF2;
+    color: #373B56;
+    margin-left: 6.4rem;
+    background-color: #ECEDF2;
 }
 
 .SuggetionsBar {
-  margin: 0px;
-  padding: 0px;
-  background-color: #ECEDF2
+    margin: 0px;
+    padding: 0px;
+    background-color: #ECEDF2
 }
 
 .ArtistBanner {
-  width: 100%;
+    width: 100%;
 }
 
 .ArtistPhoto {
-  width: 20%;
-  margin-top: -10%;
-  margin-left: 8%;
+    width: 20%;
+    margin-top: -10%;
+    margin-left: 8%;
 }
 
 .UserData {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #LocationTxt {
-  font-family: Barlow, sans-serif;
-  color: #373B5640;
+    font-family: Barlow, sans-serif;
+    color: #373B5640;
 }
 
 #Location {
-  width: 30px;
+    width: 30px;
 }
 
 #BtnOptions {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #Block {
-  width: 10%;
-  height: 10%;
+    width: 10%;
+    height: 10%;
 }
 
 #msgBtn {
-  color: #373B56;
-  padding: 5px 15px;
-  border-radius: 10px;
-  border: #373B56 solid 1px;
+    color: #373B56;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: #373B56 solid 1px;
 }
 
 #subBtn {
-  font-family: Barlow, sans-serif;
-  background-color: #A000FF;
-  padding: 5px 15px;
-  color: #ECEDF2;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px 0px #A000FF4F;
+    font-family: Barlow, sans-serif;
+    background-color: #A000FF;
+    padding: 5px 15px;
+    color: #ECEDF2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px 0px #A000FF4F;
 }
 
 #subBtn:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .porfilUser {
-  font-family: Barlow, sans-serif;
-  color: #373B56;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 1rem;
+    font-family: Barlow, sans-serif;
+    color: #373B56;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
 }
 
 #Review {
-  color: #373B5640;
+    color: #373B5640;
 }
 
 .Nums {
-  color: #373B56;
+    color: #373B56;
 }
 
 #Subs {
-  color: #373B5640;
-  padding-right: 0.5rem;
-  border-right: 1px solid #373B5640;
-  margin-right: 0.5rem;
+    color: #373B5640;
+    padding-right: 0.5rem;
+    border-right: 1px solid #373B5640;
+    margin-right: 0.5rem;
 }
 
 #Rev {
-  color: #373B5640;
-  padding-right: 0.5rem;
-  border-right: 1px solid #373B5640;
-  margin-right: 0.5rem;
+    color: #373B5640;
+    padding-right: 0.5rem;
+    border-right: 1px solid #373B5640;
+    margin-right: 0.5rem;
 }
 
 #atSign {
-  color: #373B5640;
+    color: #373B5640;
 }
 
 #Navies {
-  display: flex;
-  justify-content: space-evenly;
-  border-bottom: #373B5640 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: #373B5640 1px solid;
 }
 
 #Navies a {
-  color: #373B56;
-  font-family: Barlow, sans-serif;
+    color: #373B56;
+    font-family: Barlow, sans-serif;
 }
 
 #RoomBtn {
-  color: #A000FF !important;
+    color: #A000FF !important;
 }
 
 .PostTittle {
-  font-size: small;
-  color: #373B56;
+    font-size: small;
+    color: #373B56;
 }
 
 .PostInput {
-  width: 100%;
-  border: none;
+    width: 100%;
+    border: none;
 }
 
 #SelectView {
-  border: none;
-  padding: 1px;
-  width: 190px;
+    border: none;
+    padding: 1px;
+    width: 190px;
 }
 
 #modalFooter {
-  display: flex;
-  justify-content: space-between;
-  color: #A000FF;
+    display: flex;
+    justify-content: space-between;
+    color: #A000FF;
 }
 
 /* Become Artist Dashboard styles*/
 
 #ArtistDashboard {
-  background-color: #ECEDF2;
-  width: 100%;
-  margin: 0%;
+    background-color: #ECEDF2;
+    width: 100%;
 }
 
-#ContainerArtistDashboard {
-  width: 100%;
-  padding-top: 1rem;
+#ContainerArtistDashboard
+{
+    margin-left: 6.4rem;
+    background: #ECEDF2;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rowDashboard
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .Head {
-  background-color: #F9F9F9;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
-  margin: 0px 1rem 1rem 1rem;
-  border-radius: 10px;
-  align-items: center;
-  box-shadow: 0px 4px 15px 0px #373B5626;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0px 4px 15px 0px #373B5626;
+}
+
+.Balance
+{
+    box-shadow: 0px 4px 15px 0px #373B5626;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #F9F9F9;
+    display: flex;
+    align-items: center;
+}
+
+.BalanceChart
+{
+
+}
+
+.BalanceInfo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #LogoDashboard {
-  width: 350px;
+    width: 350px;
 }
 
 .monthlyIncome {
-  background-color: #F9F9F9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.5rem;
-  margin: 1rem;
-  border-radius: 10px;
-  color: #373B56;
-  box-shadow: 0px 4px 15px 0px #373B5626;
-  text-align: center;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    color: #373B56;
+    box-shadow: 0px 4px 15px 0px #373B5626;
+    text-align: center;
 }
 
 .monthlyIncome div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .monthlyIncome p {
-  color: #373B56;
+    color: #373B56;
 
 }
 
 .monthlyIncome span {
-  color: #34A853;
+    color: #34A853;
 }
 
 .Dates {
-  background-color: #F9F9F9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 1rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px 0px #373B5626;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px #373B5626;
 }
 
 .Dates h5 {
-  padding: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
 }
 
 .itemsDates {
-  display: flex;
-  flex-direction: column;
-  border-top: #373B5626 solid 1px;
-  border-bottom: #373B5626 solid 1px;
-  padding: 0.5rem;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-top: #373B5626 solid 1px;
+    border-bottom: #373B5626 solid 1px;
+    padding: 0.5rem;
+    justify-content: center;
 }
 
 .itemsDates span {
-  color: #A000FF;
+    color: #A000FF;
 }
 
 .salesReport {
-  background-color: #F9F9F9;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px 0px #373B5626;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px #373B5626;
 }
 
 .salesReportBalance {
-  display: flex;
-  width: 400px;
-  flex-direction: column;
-  padding: 1rem;
-  justify-content: center;
-  border-right: #373B5640 1px solid;
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    border-right: #373B5640 1px solid;
 }
 
 .salesReportBalance p {
-  color: #373B5640;
+    color: #373B5640;
 }
 
 .salesReportBalance span {
-  color: #34A853;
+    color: #34A853;
 }
 
 .bestSalers {
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: start !important;
-  font-family: Barlow, Arial, Helvetica, sans-serif;
-  color: rgba(55, 59, 86, 0.25);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: start !important;
+    font-family: Barlow, Arial, Helvetica, sans-serif;
+    color: rgba(55, 59, 86, 0.25);
 }
 
 .bestSalersItems {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .bestSalersItems p {
-  display: flex;
-  color: #373B56;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin: 0px 1rem;
-  height: 20px;
-  padding: 1rem;
-  border: #373B56 solid 1px;
+    display: flex;
+    color: #373B56;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0px 1rem;
+    height: 20px;
+    padding: 1rem;
+    border: #373B56 solid 1px;
 }
 
 /* Finish Artist Dashboard styles*/
@@ -573,132 +607,132 @@
 /* Begin Artist Billing styles */
 
 #BillingContainer {
-  padding-left: 6.4rem;
-  background-color: #ECEDF2;
-  height: 100vh;
-  font-family: Inter, sans-serif;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+    padding-left: 6.4rem;
+    background-color: #ECEDF2;
+    height: 100vh;
+    font-family: Inter, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
 #BillingLogo {
-  width: 80%;
-  margin: 1rem;
+    width: 80%;
+    margin: 1rem;
 }
 
 #BillingRow {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 
 }
 
 .BillingItems {
-  text-align: center;
+    text-align: center;
 }
 
 #UsdBilling {
-  background-color: #F9F9F9;
-  width: 30%;
-  padding: 1rem;
-  margin: 2rem;
-  height: 3.5rem;
+    background-color: #F9F9F9;
+    width: 30%;
+    padding: 1rem;
+    margin: 2rem;
+    height: 3.5rem;
 }
 
 #Credits {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-  height: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    height: 20%;
 }
 
 #AvailableCredits {
-  width: 30%;
-  background-color: #F9F9F9;
-  padding: 1rem;
-  height: 3.5rem;
+    width: 30%;
+    background-color: #F9F9F9;
+    padding: 1rem;
+    height: 3.5rem;
 }
 
 #CreditsBuy {
-  width: 70%;
-  padding: 1rem;
-  background-color: #A000FF;
-  color: #F9F9F9;
-  height: 3.5rem;
+    width: 70%;
+    padding: 1rem;
+    background-color: #A000FF;
+    color: #F9F9F9;
+    height: 3.5rem;
 }
 
 #TransactionsBilling {
-  background-color: #F9F9F9;
-  padding: 1rem;
-  font-family: Barlow, sans-serif;
+    background-color: #F9F9F9;
+    padding: 1rem;
+    font-family: Barlow, sans-serif;
 }
 
 .TransactionsRows {
-  margin: 1rem;
-  padding: 1rem;
-  border-bottom: #373B5640 1px solid;
+    margin: 1rem;
+    padding: 1rem;
+    border-bottom: #373B5640 1px solid;
 }
 
 .weeklyEarn {
-  background-color: #F9F9F9;
-  display: flex;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  justify-content: space-evenly;
-  border-radius: 10px;
+    background-color: #F9F9F9;
+    display: flex;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-evenly;
+    border-radius: 10px;
 }
 
 .weeklyEarn select {
-  background-color: #F9F9F9;
-  border: none;
-  color: #373B56;
-  padding: 1rem;
+    background-color: #F9F9F9;
+    border: none;
+    color: #373B56;
+    padding: 1rem;
 }
 
 .weeklyEarnItem {
-  padding: 1rem;
-  width: 150px;
-  border-left: 1px solid #373B5626;
-  color: #373B56;
+    padding: 1rem;
+    width: 150px;
+    border-left: 1px solid #373B5626;
+    color: #373B56;
 }
 
 .weeklyEarnItem p {
-  color: #373B5626;
+    color: #373B5626;
 }
 
 .serviceRoomME {
-  display: flex;
-  margin-right: 2rem;
-  justify-content: space-between;
+    display: flex;
+    margin-right: 2rem;
+    justify-content: space-between;
 }
 
 .serviceRoomMEItem {
-  background: #F9F9F9;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #373B56;
+    background: #F9F9F9;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #373B56;
 }
 
 .serviceRoomMEItem p {
-  color: #373B5626;
+    color: #373B5626;
 }
 
 .serviceRoomME2 {
-  display: flex;
-  margin-right: 2rem;
-  margin-top: 1rem;
-  justify-content: space-between;
+    display: flex;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    justify-content: space-between;
 }
 
 .serviceRoomMESubItem {
-  width: 230px;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #F9F9F9;
+    width: 230px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #F9F9F9;
 }
 
 .serviceRoomMESubItem p {
-  color: #373B5626;
+    color: #373B5626;
 }
 
 /* .WhiteSection {
@@ -710,148 +744,147 @@
 /* Finish Artist Billing styles */
 
 #VideoCall {
-  width: 100%;
-  height: 100vh;
-  background-color: #373B56;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ECEDF2;
-  font-family: Inter, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #373B56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ECEDF2;
+    font-family: Inter, sans-serif;
 }
 
 #Lives {
-  width: 100%;
-  height: 100vh;
-  background-color: #373B56;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ECEDF2;
-  font-family: Inter, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #373B56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ECEDF2;
+    font-family: Inter, sans-serif;
 }
 
 #LiveVideo {
-  width: 100%;
-  background-color: #373B56;
+    width: 100%;
+    background-color: #373B56;
 }
 
 .LiveChat {
-  background-color: #373B56;
+    background-color: #373B56;
 
 }
 
 .Streamer {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .StreamerPhoto {
-  width: 70px;
+    width: 70px;
 }
 
 .StreamerTxt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0.5rem;
 }
 
 .SpectatorContainer {
-  display: flex;
-  height: 80%;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .SpectatorItem {
-  display: flex;
-  justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: #ECEDF20D 1px solid;
-  border-bottom: #ECEDF20D 1px solid;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: #ECEDF20D 1px solid;
+    border-bottom: #ECEDF20D 1px solid;
 }
 
 .Spectator {
-  width: 25%;
+    width: 25%;
 }
 
 .SpectatorTxt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .LiveSend {
-  border-radius: 5px;
-  height: 40px;
-  width: 100%;
-  color: #373B56;
-  background:
-    linear-gradient(0deg, #ECEDF2, #ECEDF2);
-  border: 1px solid #373B56
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    color: #373B56;
+    background: linear-gradient(0deg, #ECEDF2, #ECEDF2);
+    border: 1px solid #373B56
 }
 
 #SubscriptionsContainer {
-  padding-left: 6.4rem;
-  font-family: Barlow, sans-serif;
-  color: #373B56;
+    padding-left: 6.4rem;
+    font-family: Barlow, sans-serif;
+    color: #373B56;
 }
 
 .ArtisSub {
-  width: 10%;
+    width: 10%;
 }
 
 #ReviewTitle {
-  text-align: center;
-  padding: 1rem;
-  border-bottom: #373B5640 solid 1px;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: #373B5640 solid 1px;
 }
 
 #newReview {
-  margin: 10px;
-  background-color: #F9F9F9;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid #373B5626;
-  border-radius: 0px, 0px, 1px, 0px;
+    margin: 10px;
+    background-color: #F9F9F9;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #373B5626;
+    border-radius: 0px, 0px, 1px, 0px;
 }
 
 .StarsReview {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .StarsReview img {
-  width: 20px;
-  height: 20px;
-  margin: 1px;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
 }
 
 #inputReview {
-  width: 80%;
-  background: #F9F9F9;
-  box-shadow: 0px 0px 4px 0px #00000040 inset;
-  border: none;
-  border-radius: 10px;
+    width: 80%;
+    background: #F9F9F9;
+    box-shadow: 0px 0px 4px 0px #00000040 inset;
+    border: none;
+    border-radius: 10px;
 }
 
 #historyReview {
-  background-color: #F9F9F9;
-  border-bottom: 1px solid #373B5626;
-  margin: 10px;
-  padding: 10px;
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #373B5626;
+    margin: 10px;
+    padding: 10px;
 }
 
 .itemReview {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #373B5640;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #373B5640;
 }

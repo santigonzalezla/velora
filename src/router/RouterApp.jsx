@@ -33,7 +33,8 @@ const home = () => {
     )
 }
 
-const chats = () => {
+const chats = () =>
+{
     return (
         <ClientProtectedRoute>
             <Chats/>
@@ -41,23 +42,30 @@ const chats = () => {
     )
 }
 
-const subscriptions = () => {
+const subscriptions = () =>
+{
     return (
+        /*
         <ClientProtectedRoute>
-            <Subscriptions/>
         </ClientProtectedRoute>
+        */
+        <Subscriptions/>
     )
 }
 
-const billing = () => {
+const billing = () =>
+{
     return (
+        /*
         <ClientProtectedRoute>
-            <Billing/>
         </ClientProtectedRoute>
+        */
+        <Billing/>
     )
 }
 
-const videoCall = () => {
+const videoCall = () =>
+{
     return (
         <ClientProtectedRoute>
             <VideoCall/>
@@ -65,15 +73,19 @@ const videoCall = () => {
     )
 }
 
-const artistApp = () => {
+const artistApp = () =>
+{
     return (
+        /*
         <ClientProtectedRoute>
-            <ArtistApp/>
         </ClientProtectedRoute>
+        */
+        <ArtistApp/>
     )
 }
 
-const artistChats = () => {
+const artistChats = () =>
+{
     return (
         <ClientProtectedRoute>
             <ArtstChats/>
@@ -81,7 +93,8 @@ const artistChats = () => {
     )
 }
 
-const artistProfile = () => {
+const artistProfile = () =>
+{
     return (
         <ClientProtectedRoute>
             <ArtistPorfile/>
@@ -89,7 +102,8 @@ const artistProfile = () => {
     )
 }
 
-const clientProfile = () => {
+const clientProfile = () =>
+{
     return (
         <ClientProtectedRoute>
             <ClientPorfile/>
@@ -97,15 +111,19 @@ const clientProfile = () => {
     )
 }
 
-const artistDashboard = () => {
+const artistDashboard = () =>
+{
     return (
+        /*
         <ClientProtectedRoute>
-            <ArtistDashboard/>
         </ClientProtectedRoute>
+        */
+        <ArtistDashboard/>
     )
 }
 
-const videoCallArtist = () => {
+const videoCallArtist = () =>
+{
     return (
         <ClientProtectedRoute>
             <VideoCallArtist/>
@@ -113,7 +131,8 @@ const videoCallArtist = () => {
     )
 }
 
-const livesArtist = () => {
+const livesArtist = () =>
+{
     return (
         <ClientProtectedRoute>
             <LivesArtist/>
@@ -121,7 +140,8 @@ const livesArtist = () => {
     )
 }
 
-const billingArtist = () => {
+const billingArtist = () =>
+{
     return (
         <ClientProtectedRoute>
             <BillingArtist/>
@@ -129,7 +149,8 @@ const billingArtist = () => {
     )
 }
 
-const viewArtist = () => {
+const viewArtist = () =>
+{
     return (
         <ClientProtectedRoute>
             <ViewArtist/>
@@ -137,7 +158,8 @@ const viewArtist = () => {
     )
 }
 
-const lives = () => {
+const lives = () =>
+{
     return (
         <ClientProtectedRoute>
             <Lives/>
@@ -145,7 +167,8 @@ const lives = () => {
     )
 }
 
-const buyCoins = () => {
+const buyCoins = () =>
+{
     return (
         <ClientProtectedRoute>
             <BuyCoins/>
@@ -153,7 +176,8 @@ const buyCoins = () => {
     )
 }
 
-const RouterApp = () => {
+const RouterApp = () =>
+{
     return (
         <Routes>
             <Route path='/' element={<Landing/>}/>
