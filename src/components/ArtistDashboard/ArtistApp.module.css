@@ -445,9 +445,14 @@
 .rowDashboard
 {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+}
+
+.rowCards
+{
+    max-height: 350px;
 }
 
 .Head {
@@ -463,17 +468,13 @@
 
 .Balance
 {
+    height: fit-content;
     box-shadow: 0px 4px 15px 0px #373B5626;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem;
     background-color: #F9F9F9;
     display: flex;
     align-items: center;
-}
-
-.BalanceChart
-{
-
 }
 
 .BalanceInfo
@@ -482,6 +483,77 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.BalanceInfoItem
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.BalanceInfoItemPrice
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.BalanceInfoItemCircle
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #A000FF;
+}
+
+.DashboardCards
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.HooveredCard
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    border: 1px solid rgba(55, 59, 86, 0.15);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px #373B5626;
+}
+
+.HooveredCardTitle,
+.HooveredCardPercentage
+{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(55, 59, 86, 0.25);
+    font-family: Barlow, sans-serif;
+}
+
+.HooveredCardValue
+{
+    font-size: 28px;
+    font-weight: 600;
+    color: #373B56;
+    font-family: Inter, sans-serif;
+}
+
+.HooveredCardPercentage span
+{
+    color: #34A853;
 }
 
 #LogoDashboard {
@@ -516,13 +588,16 @@
     color: #34A853;
 }
 
-.Dates {
+.Dates
+{
+    height: 100%;
+    align-self: flex-start;
     background-color: #F9F9F9;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 1rem;
     border-radius: 10px;
+    padding: 10px;
     box-shadow: 0px 4px 15px 0px #373B5626;
 }
 
@@ -543,12 +618,19 @@
     color: #A000FF;
 }
 
+.salesReportCharts
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 .salesReport {
     background-color: #F9F9F9;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 1rem;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0px 4px 15px 0px #373B5626;
@@ -563,12 +645,18 @@
     border-right: #373B5640 1px solid;
 }
 
-.salesReportBalance p {
-    color: #373B5640;
+.salesReportBalanceFinal
+{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
 }
 
-.salesReportBalance span {
-    color: #34A853;
+.salesReportBalance p
+{
+    text-transform: capitalize;
 }
 
 .bestSalers {
@@ -852,7 +940,6 @@
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid #373B5626;
-    border-radius: 0px, 0px, 1px, 0px;
 }
 
 .StarsReview {
