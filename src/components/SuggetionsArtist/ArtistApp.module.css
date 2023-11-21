@@ -569,23 +569,28 @@
 
 /* Finish Artist Dashboard styles*/
 
-#Suggetions {
+#Suggetions
+{
+  padding: 20px;
   height: 100%;
   background-color: #ECEDF2;
   font-family: "Barlow", sans-serif;
-}
-
-#SuggetionsContainer {
   border-left: 1px solid #373B5640;
-  padding-left: 2rem;
 }
 
-.SuggetionsContent {
+.SuggetionsContent
+{
   flex-direction: row;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.SuggetionsContTop h3
+{
+    font-size: 26px;
+    font-weight: 500;
 }
 
 .SuggetionsCard {
@@ -602,8 +607,9 @@
   margin: 1rem;
 }
 
-#SuggetionsPaginate {
-  height: 40vh;
+#SuggetionsPaginate
+{
+  margin-top: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;

@@ -1,953 +1,990 @@
 #ArtistApp {
-  display: flex;
+    display: flex;
+}
+
+#ViewArtist {
+    max-width: 100vw;
 }
 
 #ViewArtistCol {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    padding-left: 6.4rem;
 }
 
 #ViewArtistContent {
-  color: #373B56;
-  margin-left: 6.4rem;
-  background-color: #ECEDF2;
+    color: #373B56;
+    background-color: #ECEDF2;
 }
 
-.SuggetionsBar {
-  margin: 0px;
-  padding: 0px;
-  background-color: #ECEDF2
+.ViewArtistRow
+{
+  --bs-gutter-x: 0;
 }
 
 .ArtistBanner {
-  width: 100%;
+    width: 100%;
 }
 
 .ArtistPhoto {
-  width: 20%;
-  margin-top: -10%;
-  margin-left: 8%;
+    width: 20%;
+    margin-top: -10%;
+    margin-left: 8%;
 }
 
 .UserData {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
 #LocationTxt {
-  font-family: Barlow, sans-serif;
-  color: #373B5640;
+    font-family: Barlow, sans-serif;
+    color: #373B5640;
 }
 
 #Location {
-  width: 30px;
+    width: 30px;
 }
 
 #BtnOptions {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
 }
 
 
 #Coins {
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #msgBtn {
-  margin: 5px;
-  width: 6.5rem;
-  cursor: pointer;
-  color: #373B56;
-  padding: 5px 15px;
-  border-radius: 10px;
-  text-align: center;
-  border: #373B56 solid 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 7px 20px;
+    color: #373B56;
+    border-radius: 10px;
+    border: #373B56 solid 1px;
 }
 
 #subBtn {
-  font-family: Barlow, sans-serif;
-  background-color: #A000FF;
-  padding: 5px 15px;
-  color: #ECEDF2;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0px 4px 10px 0px #A000FF4F;
+    font-family: Barlow, sans-serif;
+    background-color: #A000FF;
+    padding: 5px 15px;
+    color: #ECEDF2;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px 0px #A000FF4F;
 }
 
 .porfilUser {
-  font-family: Barlow, sans-serif;
-  color: #373B56;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 1rem;
+    font-family: Barlow, sans-serif;
+    color: #373B56;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    gap: 7px;
 }
 
 #Review {
-  cursor: pointer;
-  color: #373B5640;
+    cursor: pointer;
+    color: #373B5640;
 }
 
 .Nums {
-  color: #373B56;
+    color: #373B56;
 }
 
 #Subs {
-  color: #373B5640;
-  padding-right: 0.5rem;
-  border-right: 1px solid #373B5640;
-  margin-right: 0.5rem;
+    color: #373B5640;
+    padding-right: 0.5rem;
+    border-right: 1px solid #373B5640;
+    margin-right: 0.5rem;
 }
 
 #Rev {
-  color: #373B5640;
-  padding-right: 0.5rem;
-  border-right: 1px solid #373B5640;
-  margin-right: 0.5rem;
+    color: #373B5640;
+    padding-right: 0.5rem;
+    border-right: 1px solid #373B5640;
+    margin-right: 0.5rem;
 }
 
 #atSign {
-  color: #373B5640;
+    color: #373B5640;
 }
 
 #Navies ul {
-  display: flex;
-  justify-content: space-evenly;
-  border-bottom: #373B5640 1px solid;
-  cursor: pointer;
-  padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: #373B5640 1px solid;
+    cursor: pointer;
+    padding: 1rem;
 }
 
 .Tab {
-  text-decoration: none;
-  list-style: none;
-  color: #373B56;
-  font-family: Barlow, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: #373B56;
+    font-family: Barlow, sans-serif;
 }
 
 .Tab:focus {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
 }
 
 .RoomBtn {
-  color: #A000FF;
-  text-decoration: none;
-  list-style: none;
-  font-family: Cantarell, sans-serif;
+    color: #A000FF;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Aref Ruqaa", sans-serif;
+}
+
+.TopServiceRowCard
+{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.ServiceCardsTop
+{
+    font-family: Inter, sans-serif;
+    background-color: #FFF;
+    border: none;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ServiceCardTopBody {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.ServiceCardsText
+{
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .serviceRoomME {
-  display: flex;
-  margin-right: 2rem;
-  justify-content: space-between;
+    display: flex;
+    margin-right: 2rem;
+    justify-content: space-between;
 }
 
 .serviceRoomMEItem {
-  background: #F9F9F9;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #373B56;
+    background: #F9F9F9;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #373B56;
 }
 
 .serviceRoomMEItem p {
-  color: #373B5626;
+    color: #373B5626;
 }
 
 .serviceRoomME2 {
-  display: flex;
-  margin-right: 2rem;
-  margin-top: 1rem;
-  justify-content: space-between;
+    display: flex;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    justify-content: space-between;
 }
 
 .serviceRoomMESubItem {
-  width: 230px;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #F9F9F9;
+    width: 230px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #F9F9F9;
 }
 
 .serviceRoomMESubItem p {
-  color: #373B5626;
+    color: #373B5626;
 }
 
 
 #Dates {
-  margin: 1rem;
-  padding: 0.5rem;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
 #Dates div {
-  padding: 0.5rem;
-  color: #373B56;
-  border-bottom: 1px solid #373B5626;
+    padding: 0.5rem;
+    color: #373B56;
+    border-bottom: 1px solid #373B5626;
 }
 
 #Dates span {
-  color: #A000FF;
+    color: #A000FF;
 }
 
 #Locations {
-  margin: 1rem;
-  padding: 0.5rem;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
 #Locations article {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 #Locations span {
-  color: #A000FF;
+    color: #A000FF;
 }
 
 #LocationData1 {
-  border-right: 1px solid #373B5626;
+    border-right: 1px solid #373B5626;
 }
 
 #LocationData1 div {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #LocationData1 svg,
 p {
-  margin: 5px
+    margin: 5px
 }
 
 #LocationData2 div {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #LocationData2 svg,
 p {
-  margin: 5px
+    margin: 5px
 }
 
 #AddAction {
-  display: flex;
-  align-items: center;
-  justify-content: end;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 #AddAction svg,
 p {
-  margin: 5px
+    margin: 5px
 }
 
 #ContentArtistApp {
-  margin-left: 6.4rem;
-  background: #ECEDF2;
+    margin-left: 6.4rem;
+    background: #ECEDF2;
 }
 
 #SideBar {
-  background-color: #F9F9F9;
-  height: 100%;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background-color: #F9F9F9;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #SideBarIcons {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
 }
 
 #SideBarMore {
-  text-align: center;
+    text-align: center;
 }
 
 .SideBarItem {
-  width: 50px;
-  margin: 10px;
+    width: 50px;
+    margin: 10px;
 }
 
 
 #Notification {
-  width: 18rem;
-  margin-left: 20px;
-  border-radius: 0px 7px 7px 0px;
-  box-shadow: 0px 8.445945739746094px 16.891891479492188px 0px #373B5626;
+    width: 18rem;
+    margin-left: 20px;
+    border-radius: 0px 7px 7px 0px;
+    box-shadow: 0px 8.445945739746094px 16.891891479492188px 0px #373B5626;
 }
 
 .notificationHead {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
 }
 
 .notificationHead img {
-  width: 20px;
-  height: 20px;
-  margin: 5px;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
 }
 
 .notificationItem {
-  margin: 5px;
-  display: flex;
-  justify-content: space-between;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .notificationItem img {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 #Overlay {
-  box-shadow: 0px 4px 10px 0px #00000040;
-  margin-left: -20px;
-  margin-bottom: 1rem;
-  padding: 20px;
+    box-shadow: 0px 4px 10px 0px #00000040;
+    margin-left: -20px;
+    margin-bottom: 1rem;
+    padding: 20px;
 }
 
 .iconsOverlay {
-  height: 20px;
-  margin: 1px;
+    height: 20px;
+    margin: 1px;
 }
 
 .overlayItem {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 #Feed {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #LogoSide {
-  width: 30%;
+    width: 30%;
 }
 
 #FeedInput {
-  width: 65%;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0px 0px 4px 0px #00000040 inset;
-  background: #ECEDF2;
+    width: 65%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 0px #00000040 inset;
+    background: #ECEDF2;
 }
 
 .Post {
-  margin: 1rem;
-  width: 95%;
-  background-color: #F9F9F9;
-  border-radius: 10px;
+    margin: 1rem;
+    width: 95%;
+    background-color: #F9F9F9;
+    border-radius: 10px;
 }
 
 .porfile {
-  margin: 1rem;
-  display: flex;
-  align-items: center;
-  font-family: "Barlow", sans-serif;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    font-family: "Barlow", sans-serif;
 }
 
 .userPhoto {
-  width: 50px;
-  margin: 1%;
+    width: 50px;
+    margin: 1%;
 }
 
 
 .userData {
-  display: flex;
-  flex-direction: column;
-  color: #373B56;
+    display: flex;
+    flex-direction: column;
+    color: #373B56;
 }
 
 .userNick {
-  font-family: "Barlow Medium", sans-serif;
-  color: #373B56;
+    font-family: "Barlow Medium", sans-serif;
+    color: #373B56;
 }
 
 .PostImg {
-  width: 40rem;
+    width: 40rem;
 }
 
 .PostContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .PostReaction {
-  width: 87%;
+    width: 87%;
 }
 
 .iconsReaction {
-  width: 25px;
-  margin: 1rem;
+    width: 25px;
+    margin: 1rem;
 }
 
 .postDescription {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
 }
 
 .postTxt {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .postViewMore {
-  color: #373B56B2;
+    color: #373B56B2;
 }
 
 .postViewMore:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #Chats {
-  background-color: #F9F9F9;
-  height: 100vh;
+    background-color: #F9F9F9;
+    height: 100vh;
 }
 
 .ChatsContainer {
-  padding-left: 6.4rem;
-  max-width: 100%;
+    padding-left: 6.4rem;
+    max-width: 100%;
 }
 
 .ChatsBar {
-  height: 100vh;
-  border-left: #373B5640 1px solid;
-  border-right: #373B5640 1px solid;
+    height: 100vh;
+    border-left: #373B5640 1px solid;
+    border-right: #373B5640 1px solid;
 }
 
 #LogoChats {
-  width: 100%;
+    width: 100%;
 }
 
 #SerchUser {
-  box-shadow: 0px 0px 2px 0px #00000040 inset;
-  margin-top: 1rem;
-  border-radius: 15px;
-  background-color: #F9F9F9;
+    box-shadow: 0px 0px 2px 0px #00000040 inset;
+    margin-top: 1rem;
+    border-radius: 15px;
+    background-color: #F9F9F9;
 }
 
 .UserPhoto {
-  width: 50px;
+    width: 50px;
 }
 
 .UserChatData {
-  display: flex;
-  margin: 2.5rem 1.5rem;
+    display: flex;
+    margin: 2.5rem 1.5rem;
 }
 
 .UserChatDataTxT {
-  color: #373B56;
-  display: flex;
-  flex-direction: column;
-  margin: 0rem 0.5rem;
-  font-family: Barlow, sans-serif;
+    color: #373B56;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 0.5rem;
+    font-family: Barlow, sans-serif;
 }
 
 .UserChat {
-  height: 80%;
-  background-color: #ECEDF2;
+    height: 80%;
+    background-color: #ECEDF2;
 }
 
 .OtherUser {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .chatBubble1 {
-  width: 365px;
-  background: #F9F9F9;
-  margin: 1rem 2rem;
-  border-radius: 20px 20px 20px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  color: #373B56;
+    width: 365px;
+    background: #F9F9F9;
+    margin: 1rem 2rem;
+    border-radius: 20px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #373B56;
 }
 
 .MyUser {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .chatBubble2 {
-  width: 365px;
-  background: #373B56;
-  margin: 1rem 2rem;
-  border-radius: 20px 20px 0px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  color: #F9F9F9;
+    width: 365px;
+    background: #373B56;
+    margin: 1rem 2rem;
+    border-radius: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #F9F9F9;
 }
 
 
 #Send {
-  height: 20%;
-  box-shadow: 0px 0px 2px 0px #00000040 inset;
-  margin-top: 1rem;
-  border-radius: 15px;
-  background-color: #F9F9F9;
+    height: 20%;
+    box-shadow: 0px 0px 2px 0px #00000040 inset;
+    margin-top: 1rem;
+    border-radius: 15px;
+    background-color: #F9F9F9;
 }
 
 .SendMsg {
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border-top: #373B5640 1px solid;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-top: #373B5640 1px solid;
 }
 
 .SendIcons {
-  width: 30px;
-  height: 30px;
-  margin: 1rem;
+    width: 30px;
+    height: 30px;
+    margin: 1rem;
 }
 
 .SendIcons:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .PostTittle {
-  font-size: small;
-  color: #373B56;
+    font-size: small;
+    color: #373B56;
 }
 
 .photoModal {
-  width: 15%;
+    width: 15%;
 }
 
 .NewPostHeader {
-  border: none;
+    border: none;
 }
 
 .NewPostHeader p {
-  background-color: #EB4335;
-  color: #FFFFFF;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
+    background-color: #EB4335;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .NewPostBody {
-  padding: 1rem;
-  border: 1px solid #373B56;
-  border-radius: 10px;
+    padding: 1rem;
+    border: 1px solid #373B56;
+    border-radius: 10px;
 }
 
 .PostInput {
-  width: 100%;
-  border: none;
-  height: 6rem;
-  padding: 1rem;
+    width: 100%;
+    border: none;
+    height: 6rem;
+    padding: 1rem;
 }
 
 .PostInput:focus {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
 }
 
 #SelectView {
-  background-color: #ECEDF2;
-  border: none;
-  padding: 10px;
-  width: 250px;
-  text-align: center;
+    background-color: #ECEDF2;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
 }
 
 #modalFooter {
-  display: flex;
-  justify-content: space-evenly;
-  border: none;
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
 }
 
 #modalFooter span {
-  cursor: pointer;
-  color: #A000FF;
-  width: 30%;
-  text-align: center;
-  padding: 0.4rem 1rem;
-  border-radius: 10px;
-  border: 1px solid #A000FF;
+    cursor: pointer;
+    color: #A000FF;
+    width: 30%;
+    text-align: center;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #A000FF;
 }
 
 #modalFooter p {
-  cursor: pointer;
-  width: 30%;
-  text-align: center;
-  padding: 0.4rem 1rem;
-  border-radius: 10px;
-  background-color: #A000FF;
-  color: #ECEDF2;
+    cursor: pointer;
+    width: 30%;
+    text-align: center;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    background-color: #A000FF;
+    color: #ECEDF2;
 }
 
 .SelectedImage {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  margin-top: 10px;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
 }
 
 /* Become Artist Dashboard styles*/
 
 #ArtistDashboard {
-  background-color: #ECEDF2;
-  width: 100%;
-  margin: 0%;
+    background-color: #ECEDF2;
+    width: 100%;
+    margin: 0%;
 }
 
 #ContainerArtistDashboard {
-  width: 100%;
-  padding-top: 1rem;
+    width: 100%;
+    padding-top: 1rem;
 }
 
 .Head {
-  background-color: #F9F9F9;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
-  margin: 0px 1rem 1rem 1rem;
-  border-radius: 10px;
-  align-items: center;
-  box-shadow: 0px 4px 15px 0px #373B5626;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 0px 1rem 1rem 1rem;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0px 4px 15px 0px #373B5626;
 }
 
 #LogoDashboard {
-  width: 350px;
+    width: 350px;
 }
 
 .monthlyIncome {
-  background-color: #F9F9F9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.5rem;
-  margin: 1rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px 0px #373B5626;
-  text-align: center;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px #373B5626;
+    text-align: center;
 }
 
 .monthlyIncome div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .monthlyIncome p {
-  color: #373B5640;
+    color: #373B5640;
 
 }
 
 .monthlyIncome span {
-  color: #34A853;
+    color: #34A853;
 }
 
 .Dates {
-  background-color: #F9F9F9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 1rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px 0px #373B5626;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px #373B5626;
 }
 
 .Dates h5 {
-  padding: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
 }
 
 .itemsDates {
-  display: flex;
-  flex-direction: column;
-  border-top: #373B5626 solid 1px;
-  border-bottom: #373B5626 solid 1px;
-  padding: 0.5rem;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-top: #373B5626 solid 1px;
+    border-bottom: #373B5626 solid 1px;
+    padding: 0.5rem;
+    justify-content: center;
 }
 
 .itemsDates span {
-  color: #A000FF;
+    color: #A000FF;
 }
 
 .salesReport {
-  background-color: #F9F9F9;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px 0px #373B5626;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px #373B5626;
 }
 
 .salesReportBalance {
-  display: flex;
-  width: 400px;
-  flex-direction: column;
-  padding: 1rem;
-  justify-content: center;
-  border-right: #373B5640 1px solid;
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    border-right: #373B5640 1px solid;
 }
 
 .salesReportBalance p {
-  color: #373B5640;
+    color: #373B5640;
 }
 
 .salesReportBalance span {
-  color: #34A853;
+    color: #34A853;
 }
 
 .bestSalers {
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: start !important;
-  color: #373B5626;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: start !important;
+    color: #373B5626;
 }
 
 .bestSalersItems {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .bestSalersItems p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin: 0px 1rem;
-  height: 20px;
-  padding: 1rem;
-  border: #373B56 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0px 1rem;
+    height: 20px;
+    padding: 1rem;
+    border: #373B56 solid 1px;
 }
 
 /* Finish Artist Dashboard styles*/
-
-#Suggetions {
-  height: 100%;
-  background-color: #ECEDF2;
-  font-family: "Barlow", sans-serif;
-}
-
-#SuggetionsContainer {
-  border-left: 1px solid #373B5640;
-  padding-left: 2rem;
-}
-
 .SuggetionsContent {
-  flex-direction: row;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .SuggetionsCard {
-  width: 100%;
-  margin-top: 1rem;
-  padding: 0px;
-  margin-bottom: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.SuggetionsCardImg
+{
+    object-fit: cover;
+    width: 20px;
 }
 
 .SuggetionsText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
 }
 
 #SuggetionsPaginate {
-  height: 40vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
+    height: 40vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
 }
 
 .SuggArrows {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 1rem;
-  width: 100%;
-  border-bottom: 1px solid #373B5640;
-  margin-bottom: 1rem;
-  color: #4F5168;
-  cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #373B5640;
+    margin-bottom: 1rem;
+    color: #4F5168;
+    cursor: pointer;
 }
 
 .SuggTerms {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 1rem;
-  width: 100%;
-  cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+    width: 100%;
+    cursor: pointer;
 }
 
 #SuggLogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 2rem;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    width: 100%;
 }
 
 /* Begin Artist Billing styles */
 
 #BillingContainer {
-  padding-left: 6.4rem;
-  background-color: #ECEDF2;
-  height: 100vh;
-  font-family: Inter, sans-serif;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+    padding-left: 6.4rem;
+    background-color: #ECEDF2;
+    height: 100vh;
+    font-family: Inter, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
 #BillingLogo {
-  width: 80%;
-  margin: 1rem;
+    width: 80%;
+    margin: 1rem;
 }
 
 #BillingRow {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 
 }
 
 .BillingItems {
-  text-align: center;
+    text-align: center;
 }
 
 #UsdBilling {
-  background-color: #F9F9F9;
-  width: 30%;
-  padding: 1rem;
-  margin: 2rem;
-  height: 3.5rem;
+    background-color: #F9F9F9;
+    width: 30%;
+    padding: 1rem;
+    margin: 2rem;
+    height: 3.5rem;
 }
 
 #Credits {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-  height: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    height: 20%;
 }
 
 #AvailableCredits {
-  width: 30%;
-  background-color: #F9F9F9;
-  padding: 1rem;
-  height: 3.5rem;
+    width: 30%;
+    background-color: #F9F9F9;
+    padding: 1rem;
+    height: 3.5rem;
 }
 
 #CreditsBuy {
-  width: 70%;
-  padding: 1rem;
-  background-color: #A000FF;
-  color: #F9F9F9;
-  height: 3.5rem;
+    width: 70%;
+    padding: 1rem;
+    background-color: #A000FF;
+    color: #F9F9F9;
+    height: 3.5rem;
 }
 
 #TransactionsBilling {
-  background-color: #F9F9F9;
-  padding: 1rem;
-  font-family: Barlow, sans-serif;
+    background-color: #F9F9F9;
+    padding: 1rem;
+    font-family: Barlow, sans-serif;
 }
 
 .TransactionsRows {
-  margin: 1rem;
-  padding: 1rem;
-  border-bottom: #373B5640 1px solid;
+    margin: 1rem;
+    padding: 1rem;
+    border-bottom: #373B5640 1px solid;
 }
 
 .weeklyEarn {
-  background-color: #F9F9F9;
-  display: flex;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  justify-content: space-evenly;
-  border-radius: 10px;
+    background-color: #F9F9F9;
+    display: flex;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-evenly;
+    border-radius: 10px;
 }
 
 .weeklyEarn select {
-  background-color: #F9F9F9;
-  border: none;
-  color: #373B56;
-  padding: 1rem;
+    background-color: #F9F9F9;
+    border: none;
+    color: #373B56;
+    padding: 1rem;
 }
 
 .weeklyEarnItem {
-  padding: 1rem;
-  width: 150px;
-  border-left: 1px solid #373B5626;
-  color: #373B56;
+    padding: 1rem;
+    width: 150px;
+    border-left: 1px solid #373B5626;
+    color: #373B56;
 }
 
 .weeklyEarnItem p {
-  color: #373B5626;
+    color: #373B5626;
 }
 
 .serviceRoomME {
-  display: flex;
-  margin-right: 2rem;
-  justify-content: space-between;
+    display: flex;
+    margin-right: 2rem;
+    justify-content: space-between;
 }
 
 .serviceRoomMEItem {
-  background: #F9F9F9;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #373B56;
+    background: #F9F9F9;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #373B56;
 }
 
 .serviceRoomMEItem p {
-  color: #373B5626;
+    color: #373B5626;
 }
 
 .serviceRoomME2 {
-  display: flex;
-  margin-right: 2rem;
-  margin-top: 1rem;
-  justify-content: space-between;
+    display: flex;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    justify-content: space-between;
 }
 
 .serviceRoomMESubItem {
-  width: 230px;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #F9F9F9;
+    width: 230px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #F9F9F9;
 }
 
 .serviceRoomMESubItem p {
-  color: #373B5626;
+    color: #373B5626;
 }
 
 /* .WhiteSection {
@@ -959,206 +996,204 @@ p {
 /* Finish Artist Billing styles */
 
 #VideoCall {
-  width: 100%;
-  height: 100vh;
-  background-color: #373B56;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ECEDF2;
-  font-family: Inter, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #373B56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ECEDF2;
+    font-family: Inter, sans-serif;
 }
 
 #Lives {
-  width: 100%;
-  height: 100vh;
-  background-color: #373B56;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ECEDF2;
-  font-family: Inter, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #373B56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ECEDF2;
+    font-family: Inter, sans-serif;
 }
 
 #LiveVideo {
-  width: 100%;
-  background-color: #373B56;
+    width: 100%;
+    background-color: #373B56;
 }
 
 .LiveChat {
-  background-color: #373B56;
+    background-color: #373B56;
 
 }
 
 .Streamer {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .StreamerPhoto {
-  width: 70px;
+    width: 70px;
 }
 
 .StreamerTxt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0.5rem;
 }
 
 .SpectatorContainer {
-  display: flex;
-  height: 80%;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .SpectatorItem {
-  display: flex;
-  justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: #ECEDF20D 1px solid;
-  border-bottom: #ECEDF20D 1px solid;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: #ECEDF20D 1px solid;
+    border-bottom: #ECEDF20D 1px solid;
 }
 
 .Spectator {
-  width: 25%;
+    width: 25%;
 }
 
 .SpectatorTxt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .LiveSend {
-  border-radius: 5px;
-  height: 40px;
-  width: 100%;
-  color: #373B56;
-  background:
-    linear-gradient(0deg, #ECEDF2, #ECEDF2);
-  border: 1px solid #373B56
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    color: #373B56;
+    background: linear-gradient(0deg, #ECEDF2, #ECEDF2);
+    border: 1px solid #373B56
 }
 
 #SubscriptionsContainer {
-  padding-left: 6.4rem;
-  font-family: Barlow, sans-serif;
-  color: #373B56;
+    padding-left: 6.4rem;
+    font-family: Barlow, sans-serif;
+    color: #373B56;
 }
 
 .ArtisSub {
-  width: 10%;
+    width: 10%;
 }
 
 #ReviewTitle {
-  text-align: center;
-  padding: 1rem;
-  border-bottom: #373B5640 solid 1px;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: #373B5640 solid 1px;
 }
 
 #newReview {
-  margin: 10px;
-  background-color: #F9F9F9;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid #373B5626;
-  border-radius: 0px, 0px, 1px, 0px;
+    margin: 10px;
+    background-color: #F9F9F9;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #373B5626;
 }
 
 .StarsReview {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .StarsReview img {
-  width: 20px;
-  height: 20px;
-  margin: 1px;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
 }
 
 #inputReview {
-  width: 80%;
-  background: #F9F9F9;
-  box-shadow: 0px 0px 4px 0px #00000040 inset;
-  border: none;
-  border-radius: 10px;
+    width: 80%;
+    background: #F9F9F9;
+    box-shadow: 0px 0px 4px 0px #00000040 inset;
+    border: none;
+    border-radius: 10px;
 }
 
 #historyReview {
-  background-color: #F9F9F9;
-  border-bottom: 1px solid #373B5626;
-  margin: 10px;
-  padding: 10px;
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #373B5626;
+    margin: 10px;
+    padding: 10px;
 }
 
 .itemReview {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #373B5640;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #373B5640;
 }
 
 .calendario {
-  margin: 1rem;
-  width: 300px;
-  height: 280px;
-  text-align: center;
-  font-family: Inter;
-  color: #373B56;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+    margin: 1rem;
+    width: 300px;
+    height: 280px;
+    text-align: center;
+    font-family: Inter;
+    color: #373B56;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
 .encabezado {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 #Select {
-  border: none;
-  color: #373B56;
-  background-color: #f9f9f9;
+    border: none;
+    color: #373B56;
+    background-color: #f9f9f9;
 }
 
 .diasYSemana {
-  display: flex;
-  color: #373B56B2;
-  justify-content: space-evenly;
-  background-color: #f9f9f9;
+    display: flex;
+    color: #373B56B2;
+    justify-content: space-evenly;
+    background-color: #f9f9f9;
 }
 
 .dias {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  padding: 10px;
-  width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+    width: 100%;
 }
 
 .diaInicio {
-  background: #a200ff9a;
-  border-radius: 5px;
+    background: #a200ff9a;
+    border-radius: 5px;
 }
 
 .diaFin {
-  background: #a200ff9a;
-  border-radius: 5px;
+    background: #a200ff9a;
+    border-radius: 5px;
 }
 
 .diaReserva {
-  background: rgba(160, 0, 255, 0.31);
-  border-radius: 5px;
+    background: rgba(160, 0, 255, 0.31);
+    border-radius: 5px;
 }

@@ -237,3 +237,17 @@
   src: local("Matchbook"),
     url("./assets/fonts/Matchbook/Matchbook.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Aref Ruqaa";
+  src: local("Aref Ruqaa"),
+    url("./assets/fonts/Aref Ruqaa/ArefRuqaa-Regular.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Aref Ruqaa";
+  src: local("Aref Ruqaa"),
+  url("./assets/fonts/Aref Ruqaa/ArefRuqaa-Bold.ttf") format("truetype");
+  font-weight: 700;
+}

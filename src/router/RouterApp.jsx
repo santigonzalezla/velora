@@ -96,9 +96,11 @@ const artistChats = () =>
 const artistProfile = () =>
 {
     return (
+        <ArtistPorfile/>
+        /*
         <ClientProtectedRoute>
-            <ArtistPorfile/>
         </ClientProtectedRoute>
+        */
     )
 }
 
