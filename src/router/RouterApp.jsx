@@ -25,11 +25,9 @@ import ClientProtectedRoute from '../utils/clientProtectedRoute';
 
 const home = () => {
     return (
-        /*
         <ClientProtectedRoute>
+            <HomeApp/>
         </ClientProtectedRoute>
-        */
-        <HomeApp/>
     )
 }
 
@@ -45,22 +43,18 @@ const chats = () =>
 const subscriptions = () =>
 {
     return (
-        /*
         <ClientProtectedRoute>
+            <Subscriptions/>
         </ClientProtectedRoute>
-        */
-        <Subscriptions/>
     )
 }
 
 const billing = () =>
 {
     return (
-        /*
         <ClientProtectedRoute>
+            <Billing/>
         </ClientProtectedRoute>
-        */
-        <Billing/>
     )
 }
 
@@ -76,11 +70,9 @@ const videoCall = () =>
 const artistApp = () =>
 {
     return (
-        /*
         <ClientProtectedRoute>
+            <ArtistApp/>
         </ClientProtectedRoute>
-        */
-        <ArtistApp/>
     )
 }
 
@@ -96,11 +88,9 @@ const artistChats = () =>
 const artistProfile = () =>
 {
     return (
-        <ArtistPorfile/>
-        /*
         <ClientProtectedRoute>
+            <ArtistPorfile/>
         </ClientProtectedRoute>
-        */
     )
 }
 

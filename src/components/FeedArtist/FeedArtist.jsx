@@ -47,10 +47,12 @@ const FeedArtist = () => {
     const [posts, setPosts] = useState([]);
 
 
-    useEffect(() => {
+    useEffect(() =>
+    {
 
         getPosts().then((data) => {
-            getUserInfo().then((user) => {
+            getUserInfo().then((user) =>
+            {
                 const tempData = data.data.map((post) => [user.first_name + " " + user.last_name, post])
                 console.log(tempData);
                 setPosts(tempData);
@@ -66,7 +68,6 @@ const FeedArtist = () => {
                           postImages={post[1].media} postText={post[1].text}/>
                 ))
             }
-
         </main>
     );
 }

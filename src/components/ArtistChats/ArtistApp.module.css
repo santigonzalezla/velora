@@ -24,6 +24,7 @@
 }
 
 .ChatsBar {
+  padding: 20px;
   height: 100vh;
   border-left: #373B5640 1px solid;
   border-right: #373B5640 1px solid;
@@ -44,9 +45,11 @@
   width: 50px;
 }
 
-.UserChatData {
+.UserChatData
+{
   display: flex;
-  margin: 2.5rem 1.5rem;
+  align-items: center;
+  margin: 2.5rem 0.2rem;
 }
 
 .UserChatDataTxT {
