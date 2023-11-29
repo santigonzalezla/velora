@@ -5,6 +5,7 @@ import Logo from '../../assets/img/HomeApp/Chats/Logo.png'
 import Chart from "../../assets/img/HomeApp/SideBar/chart.png";
 import HooveredCard from "../HomeApp/HooveredCard.jsx";
 import CampaingCard from "./CampaingCard.jsx";
+import DashboardCard from "./DashboardCard.jsx";
 
 const campaings = [
     {
@@ -39,6 +40,14 @@ const campaings = [
     },
 ]
 
+const cardInfo = [
+    {
+        title: "Transacciones",
+        value: "35",
+        percentage: "+20"
+    }
+]
+
 const BillingArtist = () => {
     return (
         <div id={style.Billings}>
@@ -71,26 +80,26 @@ const BillingArtist = () => {
                         </Row>
                     </Col>
                     <Col xs="12" sm="12" md="3" lg="3" className={style.DashboardCards}>
-                        <Card className={style.HooveredCardRight}>
-                            <Card.Title className={style.HooveredCardRightTitle}>Transacciones</Card.Title>
-                            <Card.Text className={style.HooveredCardRightValue}>35 USD</Card.Text>
-                            <Card.Text className={style.HooveredCardRightPercentage}><span>20%</span> mes anterior</Card.Text>
-                        </Card>
-                        <Card className={style.HooveredCardRight}>
-                            <Card.Title className={style.HooveredCardRightTitle}>Transacciones</Card.Title>
-                            <Card.Text className={style.HooveredCardRightValue}>35 USD</Card.Text>
-                            <Card.Text className={style.HooveredCardRightPercentage}><span>20%</span> mes anterior</Card.Text>
-                        </Card>
-                        <Card className={style.HooveredCardRight}>
-                            <Card.Title className={style.HooveredCardRightTitle}>Transacciones</Card.Title>
-                            <Card.Text className={style.HooveredCardRightValue}>35 USD</Card.Text>
-                            <Card.Text className={style.HooveredCardRightPercentage}><span>20%</span> mes anterior</Card.Text>
-                        </Card>
-                        <Card className={style.HooveredCardRight}>
-                            <Card.Title className={style.HooveredRightCardTitle}>Transacciones</Card.Title>
-                            <Card.Text className={style.HooveredCardRightValue}>35 USD</Card.Text>
-                            <Card.Text className={style.HooveredCardRightPercentage}><span>20%</span> mes anterior</Card.Text>
-                        </Card>
+                        <DashboardCard
+                            title={"Transacciones"}
+                            value={"30"}
+                            percentage={"+20%"}
+                        />
+                        <DashboardCard
+                            title={"Transacciones"}
+                            value={"30"}
+                            percentage={"+20%"}
+                        />
+                        <DashboardCard
+                            title={"Transacciones"}
+                            value={"30"}
+                            percentage={"+20%"}
+                        />
+                        <DashboardCard
+                            title={"Transacciones"}
+                            value={"30"}
+                            percentage={"+20%"}
+                        />
                     </Col>
                 </Row>
             </div>

@@ -3,50 +3,45 @@ import {Image} from 'react-bootstrap';
 import imgCard from '../../assets/img/HomeApp/Suggestions/imgCard.png'
 import userPhoto from '../../assets/img/HomeApp/Suggestions/userPhoto.png'
 import Logo from '../../assets/img/HomeApp/Suggestions/logoside.png'
+import SuggestionCard from "../ArtistPorfile/SuggestionCard.jsx";
 
-const SuggetionsArtist = () => {
+const artistSuggestion = [
+    {
+        img: imgCard,
+        userPhoto: userPhoto,
+        user: "@beautifulmouse112",
+        description: "Gravida diam enim sed ut mi. Est in sit sed tincidunt."
+    },
+    {
+        img: imgCard,
+        userPhoto: userPhoto,
+        user: "@beautifulmouse23",
+        description: "Gravida diam enim sed ut mi. Est in sit sed tincidunt."
+    },
+    {
+        img: imgCard,
+        userPhoto: userPhoto,
+        user: "@beautifulmouse456",
+        description: "Gravida diam enim sed ut mi. Est in sit sed tincidunt."
+    }
+]
+
+const SuggetionsArtist = () =>
+{
     return (
         <div id={style.Suggetions}>
             <div id={style.SuggetionsContainer}>
                 <div className={style.SuggetionsContTop}>
                     <h3>Sugerencias</h3>
-                    <section className={style.SuggetionsCard}>
-                        <div>
-                            <Image src={imgCard} fluid/>
-                        </div>
-                        <div className={style.SuggetionsContent}>
-                            <Image src={userPhoto} className={style.userPhoto}/>
-                            <div className={style.SuggetionsText}>
-                                <h5>@beautifulmouse112</h5>
-                                <span>Gravida diam enim sed ut mi. Est in sit sed tincidunt.</span>
-                            </div>
-                        </div>
-                    </section>
-                    <section className={style.SuggetionsCard}>
-                        <div>
-                            <Image src={imgCard} fluid/>
-                        </div>
-                        <div className={style.SuggetionsContent}>
-                            <Image src={userPhoto} className={style.userPhoto}/>
-                            <div className={style.SuggetionsText}>
-                                <h5>@beautifulmouse112</h5>
-                                <span>Gravida diam enim sed ut mi. Est in sit sed tincidunt.</span>
-                            </div>
-                        </div>
-                    </section>
-                    <section className={style.SuggetionsCard}>
-                        <div>
-                            <Image src={imgCard} fluid/>
-                        </div>
-                        <div className={style.SuggetionsContent}>
-                            <Image src={userPhoto} className={style.userPhoto}/>
-                            <div className={style.SuggetionsText}>
-                                <h5>@beautifulmouse112
-                                </h5>
-                                <span>Gravida diam enim sed ut mi. Est in sit sed tincidunt.</span>
-                            </div>
-                        </div>
-                    </section>
+                    {artistSuggestion.map((item, index) => (
+                        <SuggestionCard
+                            key={index}
+                            img={item.img}
+                            userPhoto={item.userPhoto}
+                            user={item.user}
+                            description={item.description}
+                        />
+                    ))}
                 </div>
                 <section id={style.SuggetionsPaginate}>
                     <div className={style.SuggArrows}>
