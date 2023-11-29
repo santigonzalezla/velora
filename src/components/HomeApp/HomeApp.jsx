@@ -9,7 +9,21 @@ import Google from '../../assets/img/HomeApp/SideBar/GOOGLE.png';
 import Chart from '../../assets/img/HomeApp/SideBar/chart.png';
 import HooveredCard from "./HooveredCard.jsx";
 
-const HomeApp = () => {
+const values = {
+    title: "Transacciones",
+    value: "35",
+    transactions: "3",
+    percentage: "+20%"
+}
+
+const stablisment = {
+    title: "ESTABLECIMIENTO",
+    description: "DESCRIPCION",
+    email: "info@velora.com",
+}
+
+const HomeApp = () =>
+{
     return (
         <div id={style.HomeApp}>
             <SideBar/>
@@ -18,13 +32,13 @@ const HomeApp = () => {
                     <div className={style.HomeAppTopLeft}>
                         <div className={style.HomeAppTopLeftCard}>
                             <Card className={style.HomeAppTopCard}>
-                                35 USD
+                                {values.value}USD
                             </Card>
                             <p>Valor total transaciones</p>
                         </div>
                         <div className={style.HomeAppTopLeftCard}>
                             <Card className={style.HomeAppTopCard}>
-                                3
+                                {values.transactions}
                             </Card>
                             <p>Posición publicitaria</p>
                         </div>
@@ -38,9 +52,9 @@ const HomeApp = () => {
                     <Col xs="12" sm="8" md="8" lg="3" className={style.HomeAppBottomLeft}>
                         <Card className={style.HomeAppBottomLeftCard}>
                             <img src={Google} alt="" />
-                            <Card.Title>ESTABLECIMIENTO</Card.Title>
-                            <Card.Text>DESCRIPCION</Card.Text>
-                            <Card.Text>NEGOCIO: INFO@VELORA.COM</Card.Text>
+                            <Card.Title>{stablisment.title}</Card.Title>
+                            <Card.Text>{stablisment.description}</Card.Text>
+                            <Card.Text>NEGOCIO: {stablisment.email}</Card.Text>
                         </Card>
                         <HooveredCard
                             title={"Transacciones"}
