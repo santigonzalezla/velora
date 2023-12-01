@@ -22,6 +22,7 @@ import Billing from '../components/Billing/Billing';
 import VideoCall from '../components/VideoCall/VideoCall';
 import BuyCoins from '../components/BuyCoins/BuyCoins';
 import ClientProtectedRoute from '../utils/clientProtectedRoute';
+import ArtistComments from "../components/ArtistComments/ArtistComments.jsx";
 
 const home = () => {
     return (
@@ -114,6 +115,15 @@ const artistDashboard = () =>
     )
 }
 
+const artisComments = () =>
+{
+    return (
+        <ClientProtectedRoute>
+            <ArtistComments />
+        </ClientProtectedRoute>
+    )
+}
+
 const videoCallArtist = () =>
 {
     return (
@@ -184,6 +194,7 @@ const RouterApp = () =>
             <Route path='/ArtistProfile' element={artistProfile()}/>
             <Route path='/UserReviews/:user' element={clientProfile()}/>
             <Route path='/ArtistDashboard' element={artistDashboard()}/>
+            <Route path='/ArtistComments' element={artisComments()}/>
             <Route path='/VideoCallArtist' element={videoCallArtist()}/>
             <Route path='/LivesArtist' element={livesArtist()}/>
             <Route path='/BillingArtist' element={billingArtist()}/>
