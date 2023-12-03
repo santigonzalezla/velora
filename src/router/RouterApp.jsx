@@ -32,6 +32,15 @@ const home = () => {
     )
 }
 
+const homeArtist = () =>
+{
+    return (
+        <ClientProtectedRoute>
+            <HomeApp/>
+        </ClientProtectedRoute>
+    )
+}
+
 const chats = () =>
 {
     return (
@@ -189,6 +198,7 @@ const RouterApp = () =>
             <Route path='/Terms' element={<Terms/>}/>
             <Route path='/Help' element={<Help/>}/>
             {/*-------------------------------------------------*/}
+            <Route path='/ArtistHome' element={home()}/>
             <Route path='/ArtistApp' element={artistApp()}/>
             <Route path='/ArtstChats' element={artistChats()}/>
             <Route path='/ArtistProfile' element={artistProfile()}/>

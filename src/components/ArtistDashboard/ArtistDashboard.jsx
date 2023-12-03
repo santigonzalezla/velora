@@ -139,7 +139,7 @@ const ArtistDashboard = () =>
                         </section>
                     </Col>
                 </div>
-                <Row className={style.rowDashboard}>
+                <Row className={style.rowDashboardTop}>
                     <Col xs="12" sm="5" md="5" lg="5" className={style.rowCards}>
                         <Chart chartVariables={chartVariables} />
                     </Col>

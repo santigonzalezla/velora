@@ -1,0 +1,167 @@
+#HomeApp
+{
+    display: flex;
+}
+
+#ContentHomeApp
+{
+    margin-left: 6.4rem;
+    background: #ECEDF2;
+    padding: 25px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.HomeAppTop
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.HomeAppTopLeft
+{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+.HomeAppTopLeftCard
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.HomeAppTopLeftCard p
+{
+    font-size: 16px;
+    color: #A000FF;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    font-family: Barlow, sans-serif;
+}
+
+.HomeAppTopLeft button
+{
+    border-radius: 5px;
+    background: #A000FF;
+    box-shadow: 0px 10px 40px 0px rgba(55, 59, 86, 0.15);
+    border: none;
+    color: #FFF;
+    font-weight: 600;
+    padding: 10px 30px;
+}
+
+.HomeAppTopCard
+{
+    width: 210px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 26px;
+    background: #FFF;
+    border: none;
+    font-family: Inter, sans-serif;
+}
+
+.HomeAppTopRight
+{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.HomeAppTopRightImg
+{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.HooveredCard
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 150px;
+    border: 1px solid rgba(55, 59, 86, 0.15);
+}
+
+.HooveredCardTitle,
+.HooveredCardPercentage
+{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(55, 59, 86, 0.25);
+    font-family: Barlow, sans-serif;
+}
+
+.HooveredCardValue
+{
+    font-size: 28px;
+    font-weight: 600;
+    color: #373B56;
+    font-family: Inter, sans-serif;
+}
+
+.HooveredCardPercentage span
+{
+    color: #34A853;
+}
+
+.HomeAppBottomLeft
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.HomeAppBottomLeft img
+{
+    width: 120px;
+}
+
+.HomeAppBottomLeftCard
+{
+    padding: 25px;
+}
+
+.HomeAppBottomRight
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.HomeAppBottomRight img
+{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    bottom: 0;
+}
+
+.HomeAppBottomRightRow
+{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.HomeAppBottomRightCard
+{
+    display: flex;
+    height: 100%;
+    position: relative;
+}

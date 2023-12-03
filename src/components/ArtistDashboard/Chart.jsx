@@ -1,12 +1,13 @@
 import style from "./ArtistApp.module.css";
 import Grafic from "../../assets/img/ArtistApp/ArtistDashboard/grafic.png";
+import Example from "./Graphic.jsx";
 
 const Chart = ({ chartVariables }) =>
 {
     return (
         <div className={style.Balance}>
             <div className={style.BalanceChart}>
-                <img src={Grafic} alt="" width="100%"/>
+                <Example />
             </div>
             <div className={style.BalanceInfo}>
                 {chartVariables.map((variable, index) => (
