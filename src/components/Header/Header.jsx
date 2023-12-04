@@ -157,6 +157,10 @@ const Header = (props) => {
                     alert("SignUp successful Client");
                     navigate('/home')
                 }
+                else if (t === 'establecimiento') {
+                    alert("SignUp successful Company");
+                    navigate('/ArtistHome')
+                }
             } else {
                 alert("Login failed");
             }
